@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=1024">
+		<title>hello</title>
+		<style>
+		body {
+		 background-image:url("bg.jpg");
+		 backgroud-position:center;
+		 background-size: cover;
+		 background-attachment: fixed;
+		 background-repeat: no-repeat;
+		 text-align: center;
+		}
+		.title{
+			background-color:#2a3934;
+			height:3.125rem; /*高度改为自动高度*/
+			width:100%;
+			margin-left: 0;
+			position:fixed;
+			opacity:0.6;
+			top:0;
+			color:white;
+			margin-bottom: 5px;
+		}
+		
+		.title ul{
+		            /* 清除ul标签的默认样式 */
+		            width: 80%;
+		            list-style-type: none;
+		            margin: 0;            
+		            padding: 0;
+		            overflow: hidden;
+		
+		        }
+				
+				 .title li {    
+				            float:left; /* 使li内容横向浮动，即横向排列  */
+				            margin-right:3.75rem;  /* 两个li之间的距离*/
+							position:relative;
+							top:1px;
+							border-color:#ffffff;
+							border-radius:8px;
+				        }
+				
+				        .title li a{
+				           /* 设置链接内容显示的格式*/
+				            display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+				            color:white;
+				            text-align: center;
+				            padding: 14px 16px;
+				            text-decoration: none; /* 去除下划线 */
+				        }
+				        .title li a:hover{
+				            /* 鼠标选中时背景变为黑色 */
+				            background-color: #111;
+							border-radius:8px;
+				        }
+
+		.symbol{
+			position:absolute;
+			top:4%;
+			left:2%;
+			font-size: 30px;
+			color:white;
+			font-weight: bolder;
+			text-shadow: 5px 5px 5px #516f7c;
+		}
+
+		.box1{
+			position:absolute;
+			top:20%;
+			left:10%;
+			height:6.25rem;
+			width:25rem;
+			background-color:#3a4750;
+			opacity:0.5; 
+			border-radius:0.7rem;
+			box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
+				0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+		}
+		.h1{
+			position:absolute;
+			left:4%;
+			top:4%;
+			font-size:30px;
+			color:white;
+			text-shadow: 3px 3px 3px #758481;
+		}
+		.link1{
+			color:#c4f193;
+			position:absolute;
+			left:80%;
+			top:50%;
+		}
+		
+		.box2{
+			position:absolute;
+			top:40%;
+			left:10%;
+			height:6.25rem;
+			width:25rem;
+			background-color:#3b4250;
+			opacity:0.5; 
+			border-radius:0.7rem;
+			box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
+				0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+		}
+		.h2{
+			position:absolute;
+			left:4%;
+			top:4%;
+			font-size:30px;
+			color:white;
+			text-shadow: 3px 3px 3px #758481;
+		}
+		.link2{
+			color:#c4f193;
+			position:absolute;
+			left:80%;
+			top:63%;
+		}
+		
+		.box3{
+			position:absolute;
+			top:60%;
+			left:10%;
+			height:6.25rem;
+			width:25rem;
+			background-color:#3b4250;
+			opacity:0.5; 
+			border-radius:0.7rem;
+			box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
+				0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+		}
+		.h3{
+			position:absolute;
+			left:4%;
+			top:4%;
+			font-size:30px;
+			color:white;
+			text-shadow: 3px 3px 3px #758481;
+		}
+		.link3{
+			color:#c4f193;
+			position:absolute;
+			left:80%;
+			top:55%;
+		}
+		.picture{
+			height:34.375rem;
+			width:31.25rem;
+			position:absolute;
+			top:15%;
+			left:50%;
+			background-color:#FFFFFF;
+			opacity:0.3;
+			border-radius:20px;
+		}
+		#p1{
+			position:absolute;
+			left:50.5%;
+			top:18%;
+			border-radius:6px;
+			border-width:5px;
+			border-color:#89a6a7;
+			border-style:outset;
+		}
+		#p2{
+			position:absolute;
+			left:64%;
+			top:41%;
+			border-radius:6px;
+			border-width:5px;
+			border-color:#727e8c;
+			border-style:outset;
+		}
+		#p3{
+			position:absolute;
+			left:52%;
+			top:61%;
+			border-radius:6px;
+			border-width:5px;
+			border-color:#727e8c;
+			border-style:outset;
+		}
+		.bk2{
+			background: #FFFFFF;
+			opacity:0.4;
+			border-radius:20px;
+			position:absolute;
+			left:50.3%;
+			top:15.8%;
+			width:30.625rem;
+			height:33.75rem;
+		}
+		
+		.txt1{
+			position:absolute;
+			left:72%;
+			top:17%;
+			height:13.75rem;
+			width:9.375rem;
+			background-color:#7a7f88;
+			opacity:0.4;
+			border-radius: 10px;
+			font-size:18px;
+			font-style:italic;
+			font-weight:1px;
+			font-family:Cursive;
+			color: #ffffff;
+			
+			
+		}
+		
+		
+		footer {
+		  width: 100%;
+		  color: white;
+		  font-size: 15px;
+		  margin-left: 5px;
+		  text-shadow: 1px 1px 1px #737373; 
+		  position: absolute;
+		  bottom: 0;
+		  width: 95%;
+		  text-align: center;
+		  padding-bottom: 15px;
+		}
+		footer a {
+		  color: #FFFFFF;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<div class="title">
+		<center>
+		<span class="symbol">KuKi</span>
+		<ul>
+		<li><a href="#">首页</a></li>
+		<li><a href="#">信息资源</a></li>
+		<li><a href="#">购买</a></li>
+		<li><a href="#">技术支持</a></li>
+		<li><a href="#">最新资讯</a></li>
+		<li><a href="#">账号管理</a></li>
+		</ul>
+		</div>
+		<div class="box1">
+		<h1 class="h1">Welcome!</h1>
+		<a href="#" class="link1">Select?</a>
+		</center>
+		</div>
+		
+		<div class="box2">
+		<h1 class="h2">Do you have a number?</h1>
+		<a href="#" class="link2">Login?</a>
+		</div>
+		
+		<div class="box3">
+		<h1 class="h3">Choose your like</h1>
+		<a href="#" class="link3">About?</a>
+		</div>
+		<div class="picture">
+		<!-- 用于设置背景 -->
+		</div>
+		<div class="bk2">
+		</div>
+		<img src="fafb94b8d6848555e512ab8e739f78ed.jpg" width="300" height="200" id="p1"/>
+		<div class="txt1">
+			<p>This is our work place.You can call us to ask some details!We are waiting for your join!</p>
+			</div>		
+		<img src="ed77547c0d1d6ff0055da7b9786fc44e.jpg" width="270" height="170" id="p3"/>
+		
+		<img src="681484ea7d38ed22c36f2a655f0b4948.jpg" width="260" height="158" id="p2"/>
+	</body>
+	<footer>Created by LULU</a> @2021.
+	</footer>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>登陆界面</title>
+	<style>
+	
+	body{
+		background-color:white;
+	}
+	.title {
+	    margin: 50px auto;
+	    font-size: 54px;
+		position:absolute;
+		top:17%;
+		left:39%;
+	    font-weight: bold;
+	    text-align: center;
+	    text-transform:uppercase;
+	    color: transparent;
+	    background: linear-gradient(45deg,#ffd683,#ffff85, #bcff63, #6be587,#7adfb5, #7ddff4, #92bbd6, #ddedff);
+	    background-size: cover;
+	    background-position: center center;
+	    -webkit-background-clip: text;
+	    animation: huerotate 3s infinite;
+	}
+	
+	@keyframes huerotate {
+	    100% {
+	        filter: hue-rotate(360deg);
+	    }
+	}
+
+.email {
+            height: 500px;
+            width: 750px;
+            margin: auto;
+			position:absolute;
+			left:38%;
+			top:33%;
+        }
+        
+        .email form {
+            position: relative;
+            font-weight: blod;
+        }
+        
+        .email input {
+            height: 50px;
+            width: 300px;
+			position:relative;
+			left:8%;
+            margin: auto;
+            border: 0;
+            box-shadow: none;
+            border-bottom: 1px solid #9fe3b2;
+            transition: border-bottom 0.5s;
+        }
+        
+        .email .span {
+            position: absolute;
+			left:0;
+            bottom: 0;
+            height: 50px;
+        }
+        
+        .email label {
+            font-weight: bold;
+            color: #87cac6;
+            line-height: 50px;
+            display: block;
+        }
+        
+        .email input:focus {
+            outline: none;
+            border-bottom: 2px solid #9DF4C9;
+        }	
+		.password {
+		            height: 500px;
+		            width: 750px;
+		            margin: auto;
+					position:absolute;
+					left:38%;
+					top:48%;
+		        }
+		        
+		        .password form {
+		            position: relative;
+		            font-weight: blod;
+		        }
+		        
+		        .password input {
+		            height: 50px;
+		            width: 300px;
+					position:relative;
+					left:8%;
+		            margin: auto;
+		            border: 0;
+		            box-shadow: none;
+		            border-bottom: 1px solid #9fe3b2;
+		            transition: border-bottom 0.5s;
+		        }
+		        
+		        .password .span {
+		            position: absolute;
+					left:0;
+		            bottom: 0;
+		            height: 50px;
+		        }
+		        
+		        .password label {
+		            font-weight: bold;
+		            color: #87cac6;
+		            line-height: 50px;
+		            display: block;
+		        }
+		        
+		        .password input:focus {
+		            outline: none;
+		            border-bottom: 2px solid #9DF4C9;
+		        }
+				.button{
+				  position: absolute; /*绝对对位*/
+				  top:70%;
+				  left: 42%; 
+				  width: 15vh;
+				  height: 5vh;
+				  transform: translate(-50%,-50%); /*移动，根据X,Y轴*/
+				  text-align: center; /*字体水平居中*/
+				  font-size: 14px; /*字体大小*/
+				  color: #fff;
+				  text-decoration: none; /*字体增加装饰：去除下划线*/
+				  font-family: sans-serif; /*非衬线体*/
+				  box-sizing: border-box; /*盒模型大小规则*/
+				  background: linear-gradient(
+				    90deg,#a7ff93, #9df4c9, #b9f6ff, #7ddff4, 
+				      #cee2f4, #bff4e1, #97ffac, #c4f4b5); /*渐变背景*/
+				  border-radius: 60px; /*边框圆角*/
+				  background-size: 400%; /*背景大小*/
+				  z-index: 1; /*层叠定位*/
+				}
+				.button:hover{
+				  animation: animate 8s linear infinite alternate; /*动画: 名称 时间 线性 循环 播放完回退播放*/
+				}
+				@keyframes animate{
+				  0%{
+				    background-position: 0%; /*修改背景定位，实现渐变色炫光*/
+				  }
+				  50%{
+				    background-position: 100%;
+				  }
+				  100%{
+				    background-position: 0%;
+				  }
+				}
+				.button::before{ /*之前添加*/
+				  content: ''; /*内容*/
+				  position: absolute; /*绝对定位*/
+				  top:-5px; /*当设置对立的2个定位属性时，元素的大小将由对立的大小决定*/
+				  left: -5px;
+				  right: -5px;
+				  bottom: -5px; /*当设置对立的2个定位属性时，元素的大小将由对立的大小决定*/
+				  z-index: -1; 
+				  background: linear-gradient(
+				    90deg,#a7ff93, #9df4c9, #b9f6ff, #7ddff4, 
+				      #cee2f4,#bff4e1, #97ffac, #c4f4b5);
+				  border-radius: 40px;
+				  background-size: 400%;
+				  filter: blur(20px); /*过渡：模糊*/
+				  opacity: 0; /*透明度*/
+				  transition: 1s; /*过渡时间*/
+				}
+				.button:hover::before{
+				  filter: blur(20px);
+				  opacity: 1;
+				  animation: animate 8s linear infinite; /*注意动画名称统一*/
+				}
+				
+				
+				
+				.buttontwo {
+				  position: absolute; /*绝对对位*/
+				  top:70%;
+				  left: 60%; 
+				  width: 15vh;
+				  height: 5vh;
+				  transform: translate(-50%,-50%); /*移动，根据X,Y轴*/
+				  text-align: center; /*字体水平居中*/
+				  font-size: 14px; /*字体大小*/
+				  color: #fff;
+				  text-decoration: none; /*字体增加装饰：去除下划线*/
+				  font-family: sans-serif; /*非衬线体*/
+				  box-sizing: border-box; /*盒模型大小规则*/
+				  background: linear-gradient(
+				    90deg,#f3d9f4, #ffc5df, #f4d392, #c7f4aa,#f4e284, #e9f4b0, #ffe5f6
+				      ); /*渐变背景*/
+				  border-radius: 60px; /*边框圆角*/
+				  background-size: 400%; /*背景大小*/
+				  z-index: 1; /*层叠定位*/
+				}
+				.buttontwo:hover{
+				  animation: animate 8s linear infinite alternate; /*动画: 名称 时间 线性 循环 播放完回退播放*/
+				}
+				@keyframes animate{
+				  0%{
+				    background-position: 0%; /*修改背景定位，实现渐变色炫光*/
+				  }
+				  50%{
+				    background-position: 100%;
+				  }
+				  100%{
+				    background-position: 0%;
+				  }
+				}
+				.buttontwo::before{ /*之前添加*/
+				  content: ''; /*内容*/
+				  position: absolute; /*绝对定位*/
+				  top:-5px; /*当设置对立的2个定位属性时，元素的大小将由对立的大小决定*/
+				  left: -5px;
+				  right: -5px;
+				  bottom: -5px; /*当设置对立的2个定位属性时，元素的大小将由对立的大小决定*/
+				  z-index: -1; 
+				  background: linear-gradient(
+				    90deg,#f3d9f4, #ffc5df,#f4d392, #c7f4aa,#f4e284, #e9f4b0, #ffe5f6);
+				  border-radius: 40px;
+				  background-size: 400%;
+				  filter: blur(20px); /*过渡：模糊*/
+				  opacity: 0; /*透明度*/
+				  transition: 1s; /*过渡时间*/
+				}
+				.buttontwo:hover::before{
+				  filter: blur(20px);
+				  opacity: 1;
+				  animation: animate 8s linear infinite; /*注意动画名称统一*/
+				}
+</style>
+<style media-"scrreen and (min-width:512px) and (max-width:1024px)">
+
+</style>
+</head>
+
+<body>
+<div class="title"> DUDU here!</div>
+<div class="email">
+        <form style="margin-top:50px;">
+            <input type="text">
+            <span class="span">
+                <label>用户名 :</label>
+            </span>
+        </form>
+    </div>
+<div class="password">
+	        <form style="margin-top:50px;">
+	            <input type="password">
+	            <span class="span">
+	                <label>密码:</label>
+	            </span>
+	        </form>
+	    </div>
+		<div>
+		<button class="button">Register</button>
+		</div>
+		<div>
+		<button class="buttontwo">logon</button>
+		</div>
+	<script>
+	 window.onload = function() {
+	            var span = document.getElementsByTagName('span');
+	            var input = document.getElementsByTagName('input');
+	            input[0].onfocus = function() {
+	                span[0].style.bottom = '30px';
+	            }
+	            input[0].onblur = function() {
+	                span[0].style.bottom = '0';
+	            }
+				input[1].onfocus = function() {
+				    span[1].style.bottom = '30px';
+				}
+				input[1].onblur = function() {
+				    span[1].style.bottom = '0';
+				}
+	        }
+	</script>
+</body>
+</html>
