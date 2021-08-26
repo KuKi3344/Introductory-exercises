@@ -3,21 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"> -->
     <title>登陆界面</title>
 	<style>
 	
 	body{
 		background-color:white;
+		width:1260px;
+		height:700px;
 	}
 	.title {
 	    margin: 50px auto;
 	    font-size: 54px;
+		height:70px;
+		width:500px;
 		position:absolute;
-		top:17%;
-		left:39%;
+		top:150px;
+		left:600px;
 	    font-weight: bold;
-	    text-align: center;
 	    text-transform:uppercase;
 	    color: transparent;
 	    background: linear-gradient(45deg,#ffd683,#ffff85, #bcff63, #6be587,#7adfb5, #7ddff4, #92bbd6, #ddedff);
@@ -34,12 +37,13 @@
 	}
 
 .email {
-            height: 500px;
-            width: 750px;
+            height: 150px;
+            width: 600px;
             margin: auto;
 			position:absolute;
-			left:38%;
-			top:33%;
+			left:570px;
+			top:250px;
+
         }
         
         .email form {
@@ -51,7 +55,7 @@
             height: 50px;
             width: 300px;
 			position:relative;
-			left:8%;
+			left:60px;
             margin: auto;
             border: 0;
             box-shadow: none;
@@ -71,6 +75,8 @@
             color: #87cac6;
             line-height: 50px;
             display: block;
+			position:relative;
+			left:0;
         }
         
         .email input:focus {
@@ -78,12 +84,12 @@
             border-bottom: 2px solid #9DF4C9;
         }	
 		.password {
-		            height: 500px;
-		            width: 750px;
+		          height: 150px;
+		          width: 600px;
 		            margin: auto;
 					position:absolute;
-					left:38%;
-					top:48%;
+					left:570px;
+					top:350px;
 		        }
 		        
 		        .password form {
@@ -95,7 +101,7 @@
 		            height: 50px;
 		            width: 300px;
 					position:relative;
-					left:8%;
+					left:60px;
 		            margin: auto;
 		            border: 0;
 		            box-shadow: none;
@@ -123,10 +129,10 @@
 		        }
 				.button{
 				  position: absolute; /*绝对对位*/
-				  top:70%;
-				  left: 42%; 
-				  width: 15vh;
-				  height: 5vh;
+				  top:520px;
+				  left:620px; 
+				  width: 120px;
+				  height: 40px;
 				  transform: translate(-50%,-50%); /*移动，根据X,Y轴*/
 				  text-align: center; /*字体水平居中*/
 				  font-size: 14px; /*字体大小*/
@@ -140,7 +146,7 @@
 				  border-radius: 60px; /*边框圆角*/
 				  background-size: 400%; /*背景大小*/
 				  z-index: 1; /*层叠定位*/
-				  border-color:#c5c5c5
+				  border-color:#c5c5c5;
 				}
 				.button:hover{
 				  animation: animate 8s linear infinite alternate; /*动画: 名称 时间 线性 循环 播放完回退播放*/
@@ -183,10 +189,10 @@
 				
 				.buttontwo {
 				  position: absolute; /*绝对对位*/
-				  top:70%;
-				  left: 60%; 
-				  width: 15vh;
-				  height: 5vh;
+				 top:520px;
+				 left:900px; 
+				 width: 120px;
+				 height: 40px;
 				  transform: translate(-50%,-50%); /*移动，根据X,Y轴*/
 				  text-align: center; /*字体水平居中*/
 				  font-size: 14px; /*字体大小*/
@@ -238,7 +244,7 @@
 				  animation: animate 8s linear infinite; /*注意动画名称统一*/
 				}
 </style>
-<style media-"scrreen and (min-width:512px) and (max-width:1024px)">
+<style media-"scrreen and (min-width:900px) and (max-width:1024px)">
 
 </style>
 </head>
