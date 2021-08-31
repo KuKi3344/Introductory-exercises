@@ -3,35 +3,23 @@
 	<head>
 		<meta charset="utf-8">
 		<title>LuLu花房(*￣▽￣*)ブ欢迎您</title>
-		<script src="./jquery-3.6.0.js"></script>
 		
 	<style>
 	
 	html {
 			  height: 100%;
 			}
-			body {
+			body 
+			{
 			 background-color:#FFFFFF;
 			 backgroud-position:center;
 			 background-size: cover;
 			 background-attachment: fixed;
 			 background-repeat: no-repeat;
 			 text-align: center;
-			
+			background:linear-gradient(#dcf8d0,#bce1ba,#a6d3a6,#8dc3a1);			
 			}
-			
-			.bk1{
-				position:absolute;
-				top:0;
-				left:0;
-				width:1535px;
-				height:753px;
-				background:linear-gradient(#dcf8d0,#bce1ba,#a6d3a6,#8dc3a1);
-				opacity:0.9;
-				padding:0;
-				border-color: #fefefe;
-				
-			}	
+
 			.box{
 				position:absolute;
 				background-color:#FFFFFF;
@@ -187,8 +175,6 @@
 		</head>
 	<body>
 		
-		<div class="bk1">		
-		</div>
 		<div class = "box">
 		<div class="Login">
 			<form action = "flower-3.html" method = "post" onsubmit="return verify()">
@@ -219,9 +205,9 @@
 	
 	
 	function verify(){
-				var uname = $("#name").value;
+				var uname = document.getElementById(name).value;
 
-				var pwd = $("#password").value;
+				var pwd = document.getElementById(password).value;
 			
 				return true;
 				
