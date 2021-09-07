@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
 		<style>
 		
@@ -9,16 +10,19 @@
 					height: 100%;
 				}
 		
-				body
-				{
-					background-color: #FFFFFF;
-					backgroud-position: center;
+				.bk{
+					background: linear-gradient(#ceebc5, #b6ddb4, #a5d4b1, #a9dfbd);
+					backgroud-position:center;
 					background-size: cover;
 					background-attachment: fixed;
 					background-repeat: no-repeat;
-					text-align: center;
-					background: linear-gradient(#d5f3cb, #b6ddb4, #b4e6b4, #b1eac6);
-				}
+					position:absolute;
+					top:0;
+					left:0;
+					width:1535px;
+					height:753px;
+					}
+						
 		
 				
 				.title {
@@ -247,16 +251,19 @@
 					text-align: center;
 					padding-bottom: 5px;
 				}
-		
+		@media (max-width:1535px) {
+		.bk{
+		  height:800px;
+		}
 		</style>
 	</head>
 	<body>
-
+<div class = "bk">
 		
 			<div class="title">
 				<ul>
 					<li><a href="flower-3.html">首页</a></li>
-					<li><a href="#">购买</a></li>
+					<li><a href="flower-4.html">购买</a></li>
 					<li><a href="#">买家秀</a></li>
 					<li><a href="#">花类介绍</a></li>
 					<li><a href="#">您的订单</a></li>
@@ -282,13 +289,14 @@
 	
 	<div class = "right">
 		<div class="box2">
+			<div class = "t1">Recommend:</div>
 			<div class = "card1">
 			<img class ="pic" src="https://tse2-mm.cn.bing.net/th/id/OIP-C.WyHvScjT2JV67pnFpsEZqwHaHa?w=206&h=206&c=7&r=0&o=5&dpr=1.25&pid=1.7">
-			<span>&emsp;Rose<br/>&emsp;Says:Madly in love</span>				
+			<span>&emsp;Rose<br/>&emsp;Madly in love</span>				
 			</div>
 			<div class = "card2">
 			<img class = "pic" src="https://tse1-mm.cn.bing.net/th/id/R-C.905802caa47f9ac88f4a10742aa18adf?rik=7nUkKxI48kQjjA&riu=http%3a%2f%2fimg.11665.com%2fimg_p5%2fi2%2f2614286500%2fTB2OIe7bKuSBuNjy1XcXXcYjFXa_!!2614286500.jpg&ehk=guJVXm5NSPnmD2bWCMmGSZOneqng1Sm8Pb7mJgotbU4%3d&risl=&pid=ImgRaw&r=0">
-			<span>&emsp;Lily<br/>Says:Purity, Elegance</span>
+			<span>&emsp;Lily<br/>Purity, Elegance</span>
 			</div>
 			<div class = "card3">
 			<img class="pic" src= "https://www.onecake.com/upload/20190506/4e8c672a5c2211abe777d3c2dd477e93.jpg">
@@ -306,12 +314,12 @@
 			<img class = "pic" src = "https://j.huazhile.com/XQ/24139040/D0A1B3FBBED5A_1.jpg">
 			<span>Little Daisy<br/>Secret love, happiness and parting</span>
 			</div>
-			<div class = "t1">Recommend:</div>
+		
 		</div>
 	
 		</div>
 			<div class="footer">Created by LULU @2021.</div>
-		
+		</div>
 
 	</body>
 </html>

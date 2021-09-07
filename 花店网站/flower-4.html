@@ -2,23 +2,26 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
 		<style>
 		html {
 					height: 100%;
 				}
 		
-				body
-				{	
+				.bk{
 					background: linear-gradient(#ceebc5, #b6ddb4, #a5d4b1, #a9dfbd);
-					background-color: #FFFFFF;
-					backgroud-position: center;
+					backgroud-position:center;
 					background-size: cover;
 					background-attachment: fixed;
 					background-repeat: no-repeat;
-					text-align: center;
-					
-				}		
+					position:absolute;
+					top:0;
+					left:0;
+					width:1535px;
+					height:753px;
+					}
+						
 				.card{
 					
 					background-color:#f4f4f4;
@@ -209,10 +212,15 @@
 			text-align: center;
 			padding-bottom: 5px;
 		}
+		
+		@media (max-width:1535px) {
+		.bk{
+		  height:800px;
+		}
 		</style>
 	</head>
 	<body>
-		
+		<div class = "bk">
 		
 				<div class="title">
 					<ul>
@@ -259,9 +267,10 @@
 			</div>
 			</div>
 			</div>
+			
 	
 	<div class = "footer">Created by LULU @2021.</div>
-	
+	</div>
 	<script>
 	
 	function bt(){

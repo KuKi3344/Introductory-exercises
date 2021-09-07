@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LuLu花房(*￣▽￣*)ブ欢迎您</title>
 		
 	<style>
@@ -9,17 +10,19 @@
 	html {
 			  height: 100%;
 			}
-			body 
-			{
-			 background-color:#FFFFFF;
-			 backgroud-position:center;
-			 background-size: cover;
-			 background-attachment: fixed;
-			 background-repeat: no-repeat;
-			 text-align: center;
-			background:linear-gradient(#dcf8d0,#bce1ba,#a6d3a6,#8dc3a1);			
+			
+			.bk{
+				background: linear-gradient(#ceebc5, #b6ddb4, #a5d4b1, #a9dfbd);
+				backgroud-position:center;
+				background-size: cover;
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				position:absolute;
+				top:0;
+				left:0;
+				width:1535px;
+				height:753px;
 			}
-
 			.box{
 				position:absolute;
 				background-color:#FFFFFF;
@@ -171,10 +174,17 @@
 			  padding-bottom: 5px;
 			}
 	
+	
+		@media (max-width:1535px) {
+	  .bk{
+	    height:800px;
+	  }
+	}
 	</style>
 		</head>
 	<body>
-		
+		<div class = "bk">
+			
 		<div class = "box">
 		<div class="Login">
 			<form action = "flower-3.html" method = "post" onsubmit="return verify()">
@@ -201,6 +211,7 @@
 		<img class="f4" src="https://pics.prcm.jp/fcd56c54d1c20/81169762/png/81169762_220x220.png"/>
 	</div>
 		<div class="footer">Created by LULU @2021.</div>	
+		</div>
 <script>
 	
 	
