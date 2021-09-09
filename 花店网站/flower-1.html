@@ -12,7 +12,7 @@
 			}
 			
 			.bk{
-				background: linear-gradient(#ceebc5, #b6ddb4, #a5d4b1, #a9dfbd);
+				background: linear-gradient(-180deg, #caeeda 0%, #e5f0e9 100%);
 				backgroud-position:center;
 				background-size: cover;
 				background-attachment: fixed;
@@ -33,7 +33,14 @@
 				box-shadow: 3px -2px 5px 2px #f4f4f4,-3px 2px 5px 2px #f4f4f4,3px -2px 5px 2px #fafafa,-3px 2px 5px 2px #fafafa;
 				border-radius:10px;
 			}
-				
+			.head{
+				position:absolute;
+				left:185px;
+				top:70px;
+				height:70px;
+				width:70px;
+				border-radius:50%;
+			}
 			
 			form {
 				position:absolute;
@@ -49,6 +56,7 @@
 			  display: block;
 			  margin-bottom:10px;
 			  color: #478349;
+			  text-align: center;
 			}
 			
 			input {
@@ -74,43 +82,45 @@
 			}
 			.bt1 {
 			  position:absolute;
-			  left:70px;
-			  top:320px;
-			  padding: 0.5rem;
-			  border: 0;
-			  border-radius: 60px;
-			  width:100px;
-			  background-color: #a4ee81;
-			  color: #fff;
-			  margin: 2rem 0 0 auto;
-			}
-			
-			.bt2 {
-			  position:absolute;
 			  left:270px;
 			  top:320px;
 			  padding: 0.5rem;
 			  border: 0;
 			  border-radius: 60px;
 			  width:100px;
-			  background-color: #a4ee81;
+			  background-color: #c9f9b5;
+			  color: #ffffff;
+			  margin: 2rem 0 0 auto;
+			}
+			
+			.bt2 {
+			  position:absolute;
+			  left:70px;
+			  top:320px;
+			  padding: 0.5rem;
+			  border: 0;
+			  border-radius: 60px;
+			  width:100px;
+			  background-color: #c9f9b5;
 			  color: #fff;
 			  margin: 2rem 0 0 auto;
+			  
 			}
 			
 		
 			button:hover{
-				background: #aeff70;
+				background: #cbffb8;
 				color: #fff;
 				border-radius: 60px;
-				box-shadow: 0 0 5px  #aeff70,
-				            0 0 25px  #aeff70,
-				            0 0 50px  #aeff70,
-				            0 0 100px  #aeff70;
+				box-shadow: 0 0 5px  #c9f9b5,
+				            0 0 25px #c9f9b5,
+				            0 0 50px  #c9f9b5,
+				            0 0 100px  #c9f9b5;
 			}
 			button:focus{
 				outline:0;
 			}
+			
 			.f1{
 				width:120px;
 				height:110px;
@@ -167,7 +177,7 @@
 				position:absolute;
 				top:320px;
 				left:80px;
-				color:#ee7173;
+				color:#ee8183;
 				opacity:0.9;
 				
 			}
@@ -193,7 +203,7 @@
 		</head>
 	<body>
 		<div class = "bk">
-			
+			<div id="particles-js"></div>
 		<div class = "box" id="container">
 		<div class="Login">
 			<form>
@@ -208,7 +218,8 @@
 			</form>		
 			<button class="bt1" type="button" @click="doSubmit">登录</button>
 			<button class="bt2" type="button" onclick="javascript:window.location.href='flower-2.html'">注册</button>
-		<div id="tips">{{tips}}</div>		
+		<div id="tips">{{tips}}</div>	
+		<img class = "head" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimages.669pic.com%2Felement_pic%2F69%2F38%2F96%2F84%2Fb7cc6d3fa01cb3cd910e0c5853a428d4.jpg&refer=http%3A%2F%2Fimages.669pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633782820&t=76224ca76d017a4ce1ffea7ccf1914de.png/">
 		</div>
 	
 		</div>
@@ -270,8 +281,9 @@
 	});
 	
 </script>
-
+	<script src="./particles.js"></script>
+	<script src="./app.js"></script></div>
 	
 	</body>
-	
+
 </html>

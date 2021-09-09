@@ -10,7 +10,7 @@
 				  height: 100%;
 				}
 				.bk{
-					background: linear-gradient(#ceebc5, #b6ddb4, #a5d4b1, #a9dfbd);
+					background: linear-gradient(-180deg, #cdf2de 0%, #ffffff 100%);
 					backgroud-position:center;
 					background-size: cover;
 					background-attachment: fixed;
@@ -25,18 +25,25 @@
 				.box{
 					position:absolute;
 					background-color:#FFFFFF;
-					top:120px;
+					top:100px;
 					left:500px;
 					width: 500px;
 					height: 550px;
-					box-shadow: 3px -2px 5px 2px #f4f4f4,-3px 2px 5px 2px #f4f4f4,3px -2px 5px 2px #fafafa,-3px 2px 5px 2px #fafafa;
+					box-shadow: 3px -2px 5px 2px #fafafa,-3px 2px 5px 2px #fafafa,3px -2px 5px 2px #fafafa,-3px 2px 5px 2px #fafafa;
 					border-radius:10px;
 				}
-					
+				.head{
+					position:absolute;
+					left:210px;
+					top:70px;
+					height:70px;
+					width:70px;
+					border-radius:50%;
+				}	
 				
 				form {
 					position:absolute;
-					left:100px;
+					left:90px;
 					top:120px;
 					margin: auto;
 					position:absolute;
@@ -74,12 +81,12 @@
 				.bt1 {
 				  position:absolute;
 				  left:10px;
-				  top:310px;
+				  top:330px;
 				  padding: 0.5rem;
 				  border: 0;
 				  border-radius: 60px;
 				  width:100px;
-				  background-color: #a4ee81;
+				  background-color: #c9f9b5;
 				  color: #fff;
 				  margin: 2rem 0 0 auto;
 				}
@@ -87,25 +94,25 @@
 				.bt2 {
 				  position:absolute;
 				  left:200px;
-				  top:310px;
+				  top:330px;
 				  padding: 0.5rem;
 				  border: 0;
 				  border-radius: 60px;
 				  width:100px;
-				  background-color: #a4ee81;
+				  background-color: #c9f9b5;
 				  color: #fff;
 				  margin: 2rem 0 0 auto;
 				}
 				
 			
 				button:hover{
-					background: #aeff70;
+					background: #cbffb8;
 					color: #fff;
 					border-radius: 60px;
-					box-shadow: 0 0 5px  #aeff70,
-					            0 0 25px  #aeff70,
-					            0 0 50px  #aeff70,
-					            0 0 100px  #aeff70;
+					box-shadow: 0 0 5px  #c9f9b5,
+					            0 0 25px #c9f9b5,
+					            0 0 50px  #c9f9b5,
+					            0 0 100px  #c9f9b5;
 				}
 				button:focus{
 					outline:0;
@@ -166,6 +173,7 @@
 		<div class = "bk">
 			
 		<div class = "box">
+		<img class = "head" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimages.669pic.com%2Felement_pic%2F69%2F38%2F96%2F84%2Fb7cc6d3fa01cb3cd910e0c5853a428d4.jpg&refer=http%3A%2F%2Fimages.669pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633782820&t=76224ca76d017a4ce1ffea7ccf1914de.png/">
 		<div class="Regist">
 			<form action = "flower-1.html" method = "post" onsubmit="return verify()">
 			<label for="name">Name</label>
