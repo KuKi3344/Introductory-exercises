@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">		
 		<title>LuLu花房(*￣▽￣*)ブ欢迎您</title>
-		
+		<script type="text/javascript" src="static/js/vue.js" ></script>
 	<style>
 	
 	html {
@@ -74,8 +74,8 @@
 			}
 			.bt1 {
 			  position:absolute;
-			  left:10px;
-			  top:180px;
+			  left:70px;
+			  top:320px;
 			  padding: 0.5rem;
 			  border: 0;
 			  border-radius: 60px;
@@ -87,8 +87,8 @@
 			
 			.bt2 {
 			  position:absolute;
-			  left:200px;
-			  top:180px;
+			  left:270px;
+			  top:320px;
 			  padding: 0.5rem;
 			  border: 0;
 			  border-radius: 60px;
@@ -162,6 +162,15 @@
 				left:880px;
 				top:150px;
 			}
+			#tips{
+				font-size:12px;
+				position:absolute;
+				top:320px;
+				left:80px;
+				color:#ee7173;
+				opacity:0.9;
+				
+			}
 			.footer {
 			  width: 200px;
 			  color: white;
@@ -185,18 +194,21 @@
 	<body>
 		<div class = "bk">
 			
-		<div class = "box">
+		<div class = "box" id="container">
 		<div class="Login">
-			<form action = "flower-3.html" method = "post" onsubmit="return verify()">
-			<label for="name">Name</label>
-			<input type="text" placeholder="UserName" id="name" name="name">
-
-    
+			<form>
+			<label for="name">Username</label>
+			
+			<input type="text" v-model="name" placeholder="请输入用户名" @keyup="checkInfo">   
+			
 			<label for="password">Password</label>
-			<input type="password"  placeholder="Password" id="password" name="password">
-		<button class="bt1" type="button" onclick="bt1()">Regist</button>	
-		<button class="bt2" type="submit" onclick="bt2()">Login</button>
-			</form>			
+			
+			<input type="password" v-model="password" placeholder="请输入密码" @keyup="checkInfo">
+				
+			</form>		
+			<button class="bt1" type="button" @click="doSubmit">登录</button>
+			<button class="bt2" type="button" onclick="javascript:window.location.href='flower-2.html'">注册</button>
+		<div id="tips">{{tips}}</div>		
 		</div>
 	
 		</div>
@@ -204,6 +216,8 @@
 		<p class = "p1">LuLu </p>
 		<p class = "p2">Flower</p>
 		</div>
+		
+		
 		<div class="picture">
 		<img class="f1" src="https://pics.prcm.jp/3a638fefa1001/75420560/png/75420560_220x200.png"/>
 		<img class="f2" src="https://www.haoy99.com/FileUpload/2018-11/7-60Zhang_Bei_Jing_Tou-102413_132.png"/>
@@ -212,25 +226,49 @@
 	</div>
 		<div class="footer">Created by LULU @2021.</div>	
 		</div>
-<script>
+<script type="text/javascript">
 	
+	var vm = new Vue({
+		el:"#container",
+		data:{
+			name:"",
+			password:"",
+			tips:"",
+			isRight:false,
+		},
+		methods:{
+			checkInfo:function(){
+				if(vm.name == ""){
+					vm.tips = "请输入帐号！";
+					vm.isRight = false;
+				}else if(vm.name.length<8 || vm.name.length>15){
+					vm.tips = "账号长度必须为8-15个字符！";
+					vm.isRight = false;
+				}else{
+					//账号合法，校验密码
+					if(vm.password == ""){
+						vm.tips = "请输入密码！";
+						vm.isRight = false;
+					}else if(vm.password.length<6 || vm.password.length>16){
+						vm.tips = "密码长度必须为6-16个字符！";
+						vm.isRight = false;
+					}else{
+						vm.tips ="";
+						vm.isRight = true;
+					}
+				}
+			},
+			doSubmit:function(){
+				if(vm.isRight){
+							alert('登陆成功！');
+							window.location.href = "flower-3.html";			
+				}else{
+					vm.tips = "请正确输入帐号和密码！";
+				}
+			}
+		}
+	});
 	
-	function verify(){
-				var uname = document.getElementById(name).value;
-
-				var pwd = document.getElementById(password).value;
-			
-				return true;
-				
-	}
-	function bt1(){
-		alert("即将跳转至注册界面！")
-		window.location.href="flower-2.html";
-	}
-	
-	function bt2(){
-		alert("登录成功！即将跳转至主页...");
-	}
 </script>
 
 	
