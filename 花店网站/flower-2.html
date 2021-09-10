@@ -277,7 +277,7 @@
 								//3.校验密码
 								var pwd1=/^(\d{8,16})|([a-z]{8,16})|([A-Z])$/;
 								var pwd2=/^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{8,16}$/;
-								var pwd3=/(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{8,16}/;
+								var pwd3= /(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{8,16}/;
 								if (vm.user.password == "") {
 									vm.tips = "请输入密码！";
 									vm.strtips="";
@@ -292,9 +292,9 @@
 										vm.strtips="";
 										vm.isRight = false;	
 											if (pwd2.test(vm.user.password)){
-												vm.strtips = "密码强度通过 ";
+												vm.strtips = "密码强度:中 ";
 												if(pwd3.test(vm.user.password)){
-													vm.strtips = "密码强度通过";													
+													vm.strtips = "密码强度:强";													
 												}
 												if (vm.user.conpassword == "") {
 													vm.tips="请输入确认密码！"
@@ -309,7 +309,11 @@
 											}
 										}										
 									else if (pwd2.test(vm.user.password)){
-										vm.strtips = "密码强度通过 ";
+										vm.strtips = "密码强度:中 ";
+										if(pwd3.test(vm.user.password)){
+											vm.strtips = "密码强度:强";
+											
+												}	
 										if (vm.user.conpassword == "") {
 											vm.tips="请输入确认密码！"
 											vm.isRight = false;										
@@ -320,20 +324,7 @@
 											vm.tips = "";
 											vm.isRight = true;
 										}
-										}
-										else if(pwd3.test(vm.user.password)){
-											vm.strtips = "密码强度通过";
-											if (vm.user.conpassword == "") {
-												vm.tips="请输入确认密码！"
-												vm.isRight = false;										
-												} else if (vm.user.conpassword != vm.user.password) {
-												vm.tips = "两次密码输入不一致！";
-												vm.isRight = false;
-											} else {
-												vm.tips = "";
-												vm.isRight = true;
-											}
-												}						
+										}				
 									}
 								}
 								
