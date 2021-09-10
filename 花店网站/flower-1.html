@@ -280,8 +280,8 @@
 							if (vm.password == "") {
 								vm.tips = "请输入密码！";
 								vm.isRight = false;
-							} else if (vm.password.length < 6 || vm.password.length > 16) {
-								vm.tips = "密码长度必须为6-16个字符！";
+							} else if (vm.password.length < 8 || vm.password.length > 16) {
+								vm.tips = "密码长度必须为8-16个字符！";
 								vm.isRight = false;
 							} else {
 								vm.tips = "";
