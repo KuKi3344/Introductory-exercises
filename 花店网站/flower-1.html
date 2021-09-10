@@ -2,288 +2,307 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">		
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LuLu花房(*￣▽￣*)ブ欢迎您</title>
-		<script type="text/javascript" src="static/js/vue.js" ></script>
-	<style>
-	
-	html {
-			  height: 100%;
+		<script type="text/javascript" src="./vue.js"></script>
+		<style>
+			html {
+				height: 100%;
 			}
-			
-			.bk{
-				background: linear-gradient(-180deg, #caeeda 0%, #e5f0e9 100%);
-				backgroud-position:center;
+
+			.bk {
+				background: linear-gradient(-180deg, #caeeda 0%, #f4fff8 100%);
+				backgroud-position: center;
 				background-size: cover;
 				background-attachment: fixed;
 				background-repeat: no-repeat;
-				position:absolute;
-				top:0;
-				left:0;
-				width:1535px;
-				height:753px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1536px;
+				height: 753px;
 			}
-			.box{
-				position:absolute;
-				background-color:#FFFFFF;
-				top:150px;
-				left:550px;
+
+			.box {
+				position: absolute;
+				background-color: #FFFFFF;
+				top: 150px;
+				left: 550px;
 				width: 450px;
 				height: 450px;
-				box-shadow: 3px -2px 5px 2px #f4f4f4,-3px 2px 5px 2px #f4f4f4,3px -2px 5px 2px #fafafa,-3px 2px 5px 2px #fafafa;
-				border-radius:10px;
+				box-shadow: 3px -2px 5px 2px #f4f4f4, -3px 2px 5px 2px #f4f4f4, 3px -2px 5px 2px #fafafa, -3px 2px 5px 2px #fafafa;
+				border-radius: 10px;
 			}
-			.head{
-				position:absolute;
-				left:185px;
-				top:70px;
-				height:70px;
-				width:70px;
-				border-radius:50%;
+
+			.head {
+				position: absolute;
+				left: 185px;
+				top: 70px;
+				height: 70px;
+				width: 70px;
+				border-radius: 50%;
 			}
-			
+
 			form {
-				position:absolute;
-				left:70px;
-				top:150px;
+				position: absolute;
+				left: 70px;
+				top: 150px;
 				margin: auto;
-				position:absolute;
+				position: absolute;
 				width: 100%;
 				max-width: 300px;
 			}
-			
+
 			label {
-			  display: block;
-			  margin-bottom:10px;
-			  color: #478349;
-			  text-align: center;
+				display: block;
+				margin-bottom: 10px;
+				color: #478349;
+				text-align: center;
 			}
-			
+
 			input {
-			  display: block;
-			  width: 100%;
-			  margin: 0 0 1rem 0;
-			  padding: 0.5rem;
-			  font-size: 1rem;
-			  border: 0;
-			  border-radius: 0.125rem 0.25rem;
-			  background-color: hsl(-1, 0%, 97%);
+				display: block;
+				width: 100%;
+				margin: 0 0 1rem 0;
+				padding: 0.5rem;
+				font-size: 1rem;
+				border: 0;
+				border-radius: 0.125rem 0.25rem;
+				background-color: hsl(-1, 0%, 97%);
 			}
-			input:focus{
-			  outline: 0;
-			  box-shadow:1px 1px 1px 1px #b4d5bf;
+
+			input:focus {
+				outline: 0;
+				box-shadow: 1px 1px 1px 1px #b4d5bf;
 			}
+
 			input::-webkit-input-placeholder {
-				color:#c3cccc;
-				
+				color: #c3cccc;
+
 			}
-			input:focus::-webkit-input-placeholder{
-				color:#FFFFFF;
+
+			input:focus::-webkit-input-placeholder {
+				color: #FFFFFF;
 			}
+
 			.bt1 {
-			  position:absolute;
-			  left:270px;
-			  top:320px;
-			  padding: 0.5rem;
-			  border: 0;
-			  border-radius: 60px;
-			  width:100px;
-			  background-color: #c9f9b5;
-			  color: #ffffff;
-			  margin: 2rem 0 0 auto;
+				position: absolute;
+				left: 270px;
+				top: 320px;
+				padding: 0.5rem;
+				border: 0;
+				border-radius: 60px;
+				width: 100px;
+				background-color: #c9f9b5;
+				color: #ffffff;
+				margin: 2rem 0 0 auto;
 			}
-			
+
 			.bt2 {
-			  position:absolute;
-			  left:70px;
-			  top:320px;
-			  padding: 0.5rem;
-			  border: 0;
-			  border-radius: 60px;
-			  width:100px;
-			  background-color: #c9f9b5;
-			  color: #fff;
-			  margin: 2rem 0 0 auto;
-			  
+				position: absolute;
+				left: 70px;
+				top: 320px;
+				padding: 0.5rem;
+				border: 0;
+				border-radius: 60px;
+				width: 100px;
+				background-color: #c9f9b5;
+				color: #fff;
+				margin: 2rem 0 0 auto;
+
 			}
-			
-		
-			button:hover{
+
+
+			button:hover {
 				background: #cbffb8;
 				color: #fff;
 				border-radius: 60px;
-				box-shadow: 0 0 5px  #c9f9b5,
-				            0 0 25px #c9f9b5,
-				            0 0 50px  #c9f9b5,
-				            0 0 100px  #c9f9b5;
+				box-shadow: 0 0 5px #c9f9b5,
+					0 0 25px #c9f9b5,
+					0 0 50px #c9f9b5,
+					0 0 100px #c9f9b5;
 			}
-			button:focus{
-				outline:0;
+
+			button:focus {
+				outline: 0;
 			}
-			
-			.f1{
-				width:120px;
-				height:110px;
-				top:530px;
-				left:500px;
-				position:absolute;
-			}
-		
-			.f2{
-				width:150px;
-				height:110px;
-				top:120px;
-				left:520px;
-				position:absolute;
-			}
-			.f3{
-				width:200px;
-				height:100px;
-				top:150px;
-				left:520px;
-				position:absolute;
-	
-			}
-			.f4{
-				width:50px;
-				height:50px;
-				top:150px;
-				left:900px;
-				position:absolute;
-				opacity: 0.9;
-	
-			}
-	
-			.txt{
-				font:italic 1em Georgia, serif;
-				font-size:35px;
-				color: #e8c4ab;
-				text-shadow:8px 8px 8px #eeeec6;
-			}
-			.p1{
-				position:absolute;
-				left:825px;
-				top:100px;
-				
-				
-			}
-			.p2{
+
+			.f1 {
+				width: 120px;
+				height: 110px;
+				top: 530px;
+				left: 500px;
 				position: absolute;
-				left:880px;
-				top:150px;
 			}
-			#tips{
-				font-size:12px;
-				position:absolute;
-				top:320px;
-				left:80px;
-				color:#ee8183;
-				opacity:0.9;
-				
+
+			.f2 {
+				width: 150px;
+				height: 110px;
+				top: 120px;
+				left: 520px;
+				position: absolute;
 			}
+
+			.f3 {
+				width: 200px;
+				height: 100px;
+				top: 150px;
+				left: 520px;
+				position: absolute;
+
+			}
+
+			.f4 {
+				width: 50px;
+				height: 50px;
+				top: 150px;
+				left: 900px;
+				position: absolute;
+				opacity: 0.9;
+
+			}
+
+			.txt {
+				font: italic 1em Georgia, serif;
+				font-size: 35px;
+				color: #e8c4ab;
+				text-shadow: 8px 8px 8px #eeeec6;
+			}
+
+			.p1 {
+				position: absolute;
+				left: 825px;
+				top: 100px;
+
+
+			}
+
+			.p2 {
+				position: absolute;
+				left: 880px;
+				top: 150px;
+			}
+
+			#tips {
+				font-size: 12px;
+				position: absolute;
+				top: 320px;
+				left: 80px;
+				color: #ee8183;
+				opacity: 0.9;
+
+			}
+
+			#particles-js {
+				position: absolute;
+				width: 1530px;
+				height: 752px;
+			}
+
 			.footer {
-			  width: 200px;
-			  color: white;
-			  font-size: 15px;
-			  margin-left: 5px;
-			  position: absolute;
-			  left:650px;
-			  bottom:10px;
-			  text-align: center;
-			  padding-bottom: 5px;
+				width: 200px;
+				color: white;
+				font-size: 15px;
+				margin-left: 5px;
+				position: absolute;
+				left: 650px;
+				bottom: 10px;
+				text-align: center;
+				padding-bottom: 5px;
 			}
-	
-	
-		@media (max-width:1535px) {
-	  .bk{
-	    height:800px;
-	  }
-	}
-	</style>
-		</head>
+
+
+			@media (min-height:800px) {
+				.bk {
+					height: 1800px;
+				}
+			}
+		</style>
+	</head>
 	<body>
-		<div class = "bk">
+		<div class="bk">
 			<div id="particles-js"></div>
-		<div class = "box" id="container">
-		<div class="Login">
-			<form>
-			<label for="name">Username</label>
-			
-			<input type="text" v-model="name" placeholder="请输入用户名" @keyup="checkInfo">   
-			
-			<label for="password">Password</label>
-			
-			<input type="password" v-model="password" placeholder="请输入密码" @keyup="checkInfo">
-				
-			</form>		
-			<button class="bt1" type="button" @click="doSubmit">登录</button>
-			<button class="bt2" type="button" onclick="javascript:window.location.href='flower-2.html'">注册</button>
-		<div id="tips">{{tips}}</div>	
-		<img class = "head" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimages.669pic.com%2Felement_pic%2F69%2F38%2F96%2F84%2Fb7cc6d3fa01cb3cd910e0c5853a428d4.jpg&refer=http%3A%2F%2Fimages.669pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633782820&t=76224ca76d017a4ce1ffea7ccf1914de.png/">
+			<div class="box" id="container">
+				<div class="Login">
+					<form>
+						<label for="name">Username</label>
+
+						<input type="text" v-model="name" placeholder="请输入用户名" @keyup="checkInfo">
+
+						<label for="password">Password</label>
+
+						<input type="password" v-model="password" placeholder="请输入密码" @keyup="checkInfo">
+
+					</form>
+					<button class="bt1" type="button" @click="doSubmit">登录</button>
+					<button class="bt2" type="button"
+						onclick="javascript:window.location.href='flower-2.html'">注册</button>
+					<div id="tips">{{tips}}</div>
+					<img class="head"
+						src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimages.669pic.com%2Felement_pic%2F69%2F38%2F96%2F84%2Fb7cc6d3fa01cb3cd910e0c5853a428d4.jpg&refer=http%3A%2F%2Fimages.669pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633782820&t=76224ca76d017a4ce1ffea7ccf1914de.png/">
+				</div>
+
+			</div>
+			<div class="txt">
+				<p class="p1">LuLu </p>
+				<p class="p2">Flower</p>
+			</div>
+
+
+			<div class="picture">
+				<img class="f1" src="https://pics.prcm.jp/3a638fefa1001/75420560/png/75420560_220x200.png" />
+				<img class="f2" src="https://www.haoy99.com/FileUpload/2018-11/7-60Zhang_Bei_Jing_Tou-102413_132.png" />
+				<img class="f3" src="https://pics.prcm.jp/3a638fefa1001/75420559/png/75420559_220x113.png" />
+				<img class="f4" src="https://pics.prcm.jp/fcd56c54d1c20/81169762/png/81169762_220x220.png" />
+			</div>
+			<div class="footer">Created by LULU @2021.</div>
 		</div>
-	
-		</div>
-		<div class = "txt">
-		<p class = "p1">LuLu </p>
-		<p class = "p2">Flower</p>
-		</div>
-		
-		
-		<div class="picture">
-		<img class="f1" src="https://pics.prcm.jp/3a638fefa1001/75420560/png/75420560_220x200.png"/>
-		<img class="f2" src="https://www.haoy99.com/FileUpload/2018-11/7-60Zhang_Bei_Jing_Tou-102413_132.png"/>
-		<img class="f3" src="https://pics.prcm.jp/3a638fefa1001/75420559/png/75420559_220x113.png"/>
-		<img class="f4" src="https://pics.prcm.jp/fcd56c54d1c20/81169762/png/81169762_220x220.png"/>
-	</div>
-		<div class="footer">Created by LULU @2021.</div>	
-		</div>
-<script type="text/javascript">
-	
-	var vm = new Vue({
-		el:"#container",
-		data:{
-			name:"",
-			password:"",
-			tips:"",
-			isRight:false,
-		},
-		methods:{
-			checkInfo:function(){
-				if(vm.name == ""){
-					vm.tips = "请输入帐号！";
-					vm.isRight = false;
-				}else if(vm.name.length<8 || vm.name.length>15){
-					vm.tips = "账号长度必须为8-15个字符！";
-					vm.isRight = false;
-				}else{
-					//账号合法，校验密码
-					if(vm.password == ""){
-						vm.tips = "请输入密码！";
-						vm.isRight = false;
-					}else if(vm.password.length<6 || vm.password.length>16){
-						vm.tips = "密码长度必须为6-16个字符！";
-						vm.isRight = false;
-					}else{
-						vm.tips ="";
-						vm.isRight = true;
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: "#container",
+				data: {
+					name: "",
+					password: "",
+					tips: "",
+					isRight: false,
+				},
+				methods: {
+					checkInfo: function() {
+						if (vm.name == "") {
+							vm.tips = "请输入帐号！";
+							vm.isRight = false;
+						} else if (vm.name.length < 8 || vm.name.length > 15) {
+							vm.tips = "账号长度必须为8-15个字符！";
+							vm.isRight = false;
+						} else {
+							//账号合法，校验密码
+							if (vm.password == "") {
+								vm.tips = "请输入密码！";
+								vm.isRight = false;
+							} else if (vm.password.length < 6 || vm.password.length > 16) {
+								vm.tips = "密码长度必须为6-16个字符！";
+								vm.isRight = false;
+							} else {
+								vm.tips = "";
+								vm.isRight = true;
+							}
+						}
+					},
+					doSubmit: function() {
+						if (vm.isRight) {
+							alert('登陆成功！');
+							window.location.href = "flower-3.html";
+						} else {
+							vm.tips = "请正确输入帐号和密码！";
+						}
 					}
 				}
-			},
-			doSubmit:function(){
-				if(vm.isRight){
-							alert('登陆成功！');
-							window.location.href = "flower-3.html";			
-				}else{
-					vm.tips = "请正确输入帐号和密码！";
-				}
-			}
-		}
-	});
-	
-</script>
-	<script src="./particles.js"></script>
-	<script src="./app.js"></script></div>
-	
+			});
+		</script>
+		<script src="./particles.js"></script>
+		<script src="./app.js"></script>
+
 	</body>
 
 </html>
