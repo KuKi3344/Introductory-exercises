@@ -5,7 +5,11 @@
 		<meta name="viewport"
 			content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LuLu花房(*￣▽￣*)ブ欢迎您</title>
-		<script type="text/javascript" src="./vue.js"></script>
+		<script type="text/javascript" src="./js/vue.js"></script>
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.cookie.min.js" ></script>
+		<script type="text/javascript" src="./js/cookie_utils.js" ></script>
+		
 		<style>
 			html {
 				height: 100%;
@@ -262,7 +266,7 @@
 			var vm = new Vue({
 				el: "#container",
 				data: {
-					name: "",
+					name:"",
 					password: "",
 					tips: "",
 					isRight: false,
@@ -291,6 +295,12 @@
 					},
 					doSubmit: function() {
 						if (vm.isRight) {
+							vm.tips = "yes";
+							console.log(vm.tips);
+							console.log(vm.name);
+							setCookieValue("token",vm.tips);
+							setCookieValue("username",vm.name);
+							console.log(getCookieValue("username"));
 							alert('登陆成功！');
 							window.location.href = "flower-3.html";
 						} else {
@@ -300,8 +310,8 @@
 				}
 			});
 		</script>
-		<script src="./particles.js"></script>
-		<script src="./app.js"></script>
+		<script src="./js/particles.js"></script>
+		<script src="./js/app.js"></script>
 
 	</body>
 

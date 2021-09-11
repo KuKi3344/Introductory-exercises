@@ -4,7 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
-		<script type="text/javascript" src="./vue.js"></script>
+		<script type="text/javascript" src="./js/vue.js"></script>
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.cookie.min.js"></script>
+		<script type="text/javascript" src="./js/cookie_utils.js" ></script>
 		<style>
 		
 		html {
@@ -12,7 +15,7 @@
 				}
 		
 				.bk{
-					background: linear-gradient(-180deg, #cdf2de 0%, #ffffff 100%);
+					background: linear-gradient(-180deg, #d9f5e2 0%, #ffffff 100%);
 					backgroud-position:center;
 					background-size: cover;
 					background-attachment: fixed;
@@ -81,6 +84,33 @@
 					background-color: #83b19c;
 					border-radius: 8px;
 				}
+				.tips{
+					background-color:#fff;
+					border-radius:5px;
+					position:fixed;
+					top:180px;
+					left:0;
+					height:150px;
+					width:35px;
+					color:#6c966c;
+					font-size:14px;
+					text-align:center;
+					padding:5px;
+					writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/  
+					writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/ 
+					box-shadow:1px -1px 1px 0px #bcf5ac,-1px 1px 1px 0px #bcf5ac,1px -1px 1px 0px #bcf5ac,-1px 1px 1px 0px #bcf5ac;
+
+				}
+				#t1{
+					color:#70c676;
+				}
+				#t1:hover{
+					color:#97ca9a;
+					text-shadow:0 0 5px #c9f9b5,
+					0 0 10px #c9f9b5,
+					0 0 20px #c9f9b5,
+					0 0 40px #c9f9b5;
+				}
 				
 				.symbol{
 					font:italic 1em Georgia, serif;
@@ -145,120 +175,6 @@
 					text-decoration: underline 2px dashed #ffdedf;
 					
 				}
-				.box2{
-					background-color: #feffef;
-					position:absolute;
-					left:600px;
-					top:80px;
-					width:850px;
-					height:620px;
-					border-radius:10px;
-					box-shadow:1px -1px 5px 2px #f5f5f5,-1px 1px 5px 2px #f5f5f5,1px -1px 5px 2px #fafafa,-1px 1px 5px 2px #fafafa;
-				}
-						
-				.card1{
-					background-color: #FFFFFF;
-					box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
-					position:absolute;
-					left:50px;
-					top:50px;				
-					width:200px;
-					height:270px;			
-				}
-				
-				
-				.card2{
-					background-color: #FFFFFF;
-					box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
-					position:absolute;
-					left:50px;
-					top:340px;				
-					width:200px;
-					height:270px;				
-				}
-				
-				.card3{
-					background-color: #FFFFFF;
-					box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
-					position:absolute;
-					left:325px;
-					top:50px;				
-					width:200px;
-					height:270px;				
-				}
-				.card4{
-					background-color: #FFFFFF;
-					box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
-					position:absolute;
-					left:325px;
-					top:340px;				
-					width:200px;
-					height:270px;			
-				}
-				.card5{
-					background-color: #FFFFFF;
-					box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
-					position:absolute;
-					left:600px;
-					top:50px;				
-					width:200px;
-					height:270px;				
-				}
-				.card6{
-					background-color: #FFFFFF;
-					box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
-					position:absolute;
-					left:600px;
-					top:340px;				
-					width:200px;
-					height:270px;				
-				}
-				.pic{
-					position:absolute;
-					top:3px;
-					left:10px;
-					width:180px;
-					height:200px;
-					border-radius: 10px;
-				}
-				.box2 span{
-					font-size:13px;
-					color: #90c277;
-					text-shadow:1px 1px 1px #eaeaea;
-					position:absolute;
-					top:205px;
-					left:20px;
-					border-color:#ffcaca;
-				}
-				.t1{
-					font:italic 1em Georgia, serif;
-					font-size:25px;
-					color: #ffb09c;
-					text-shadow:3px 3px 3px #eaeaea;
-					position:absolute;
-					top:7px;
-					left:20px;
-					border-color:#ffcaca;
-		
-				}
-						button{
-							position:absolute;
-							top:240px;
-							left:140px;
-							width:45px;
-							height:23px;
-							border-radius:5px;
-							background-color:#8fc8fd;
-							color:white;
-							font-size:13px;
-							border-width:1px;
-							border-color:#7bc4cf;
-						}
-						button:hover{
-							background-color:white;
-							border-color: #9acfcc;
-							color:#8ecfb2;
-						}
 				.footer {
 					width: 200px;
 					color: white;
@@ -272,12 +188,12 @@
 				}
 		@media (max-width:1535px) {
 		.bk{
-		  height:800px;
+		  height:1800px;
 		}
 		</style>
 	</head>
 	<body>
-<div class = "bk">
+<div class = "bk" id = "container">
 		
 			<div class="title">
 				<ul>
@@ -286,11 +202,17 @@
 					<li><a href="#">买家秀</a></li>
 					<li><a href="#">花类介绍</a></li>
 					<li><a href="#">您的订单</a></li>
-					<li><a href="flower-1.html">退出登录</a></li>
+					<li><a href="#">（头像）</a></li>
 				</ul>
 			</div>
+			<div class ="tips" v-if="isLogin">
+				{{username}},欢迎您
+			</div>
+			<div class="tips" v-else>
+				亲，请<a href="flower-1.html" target="_top" id="t1">登录</a>
+			</div>
+			
 	<div class="symbol">LULU</div>
-	<div class = "left">
 	<div class = "box">
 		<div class = "text">
 			<p id = "p1">Why buy flowers?<p>
@@ -304,100 +226,27 @@
 			<img class = "fl1" src="https://picnew9.photophoto.cn/20150721/shouhuiyiduofennendehuapngtoumingsucai-29377668_1.jpg">
 			
 	</div>					
-	</div>
-	
-	<div class = "right">
-		<div class="box2" id = "container">
-			<div class = "t1">Recommend:</div>
-			<div class = "card1">
-			<img class ="pic" v-bind:src="f1.fimg">
-			<span>&emsp;{{f1.name}}<br/>&emsp;{{f1.says}}</span>
-			<button @click="dobuy">购买</button>		
-			</div>
-			<div class = "card2">
-			<img class = "pic" v-bind:src="f2.fimg">
-			<span>&emsp;{{f2.name}}<br/>{{f2.says}}</span>
-			<button @click="dobuy">购买</button>		
-			</div>
-			<div class = "card3">
-			<img class="pic" v-bind:src="f3.fimg">
-			<span>{{f3.name}}<br/>{{f3.says}}</span>	
-			<button @click="dobuy">购买</button>		
-			</div>
-			<div class = "card4">
-			<img class ="pic" v-bind:src="f4.fimg">
-			<span>{{f4.name}}<br/>{{f4.says}}</span>
-			<button @click="dobuy">购买</button>		
-			</div>
-			<div class= "card5">
-			<img class = "pic" v-bind:src="f5.fimg">
-			<span>{{f5.name}}<br/>{{f5.says}}</span>
-			<button @click="dobuy">购买</button>		
-			</div>
-			<div class = "card6">
-			<img class = "pic" v-bind:src="f6.fimg">
-			<span>{{f6.name}}<br/>{{f6.says}}</span>
-			<button @click="dobuy">购买</button>		
-			</div>
-		
-		</div>
-	
-		</div>
 			<div class="footer">Created by LULU @2021.</div>
 		</div>
 <script>
 		var vm = new Vue({
 			el:"#container",
 			data:{
-				f1:{
-					num:"00001",
-					name:"玫瑰",
-					says:"Madly in love",
-					fimg:"img/00001.jpg",
-				},
-				f2:{
-					num:"00002",
-					name:"百合",
-					says:"Purity, Elegance",
-					fimg:"img/00002.png",
-				},
-				f3:{
-					num:"00003",
-					name:"康乃馨",
-					says:"My love forever,family love",
-					fimg:"img/00003.jpg",
-				},
-				f4:{
-					num:"00004",
-					name:"桔梗",
-					says:"Eternal love, hopeless love",
-					fimg:"img/00004.jpg",
-				},
-				f5:{
-					num:"00005",
-					name:"满天星",
-					says:"Happiness,Luck,Pure,Naive",
-					fimg:"img/00005.png",
-				},
-				f6:{
-					num:"00005",
-					name:"小雏菊",
-					says:"Secret love, happiness and parting",
-					fimg:"img/00006.jpg",
-				},
+				username:"",
+				isLogin:false,
 				
 			},
-			methods:{
-				dobuy: function() {
-					
-					
-					
-					
-					
-					
-					
+			created:function(){
+				//从cookie中获取token、username
+				var token = getCookieValue("token");
+				if(token!=null && token!=""){
+					vm.isLogin = true;
+					vm.username = getCookieValue('username');
 				}
-			}
+				},
+			methods:{
+			
+			},
 			
 			
 			
