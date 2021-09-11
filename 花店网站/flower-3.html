@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
+		<script type="text/javascript" src="./vue.js"></script>
 		<style>
 		
 		html {
@@ -128,7 +129,7 @@
 					text-decoration: underline 2px dashed #e1e1e1;
 					line-height: 1.6;
 				}
-				.f1{
+				.fl1{
 					position:absolute;
 					left:370px;
 					top:480px;
@@ -162,7 +163,7 @@
 					left:50px;
 					top:50px;				
 					width:200px;
-					height:260px;			
+					height:270px;			
 				}
 				
 				
@@ -173,7 +174,7 @@
 					left:50px;
 					top:340px;				
 					width:200px;
-					height:260px;				
+					height:270px;				
 				}
 				
 				.card3{
@@ -183,7 +184,7 @@
 					left:325px;
 					top:50px;				
 					width:200px;
-					height:260px;				
+					height:270px;				
 				}
 				.card4{
 					background-color: #FFFFFF;
@@ -192,7 +193,7 @@
 					left:325px;
 					top:340px;				
 					width:200px;
-					height:260px;			
+					height:270px;			
 				}
 				.card5{
 					background-color: #FFFFFF;
@@ -201,7 +202,7 @@
 					left:600px;
 					top:50px;				
 					width:200px;
-					height:260px;				
+					height:270px;				
 				}
 				.card6{
 					background-color: #FFFFFF;
@@ -210,7 +211,7 @@
 					left:600px;
 					top:340px;				
 					width:200px;
-					height:260px;				
+					height:270px;				
 				}
 				.pic{
 					position:absolute;
@@ -239,7 +240,25 @@
 					left:20px;
 					border-color:#ffcaca;
 		
-				}		
+				}
+						button{
+							position:absolute;
+							top:240px;
+							left:140px;
+							width:45px;
+							height:23px;
+							border-radius:5px;
+							background-color:#8fc8fd;
+							color:white;
+							font-size:13px;
+							border-width:1px;
+							border-color:#7bc4cf;
+						}
+						button:hover{
+							background-color:white;
+							border-color: #9acfcc;
+							color:#8ecfb2;
+						}
 				.footer {
 					width: 200px;
 					color: white;
@@ -267,7 +286,7 @@
 					<li><a href="#">买家秀</a></li>
 					<li><a href="#">花类介绍</a></li>
 					<li><a href="#">您的订单</a></li>
-					<li><a href="#">退出登录</a></li>
+					<li><a href="flower-1.html">退出登录</a></li>
 				</ul>
 			</div>
 	<div class="symbol">LULU</div>
@@ -282,37 +301,43 @@
 			&emsp;&emsp;Send you flowers, just for you are my</p>
 			<span id = "R">Romance.</span>
 			</div>
-			<img class = "f1" src="https://picnew9.photophoto.cn/20150721/shouhuiyiduofennendehuapngtoumingsucai-29377668_1.jpg">
+			<img class = "fl1" src="https://picnew9.photophoto.cn/20150721/shouhuiyiduofennendehuapngtoumingsucai-29377668_1.jpg">
 			
 	</div>					
 	</div>
 	
 	<div class = "right">
-		<div class="box2">
+		<div class="box2" id = "container">
 			<div class = "t1">Recommend:</div>
 			<div class = "card1">
-			<img class ="pic" src="https://tse2-mm.cn.bing.net/th/id/OIP-C.WyHvScjT2JV67pnFpsEZqwHaHa?w=206&h=206&c=7&r=0&o=5&dpr=1.25&pid=1.7">
-			<span>&emsp;Rose<br/>&emsp;Madly in love</span>				
+			<img class ="pic" v-bind:src="f1.fimg">
+			<span>&emsp;{{f1.name}}<br/>&emsp;{{f1.says}}</span>
+			<button @click="dobuy">购买</button>		
 			</div>
 			<div class = "card2">
-			<img class = "pic" src="https://tse1-mm.cn.bing.net/th/id/R-C.905802caa47f9ac88f4a10742aa18adf?rik=7nUkKxI48kQjjA&riu=http%3a%2f%2fimg.11665.com%2fimg_p5%2fi2%2f2614286500%2fTB2OIe7bKuSBuNjy1XcXXcYjFXa_!!2614286500.jpg&ehk=guJVXm5NSPnmD2bWCMmGSZOneqng1Sm8Pb7mJgotbU4%3d&risl=&pid=ImgRaw&r=0">
-			<span>&emsp;Lily<br/>Purity, Elegance</span>
+			<img class = "pic" v-bind:src="f2.fimg">
+			<span>&emsp;{{f2.name}}<br/>{{f2.says}}</span>
+			<button @click="dobuy">购买</button>		
 			</div>
 			<div class = "card3">
-			<img class="pic" src= "https://www.onecake.com/upload/20190506/4e8c672a5c2211abe777d3c2dd477e93.jpg">
-			<span>Carnations<br/>My love forever,family love</span>	
+			<img class="pic" v-bind:src="f3.fimg">
+			<span>{{f3.name}}<br/>{{f3.says}}</span>	
+			<button @click="dobuy">购买</button>		
 			</div>
 			<div class = "card4">
-			<img class ="pic" src=" https://tse1-mm.cn.bing.net/th/id/R-C.a644b1b9c15b2e1109a4248aaa099cce?rik=HOw62oqNKheRBA&riu=http%3a%2f%2fimage.huahuibk.com%2fuploads%2f20190107%2f21%2f1546866645-bvgixyhzAX.jpg&ehk=8Es%2fcRyF3UxRBL7u6bGDpzOgI9VxsR77wQo4UtIb3ZU%3d&risl=&pid=ImgRaw&r=0">
-			<span>Balloon flower<br/>Eternal love, hopeless love</span>
+			<img class ="pic" v-bind:src="f4.fimg">
+			<span>{{f4.name}}<br/>{{f4.says}}</span>
+			<button @click="dobuy">购买</button>		
 			</div>
 			<div class= "card5">
-			<img class = "pic" src="https://tse1-mm.cn.bing.net/th/id/R-C.13739366f14e3d84959f47258d896b02?rik=V%2f7O4Tc%2bb6LNDQ&riu=http%3a%2f%2fwww.168hua.com%2fphoto%2f241012390.jpg&ehk=zgPmuJPqzl9fIvURdSq%2fub%2bV2ticVW9CnhislktE020%3d&risl=&pid=ImgRaw&r=0">
-			<span>Bouquet of stars<br/>Happiness,Luck,Pure,Naive</span>
+			<img class = "pic" v-bind:src="f5.fimg">
+			<span>{{f5.name}}<br/>{{f5.says}}</span>
+			<button @click="dobuy">购买</button>		
 			</div>
 			<div class = "card6">
-			<img class = "pic" src = "https://j.huazhile.com/XQ/24139040/D0A1B3FBBED5A_1.jpg">
-			<span>Little Daisy<br/>Secret love, happiness and parting</span>
+			<img class = "pic" v-bind:src="f6.fimg">
+			<span>{{f6.name}}<br/>{{f6.says}}</span>
+			<button @click="dobuy">购买</button>		
 			</div>
 		
 		</div>
@@ -320,6 +345,82 @@
 		</div>
 			<div class="footer">Created by LULU @2021.</div>
 		</div>
+<script>
+		var vm = new Vue({
+			el:"#container",
+			data:{
+				f1:{
+					num:"00001",
+					name:"玫瑰",
+					says:"Madly in love",
+					fimg:"img/00001.jpg",
+				},
+				f2:{
+					num:"00002",
+					name:"百合",
+					says:"Purity, Elegance",
+					fimg:"img/00002.png",
+				},
+				f3:{
+					num:"00003",
+					name:"康乃馨",
+					says:"My love forever,family love",
+					fimg:"img/00003.jpg",
+				},
+				f4:{
+					num:"00004",
+					name:"桔梗",
+					says:"Eternal love, hopeless love",
+					fimg:"img/00004.jpg",
+				},
+				f5:{
+					num:"00005",
+					name:"满天星",
+					says:"Happiness,Luck,Pure,Naive",
+					fimg:"img/00005.png",
+				},
+				f6:{
+					num:"00005",
+					name:"小雏菊",
+					says:"Secret love, happiness and parting",
+					fimg:"img/00006.jpg",
+				},
+				
+			},
+			methods:{
+				dobuy: function() {
+					
+					
+					
+					
+					
+					
+					
+				}
+			}
+			
+			
+			
+			
+		})
+		
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
 
 	</body>
 </html>
