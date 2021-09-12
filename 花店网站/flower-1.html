@@ -6,8 +6,6 @@
 			content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LuLu花房(*￣▽￣*)ブ欢迎您</title>
 		<script type="text/javascript" src="./js/vue.js"></script>
-		<script type="text/javascript" src="./js/jquery.min.js"></script>
-		<script type="text/javascript" src="./js/jquery.cookie.min.js" ></script>
 		<script type="text/javascript" src="./js/cookie_utils.js" ></script>
 		
 		<style>
@@ -244,7 +242,7 @@
 						onclick="javascript:window.location.href='flower-2.html'">注册</button>
 					<div id="tips">{{tips}}</div>
 					<img class="head"
-						src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimages.669pic.com%2Felement_pic%2F69%2F38%2F96%2F84%2Fb7cc6d3fa01cb3cd910e0c5853a428d4.jpg&refer=http%3A%2F%2Fimages.669pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633782820&t=76224ca76d017a4ce1ffea7ccf1914de.png/">
+						v-bind:src="img">
 				</div>
 
 			</div>
@@ -268,8 +266,9 @@
 				data: {
 					name:"",
 					password: "",
+					img:"./img/head.png",
 					tips: "",
-					isRight: false,
+					isRight: false,				
 				},
 				methods: {
 					checkInfo: function() {
@@ -296,11 +295,9 @@
 					doSubmit: function() {
 						if (vm.isRight) {
 							vm.tips = "yes";
-							console.log(vm.tips);
-							console.log(vm.name);
 							setCookieValue("token",vm.tips);
 							setCookieValue("username",vm.name);
-							console.log(getCookieValue("username"));
+							console.log(getCookieValue("token"));
 							alert('登陆成功！');
 							window.location.href = "flower-3.html";
 						} else {

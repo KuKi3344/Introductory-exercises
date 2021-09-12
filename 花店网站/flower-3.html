@@ -84,21 +84,25 @@
 					background-color: #83b19c;
 					border-radius: 8px;
 				}
-				.tips{
+				.lefttips{
 					background-color:#fff;
 					border-radius:5px;
 					position:fixed;
-					top:180px;
+					top:170px;
 					left:0;
-					height:150px;
-					width:35px;
-					color:#6c966c;
-					font-size:14px;
+					height:180px;
+					width:40px;
 					text-align:center;
-					padding:5px;
 					writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/  
 					writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/ 
 					box-shadow:1px -1px 1px 0px #bcf5ac,-1px 1px 1px 0px #bcf5ac,1px -1px 1px 0px #bcf5ac,-1px 1px 1px 0px #bcf5ac;
+				}
+				.tips{
+					position:absolute;
+					top:15px;
+					left:5px;
+					color:#6c966c;
+					font-size:14px;
 
 				}
 				#t1{
@@ -202,16 +206,17 @@
 					<li><a href="#">买家秀</a></li>
 					<li><a href="#">花类介绍</a></li>
 					<li><a href="#">您的订单</a></li>
-					<li><a href="#">（头像）</a></li>
+					<li><a href="flower-1.html" @click="refor">退出登录</a></li>
 				</ul>
 			</div>
+			<div class ="lefttips">
 			<div class ="tips" v-if="isLogin">
 				{{username}},欢迎您
 			</div>
 			<div class="tips" v-else>
 				亲，请<a href="flower-1.html" target="_top" id="t1">登录</a>
 			</div>
-			
+			</div>
 	<div class="symbol">LULU</div>
 	<div class = "box">
 		<div class = "text">
@@ -233,6 +238,7 @@
 			el:"#container",
 			data:{
 				username:"",
+				img:"./img/head.png",
 				isLogin:false,
 				
 			},
@@ -240,16 +246,16 @@
 				//从cookie中获取token、username
 				var token = getCookieValue("token");
 				if(token!=null && token!=""){
-					vm.isLogin = true;
-					vm.username = getCookieValue('username');
+					this.isLogin = true;
+					this.username = getCookieValue('username');
 				}
 				},
 			methods:{
-			
+			refor:function(){			// 点击退出登录后，不管是网页后退还是直接输入首页网址，都要重新登录，cookie直接被删除了
+				alert('退出后，您需要重新登录才能继续使用部分功能，请确认');
+				clearCookie("token");
 			},
-			
-			
-			
+			},		
 			
 		})
 		

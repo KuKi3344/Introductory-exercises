@@ -6,7 +6,6 @@
 			content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
 		<script type="text/javascript" src="./js/vue.js"></script>
-		<script type="text/javascript" src="./js/axios.min.js" ></script>
 		<style>
 			html {
 				height: 100%;
@@ -211,7 +210,7 @@
 			<div class="box" id="container">
 
 				<img class="head"
-					src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimages.669pic.com%2Felement_pic%2F69%2F38%2F96%2F84%2Fb7cc6d3fa01cb3cd910e0c5853a428d4.jpg&refer=http%3A%2F%2Fimages.669pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633782820&t=76224ca76d017a4ce1ffea7ccf1914de.png/">
+					v-bind:src="user.img">
 				<div class="Regist">
 					<form>
 						<label for="name">Name</label>
@@ -250,6 +249,7 @@
 						email: "",
 						password: "",
 						conpassword: "",
+						img:"./img/head.png",
 					},
 					tips: "",
 					strtips:"",
