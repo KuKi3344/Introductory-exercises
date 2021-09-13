@@ -22,7 +22,7 @@
 					</ul>
 				</div>
 				<div class="symbol">LULU</div>
-				<div class = "isLogin" v-if="isLogin">
+				<div class = "isLogin" v-cloak v-if="isLogin">
 				<div class ="lefttips">
 				<div class ="tips">
 					{{username}},欢迎您
@@ -63,7 +63,7 @@
 			</div>
 			</div>
 		</div>
-	<div class= "noLogin" v-else>
+	<div class= "noLogin" v-cloak v-else>
 	<div class = "notice"><span>提示</span></div>
 		<span>亲，请登录！</span>
 		<button class = "noLogbt"  onclick="javascript:window.location.href='flower-1.html'">确认</button>

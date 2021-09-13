@@ -183,3 +183,6 @@
 		.bk{
 		  height:1800px;
 		}
+		[v-cloak] {
+			display: none !important;
+		}

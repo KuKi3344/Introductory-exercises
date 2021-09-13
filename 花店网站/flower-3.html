@@ -22,10 +22,10 @@
 				</ul>
 			</div>
 			<div class ="lefttips">
-			<div class ="tips" v-if="isLogin">
+			<div class ="tips" v-cloak v-if="isLogin">	//v-cloak解决未编译结束就显示的闪烁问题
 				{{username}},欢迎您
 			</div>
-			<div class="tips" v-else>
+			<div class="tips" v-cloak v-else>
 				亲，请<a href="flower-1.html" target="_top" id="t1">登录</a>
 			</div>
 			</div>

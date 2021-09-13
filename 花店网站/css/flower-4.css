@@ -306,5 +306,8 @@
 		
 		@media (max-width:1535px) {
 		.bk{
-		  height:800px;
+		  height:1800px;
+		}
+		[v-cloak] {
+			display: none !important;
 		}
