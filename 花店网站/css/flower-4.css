@@ -1,0 +1,310 @@
+
+		html {
+					height: 100%;
+				}
+		
+				.bk{
+					background: linear-gradient(-180deg, #d0f2d4 0%, #ffffff 100%);
+					backgroud-position:center;
+					background-size: cover;
+					background-attachment: fixed;
+					background-repeat: no-repeat;
+					position:absolute;
+					top:0;
+					left:0;
+				width: 1536px;
+				height: 753px;
+					}
+						
+				.card{
+					
+					background-color:#f4f4f4;
+					position:absolute;
+					top:80px;
+					left:100px;
+					width:1300px;
+					height:620px;
+					bottom:100px;
+					border-radius: 10px;
+					opacity: 0.9;
+				}
+				.title {
+					background-color: #c2c2c2;
+					height: 35px;
+					left: 120px;
+					font-size: 15px;
+					width: 1200px;
+					margin-left: 0;
+					position: absolute;
+					top: 3px;
+					;
+					color: white;
+					margin-bottom: 1px;
+					overflow: hidden;
+					border-radius: 8px;
+				}
+		
+				.title ul {
+					/* 清除ul标签的默认样式 */
+					width: 1100px;
+					position: absolute;
+					left: 200px;
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+		
+				}
+		
+				.title li {
+					float: left;
+					/* 使li内容横向浮动，即横向排列  */
+					margin-right:90px;
+					/* 两个li之间的距离*/
+					position: relative;
+					top: 0.;
+					
+					border-color: #222222;
+					border-radius: 8px;
+				}
+		
+				.title li a {
+					/* 设置链接内容显示的格式*/
+					display: block;
+					/* 把链接显示为块元素可使整个链接区域可点击 */
+					color: #ffffff;
+					text-align: center;
+					padding: 8px 15px;
+					text-decoration: none;
+					/* 去除下划线 */
+				}
+		
+				.title li a:hover {
+					/* 鼠标选中时背景变为深色 */
+					background-color: #83b19c;
+					border-radius: 8px;
+				}
+				
+				.symbol{
+					font:italic 1em Georgia, serif;
+					font-size:35px;
+					color: #ffc0c1;
+					text-shadow:2px 2px 2px #e7e7e7;
+					position:absolute;
+					left:150px;
+					top:1px;
+					border-color: #ffa2a7;
+				}
+				
+				.card1{
+					background-color: #FFFFFF;
+					box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
+					position:absolute;
+					left:20px;
+					top:20px;				
+					width:200px;
+					height:280px;			
+				}
+				
+				
+				.card2{
+					background-color: #FFFFFF;
+					box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
+					position:absolute;
+					left:20px;
+					top:320px;				
+					width:200px;
+					height:280px;				
+				}
+				
+				.card3{
+					background-color: #FFFFFF;
+					box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
+					position:absolute;
+					left:240px;
+					top:20px;				
+					width:200px;
+					height:280px;				
+				}
+				.card4{
+					background-color: #FFFFFF;
+					box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
+					position:absolute;
+					left:240px;
+					top:320px;				
+					width:200px;
+					height:280px;			
+				}
+				.card5{
+					background-color: #FFFFFF;
+					box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
+					position:absolute;
+					left:460px;
+					top:20px;				
+					width:200px;
+					height:280px;				
+				}
+				.card6{
+					background-color: #FFFFFF;
+					box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
+					position:absolute;
+					left:460px;
+					top:320px;				
+					width:200px;
+					height:280px;				
+				}
+				
+				.lefttips{
+					background-color:#fff;
+					border-radius:5px;
+					position:fixed;
+					top:170px;
+					left:0;
+					height:180px;
+					width:40px;
+					text-align:center;
+					writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/  
+					writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/ 
+					box-shadow:1px -1px 1px 0px #bcf5ac,-1px 1px 1px 0px #bcf5ac,1px -1px 1px 0px #bcf5ac,-1px 1px 1px 0px #bcf5ac;
+				}
+				
+				.tips{
+					position:absolute;
+					top:15px;
+					left:5px;
+					color:#6c966c;
+					font-size:14px;
+				
+				}
+				.pic{
+					position:absolute;
+					top:3px;
+					left:10px;
+					width:180px;
+					height:190px;
+					border-radius:5px;
+				}
+				.buy span{
+					font-size:13px;
+					color: #313131;
+					text-shadow:1px 1px 1px #cbcbcb;
+					position:absolute;
+					top:205px;
+					left:20px;
+				}
+				#sold{
+					color:#7e7e7e;
+					position:absolute;
+					font-size:12px;
+					top:260px;
+					left:130px;
+				}
+				.isLogin button{
+					position:absolute;
+					top:200px;
+					left:130px;
+					width:60px;
+					height:25px;
+					border: 0;
+					border-radius: 60px;
+					background-color: #a5e1bb;
+					color: #fff;
+					margin: 2rem 0 0 auto;
+				}
+				.isLogin button:hover{
+					background: #a5e1bb;
+					color: #fff;
+					border-radius: 60px;
+					box-shadow: 0 0 5px #a5e1bb,
+						0 0 25px #a5e1bb,
+						0 0 50px #a5e1bb,
+						0 0 100px #a5e1bb;
+				}
+		.noLogin{
+			position:absolute;
+			left:550px;
+			top:200px;
+			width:400px;
+			height:250px;
+			background-color:#fff;
+			box-shadow: 1px -1px 1px 1px #f4f4f4, -1px 1px 1px 1px #f4f4f4, 1px -1px 1px 1px #fafafa, -1px 1px 1px 1px #fafafa;
+			border-radius:10px;
+			
+		}
+		.noLogin span{
+			color:#a9c291;
+			position:absolute;
+			top:110px;
+			left:140px;
+			font-size:17px;
+		}
+		.notice{
+			background:#f0f0f0;
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:40px;
+			border-top-left-radius: 8px;     /* 左上角 */			
+			border-top-right-radius: 8px;    /* 右上角 */
+			opacity: 0.9;			
+		}
+		.notice span{
+			color:#9ab995;
+			position: absolute;
+			top:8px;
+			left:175px;
+			font-size:17px;
+			font-weight:bold;
+			
+		}
+		.noLogin button{
+			padding: 0.5rem;
+			border: 0;
+			border-radius: 60px;
+			width: 90px;
+			background-color: #c9f9c1;
+			color: #fff;
+			margin: 2rem 0 0 auto;
+			
+		}
+		.noLogbt{
+			position: absolute;
+			top:150px;
+			left:70px;
+		}
+		.decbt{
+			position: absolute;
+			top:150px;
+			left:230px;
+		}
+		
+		.noLogin button:hover {
+			background:  #c9f9c1;
+			color: #fff;
+			border-radius: 60px;
+			box-shadow: 0 0 5px  #c9f9c1,
+				0 0 25px  #c9f9c1,
+				0 0 50px  #c9f9c1,
+				0 0 100px  #c9f9c1;
+		}
+		
+		.noLogin button:focus {
+			outline: 0;
+		}
+		
+		.footer {
+			width: 200px;
+			color: white;
+			font-size: 15px;
+			margin-left: 5px;
+			position: absolute;
+			left: 650px;
+			bottom: 10px;
+			text-align: center;
+			padding-bottom: 5px;
+		}
+		
+		@media (max-width:1535px) {
+		.bk{
+		  height:800px;
+		}
