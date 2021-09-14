@@ -10,8 +10,10 @@
 	
 	</head>
 	<body>
-<div class = "bk" id = "container">
-			<div class="title">
+		<div class ="page" id = "container">
+<div :class ="{bk:noon,bknight:night}">
+	<button class = "night" @click="tonight">夜间模式</button>
+			<div :class="{title:noon,nititle:night}">
 				<ul>
 					<li><a href="flower-3.html">首页</a></li>
 					<li><a href="flower-4.html">购买</a></li>
@@ -21,28 +23,32 @@
 					<li><a href="flower-1.html" @click="refor">退出登录</a></li>
 				</ul>
 			</div>
-			<div class ="lefttips">
-			<div class ="tips" v-cloak v-if="isLogin">	//v-cloak解决未编译结束就显示的闪烁问题
+			<div :class ="{lefttips:noon,nilefttips:night}">
+			<div :class ="{tips:noon,nitips:night}" v-cloak v-if="isLogin">	//v-cloak解决未编译结束就显示的闪烁问题
 				{{username}},欢迎您
 			</div>
-			<div class="tips" v-cloak v-else>
+			<div :class="{tips:noon,nitips:night}" v-cloak v-else>
 				亲，请<a href="flower-1.html" target="_top" id="t1">登录</a>
 			</div>
 			</div>
 	<div class="symbol">LULU</div>
-	<div class = "box">
+	<div :class = "{box:noon,nibox:night}">
 		<div class = "text">
-			<p id = "p1">Why buy flowers?<p>
-			<p id = "p2">&emsp;&emsp;It is a good choice to buy flowers for family,
+			<p :class = "{p1:noon,nip1:night}">Why buy flowers?<p>
+			<p :class = "{p2:noon,nip2:night}">&emsp;&emsp;It is a good choice to buy flowers for family,
 			friends and loved ones during the festival.It sustains our blessing,
 			but also represents romance.In particular, your loved one will love it when you send them flowers
 			,I'd rather call it the beginning of romance than flowers.<br/>
 			&emsp;&emsp;Send you flowers, just for you are my</p>
-			<span id = "R">Romance.</span>
+			<span :class = "{R:noon,niR:night}">Romance.</span>
 			</div>
-			<img class = "fl1" src="https://picnew9.photophoto.cn/20150721/shouhuiyiduofennendehuapngtoumingsucai-29377668_1.jpg">
+			<img :class = "{fl1:noon,fl2:night}" src="https://picnew9.photophoto.cn/20150721/shouhuiyiduofennendehuapngtoumingsucai-29377668_1.jpg">
 			
-	</div>					
+	</div>
+		  
+		</div>	
+		
+			
 			<div class="footer">Created by LULU @2021.</div>
 		</div>
 <script>
@@ -52,6 +58,8 @@
 				username:"",
 				img:"./img/head.png",
 				isLogin:false,
+				noon:true,
+				night:false,
 				
 			},
 			created:function(){
@@ -61,33 +69,52 @@
 					this.isLogin = true;
 					this.username = getCookieValue('username');
 				}
+				var tonight = getCookieValue("tonight");	// 读取在别的页面是否夜间模式来决定此页面是否为夜间模式
+				 if(tonight!=null && tonight!=""){
+					 this.noon=false;
+					 this.night=true;
+				}else{
+					this.noon=true;
+					this.night=false;
+				}
 				},
 			methods:{
 			refor:function(){			// 点击退出登录后，不管是网页后退还是直接输入首页网址，都要重新登录，cookie直接被删除了
 				alert('退出后，您需要重新登录才能继续使用部分功能，请确认');
 				clearCookie("token");
-			},
-			},		
+				clearCookie("username");
+				clearCookie("tonight");
+			},	
+			tonight:function(){
+				if(vm.night){						// 因为监听器会随时监测night是否和tonight方向一致
+					var space = "";					// 所以要先改变tonight的值再去改变night的值才能使night变化
+					setCookieValue("tonight",space);	//不然night一变化就会被强制和tonight保持一致而恢复原来状态
+					vm.night=false;							//就会产生不论怎么点击都无法改变的状况
+					vm.noon=true;
+				}else if(vm.noon){
+					setCookieValue("tonight",vm.noon);
+					vm.noon=false;
+					vm.night=true;
+			}
 			
+			},
+			},
+			watch: {		// 随时监听night是否和cookie里的tonight方向一致，避免因F5刷新而导致的数据缺失
+							// 从而导致night和tonight的不同步性
+			
+			   night() {
+				   var isnight = getCookieValue("tonight");
+				  if (isnight!=null && isnight!=""){
+					  this.noon = false;
+					  this.night = true;
+				  }else{
+					  this.noon = true;
+					  this.night = false;
+				  }
+			   }
+			
+			},
 		})
-		
-
-
-
-
-
-
-
 </script>
-
-
-
-
-
-
-
-
-
-
 	</body>
 </html>
