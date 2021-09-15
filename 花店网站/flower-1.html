@@ -17,17 +17,17 @@
 			<div :class="{box:noon,nibox:night}">
 				<div class="Login">
 					<form>
-						<label for="name">Username</label>
+						<label for="name" :class= "{label:noon,nilabel:night}">Username</label>
 
-						<input type="text" v-model="name" placeholder="请输入用户名" @keyup="checkInfo">
+						<input type="text" v-model="name" :class="{input:noon,niinput:night}" placeholder="请输入用户名" @keyup="checkInfo">
 
-						<label for="password">Password</label>
+						<label for="password" :class= "{label:noon,nilabel:night}">Password</label>
 
-						<input type="password" v-model="password" placeholder="请输入密码" @keyup="checkInfo">
+						<input type="password" v-model="password" :class="{input:noon,niinput:night}" placeholder="请输入密码" @keyup="checkInfo">
 
 					</form>
-					<button class="bt1" type="button" @click="doSubmit">登录</button>
-					<button class="bt2" type="button"
+					<button :class="{bt1:noon,nibt1:night}" type="button" @click="doSubmit">登录</button>
+					<button :class="{bt2:noon,nibt2:night}" type="button"
 						onclick="javascript:window.location.href='flower-2.html'">注册</button>
 					<div id="tips">{{tips}}</div>
 					<img class="head"
