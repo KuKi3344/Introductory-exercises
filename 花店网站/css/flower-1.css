@@ -15,6 +15,18 @@
 				width: 1536px;
 				height: 753px;
 			}
+			.bknight{
+				background: linear-gradient(-180deg, #52588a 0%, #8b91af 100%);
+				backgroud-position:center;
+				background-size: cover;
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				position:absolute;
+				top:0;
+				left:0;
+				width: 1536px;
+				height: 753px;
+			}
 
 			.box {
 				position: absolute;
@@ -24,6 +36,17 @@
 				width: 450px;
 				height: 450px;
 				box-shadow: 3px -2px 5px 2px #f4f4f4, -3px 2px 5px 2px #f4f4f4, 3px -2px 5px 2px #fafafa, -3px 2px 5px 2px #fafafa;
+				border-radius: 10px;
+			}
+			.nibox {
+				position: absolute;
+				top: 150px;
+				left: 550px;
+				width: 450px;
+				height: 450px;
+				background: rgba(78, 91, 120, 0.7);
+				box-sizing: border-box;
+				box-shadow: 0 15px 25px rgba(78, 91, 120, 0.7);
 				border-radius: 10px;
 			}
 
@@ -119,6 +142,34 @@
 			button:focus {
 				outline: 0;
 			}
+
+			.night{
+						position:absolute;
+						left:1350px;
+						top:-25px;
+						padding: 0.5rem;
+						border: 0;
+						border-radius: 60px;
+						width: 90px;
+						background-color: #8eb8dc;
+						color: #fff;
+						margin: 2rem 0 0 auto;
+						
+				}
+				
+				.night:hover {
+					background:  #8eb8dc;
+					color: #fff;
+					border-radius: 60px;
+					box-shadow: 0 0 5px   #8eb8dc,
+						0 0 25px  #8eb8dc,
+						0 0 50px   #8eb8dc,
+						0 0 100px   #8eb8dc;
+				}
+				
+				.night:focus {
+					outline: 0;
+				}
 
 			.f1 {
 				width: 120px;

@@ -11,9 +11,10 @@
 		
 	</head>
 	<body>
-		<div class="bk">
+		<div :class="{bk:noon,bknight:night}" id="container">
 			<div id="particles-js"></div>
-			<div class="box" id="container">
+			<button class = "night" @click="tonight">夜间模式</button>
+			<div :class="{box:noon,nibox:night}">
 				<div class="Login">
 					<form>
 						<label for="name">Username</label>
@@ -56,7 +57,19 @@
 					password: "",
 					img:"./img/head.png",
 					tips: "",
-					isRight: false,				
+					isRight:false,		
+					noon:true,
+					night:false,
+				},
+				created:function(){
+					var tonight = getCookieValue("tonight");	// 读取在别的页面是否夜间模式来决定此页面是否为夜间模式
+					 if(tonight!=null && tonight!=""){
+						 this.noon=false;
+						 this.night=true;
+					}else{
+						this.noon=true;
+						this.night=false;
+					}
 				},
 				methods: {
 					checkInfo: function() {
@@ -91,8 +104,36 @@
 						} else {
 							vm.tips = "请正确输入帐号和密码！";
 						}
+					},
+					tonight:function(){
+						if(vm.night){						// 因为监听器会随时监测night是否和tonight方向一致
+							var space = "";					// 所以要先改变tonight的值再去改变night的值才能使night变化
+							setCookieValue("tonight",space);	//不然night一变化就会被强制和tonight保持一致而恢复原来状态
+							vm.night=false;							//就会产生不论怎么点击都无法改变的状况
+							vm.noon=true;
+						}else if(vm.noon){
+							setCookieValue("tonight",vm.noon);
+							vm.noon=false;
+							vm.night=true;
 					}
-				}
+					
+					},
+				},
+				watch: {		// 随时监听night是否和cookie里的tonight方向一致，避免因F5刷新而导致的数据缺失
+								// 从而导致night和tonight的不同步性
+				
+				   night() {
+					   var isnight = getCookieValue("tonight");
+					  if (isnight!=null && isnight!=""){
+						  this.noon = false;
+						  this.night = true;
+					  }else{
+						  this.noon = true;
+						  this.night = false;
+					  }
+				   }
+				
+				},
 			});
 		</script>
 		<script src="./js/particles.js"></script>

@@ -4,7 +4,7 @@
 				}
 		
 				.bk{
-					background: linear-gradient(-180deg, #daf3dc 0%, #ffffff 100%);
+					background: linear-gradient(-180deg, #cfebd8 0%, #f2ffef 100%);
 					backgroud-position:center;
 					background-size: cover;
 					background-attachment: fixed;
@@ -141,6 +141,7 @@
 				}
 				
 				.lefttips{
+					opacity:0.9;
 					background-color:#fff;
 					border-radius:5px;
 					position:fixed;
@@ -154,6 +155,7 @@
 					box-shadow:1px -1px 1px 0px #bcf5ac,-1px 1px 1px 0px #bcf5ac,1px -1px 1px 0px #bcf5ac,-1px 1px 1px 0px #bcf5ac;
 				}
 				.nilefttips{
+					opacity:0.9;
 					background-color:#4e77b0;
 					border-radius:5px;
 					position:fixed;
@@ -170,7 +172,7 @@
 					position:absolute;
 					top:15px;
 					left:10px;
-					color:#6c966c;
+					color:#678b70;
 					font-size:14px;
 
 				}
@@ -183,14 +185,13 @@
 				
 				}
 				#t1{
-					color:#97c683;
+					color:#88d88a;
 				}
 				#t1:hover{
-					color:#97ca9a;
-					text-shadow:0 0 5px #c9f9b5,
-					0 0 10px #c9f9b5,
-					0 0 20px #c9f9b5,
-					0 0 40px #c9f9b5;
+					color:#b2eeb5;
+					text-shadow:0 0 2px #b2eeb5,
+					0 0 4px #b2eeb5,
+					0 0 6px #b2eeb5;
 				}
 				
 				.symbol{
@@ -211,20 +212,20 @@
 						border: 0;
 						border-radius: 60px;
 						width: 90px;
-						background-color: #93c3dc;
+						background-color: #8eb8dc;
 						color: #fff;
 						margin: 2rem 0 0 auto;
 						
 				}
 				
 				.night:hover {
-					background:  #93c3dc;
+					background:  #8eb8dc;
 					color: #fff;
 					border-radius: 60px;
-					box-shadow: 0 0 5px   #93c3dc,
-						0 0 25px  #93c3dc,
-						0 0 50px   #93c3dc,
-						0 0 100px   #93c3dc;
+					box-shadow: 0 0 5px   #8eb8dc,
+						0 0 25px  #8eb8dc,
+						0 0 50px   #8eb8dc,
+						0 0 100px   #8eb8dc;
 				}
 				
 				.night:focus {
@@ -232,6 +233,7 @@
 				}
 				
 				.box{
+					opacity:0.8;
 					background-color: #FFFFFF;
 					position:absolute;
 					left:1000px;
@@ -243,6 +245,7 @@
 				}
 					
 					.nibox{
+						opacity:0.8;
 						background-color: #5a658c;
 						position:absolute;
 						left:1000px;
@@ -325,7 +328,11 @@
 					color:#b9d6f8;
 					text-decoration: underline 2px dashed #f8f8f8;
 				}
-				
+				#particles-js {
+					position: absolute;
+					width: 1530px;
+					height: 752px;
+				}
 				.footer {
 					width: 200px;
 					color: white;
