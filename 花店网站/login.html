@@ -5,7 +5,7 @@
 		<meta name="viewport"
 			content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LuLu花房(*￣▽￣*)ブ欢迎您</title>
-		<link rel="stylesheet" href="./css/flower-1.css" />
+		<link rel="stylesheet" href="./css/login.css" />
 		<link rel="stylesheet" href="./css/bk.css" />
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js" ></script>
@@ -30,7 +30,7 @@
 					</form>
 					<button :class="{bt1:noon,nibt1:night}" type="button" @click="doSubmit">登录</button>
 					<button :class="{bt2:noon,nibt2:night}" type="button"
-						onclick="javascript:window.location.href='flower-2.html'">注册</button>
+						onclick="javascript:window.location.href='regist.html'">注册</button>
 					<div id="tips">{{tips}}</div>
 					<img class="head"
 						v-bind:src="img">
@@ -90,12 +90,11 @@
 					},
 					doSubmit: function() {
 						if (vm.isRight) {
-							vm.tips = "yes";
-							setCookieValue("token",vm.tips);
+							setCookieValue("token","yes");
 							setCookieValue("username",vm.name);
 							console.log(getCookieValue("token"));
 							alert('登陆成功！');
-							window.location.href = "flower-3.html";
+							window.location.href = "home.html";
 						} else {
 							vm.tips = "请正确输入帐号和密码！";
 						}

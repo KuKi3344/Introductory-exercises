@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
-		<link rel="stylesheet" href="./css/flower-4.css" />
+		<link rel="stylesheet" href="./css/purchase.css" />
 		<link rel="stylesheet" href="./css/bk.css" />
 		<link rel="stylesheet" href="./css/nologin.css" />
 		<script type="text/javascript" src="./js/vue.js"></script>
@@ -19,8 +19,8 @@
 				<div :class="{title:noon,nititle:night}"></div>
 				<div class="symbol">LULU</div>
 				<div class = "isLogin" v-cloak v-if="isLogin">
-				<div class ="{lefttips:noon,nilefttips:night}">
-				<div class ="{tip:noon,nitips:night}">
+				<div :class ="{lefttips:noon,nilefttips:night}">
+				<div :class ="{tip:noon,nitips:night}">
 					{{username}},欢迎您
 				</div>
 				</div>	
