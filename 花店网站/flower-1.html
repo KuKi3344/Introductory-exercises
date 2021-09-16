@@ -6,6 +6,7 @@
 			content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LuLu花房(*￣▽￣*)ブ欢迎您</title>
 		<link rel="stylesheet" href="./css/flower-1.css" />
+		<link rel="stylesheet" href="./css/bk.css" />
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js" ></script>
 		
@@ -13,7 +14,8 @@
 	<body>
 		<div :class="{bk:noon,bknight:night}" id="container">
 			<div id="particles-js"></div>
-			<button class = "night" @click="tonight">夜间模式</button>
+			<button class = "night" v-if="noon" @click="tonight">夜间模式</button>
+			<button class = "night" v-else @click="tonight">白日模式</button>
 			<div :class="{box:noon,nibox:night}">
 				<div class="Login">
 					<form>
@@ -35,17 +37,10 @@
 				</div>
 
 			</div>
-			<div class="txt">
-				<p class="p1">LuLu </p>
-				<p class="p2">Flower</p>
-			</div>
-
-
 			<div class="picture">
 				<img class="f1" src="https://pics.prcm.jp/3a638fefa1001/75420560/png/75420560_220x200.png" />
 				<img class="f2" src="https://www.haoy99.com/FileUpload/2018-11/7-60Zhang_Bei_Jing_Tou-102413_132.png" />
 				<img class="f3" src="https://pics.prcm.jp/3a638fefa1001/75420559/png/75420559_220x113.png" />
-				<img class="f4" src="https://pics.prcm.jp/fcd56c54d1c20/81169762/png/81169762_220x220.png" />
 			</div>
 			<div class="footer">Created by LULU @2021.</div>
 		</div>
