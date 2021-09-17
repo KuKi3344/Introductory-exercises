@@ -60,7 +60,7 @@
 			}
 			.input:focus {
 				outline: 0;
-				box-shadow: 1px 1px 1px 1px #cbffb8;
+				box-shadow: 1px 1px 1px 0px #8dcca2;
 			}
 
 			.input::-webkit-input-placeholder {
