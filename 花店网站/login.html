@@ -42,14 +42,19 @@
 						<label for="password" :class= "{label:noon,nilabel:night}">Password</label>
 
 						<input type="password" v-model="password" :class="{input:noon,niinput:night}" placeholder="请输入密码" @keyup="checkInfo">
-
+						
+						<label for="verify" :class= "{label:noon,nilabel:night}">验证码</label>
+						
+						<input type="text" v-model="verify" :class="{input:noon,niinput:night}" placeholder="请输入验证码" @keyup="checkInfo">
+						
+						<div class="code" id="checkCode" @click="createCode" ></div>
+						<a  @click="createCode">看不清换一张</a>
+					
 					</form>
-					<button :class="{bt1:noon,nibt1:night}" type="button" @click="doSubmit">登录</button>
-					<button :class="{bt2:noon,nibt2:night}" type="button"
+					<button :class="{bt1:noon,nibt1:night}" type="button"
 						onclick="javascript:window.location.href='regist.html'">注册</button>
 					<div id="tips">{{tips}}</div>
-					<img class="head"
-						v-bind:src="img">
+					<button :class="{bt2:noon,nibt2:night}" type="button" @click="doSubmit">登录</button>
 				</div>
 
 			</div>
@@ -66,6 +71,7 @@
 				data: {
 					name:"",
 					password: "",
+					verify:"",
 					img:"./img/head.png",
 					tips: "",
 					isRight:false,		
@@ -81,6 +87,7 @@
 						this.noon=true;
 						this.night=false;
 					}
+					this.createCode();
 				},
 				methods: {
 					checkInfo: function() {
@@ -99,8 +106,20 @@
 								vm.tips = "密码长度必须为8-16个字符！";
 								vm.isRight = false;
 							} else {
-								vm.tips = "";
-								vm.isRight = true;
+								if(vm.verify.length == 0||vm.verify==""){
+								vm.tips="请输入验证码！";
+								vm.isRight = false;
+								}
+								else if(vm.verify.toUpperCase() != code.toUpperCase()){
+								 vm.tips="验证码输入有误！";
+								 vm.isRight = false;
+								 createCode();
+								}
+								else{
+									vm.tips="";
+									vm.isRight = true;
+								
+								}  
 							}
 						}
 					},
@@ -128,6 +147,25 @@
 					}
 					
 					},
+					
+					createCode:function (){
+					 code = "";
+					 var codeLength = 4; //验证码的长度
+					 var checkCode = document.getElementById("checkCode");
+					 var codeChars = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 
+					   'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+					   'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //所有候选组成验证码的字符，当然也可以用中文的
+					 for(var i = 0; i < codeLength; i++) 
+					 {
+					 var charNum = Math.floor(Math.random() * 52);
+					 code += codeChars[charNum];
+					 }
+					 if(checkCode) 
+					 {
+					 checkCode.className = "code";
+					 checkCode.innerHTML = code;
+					 }
+					},	
 				},
 				watch: {		// 随时监听night是否和cookie里的tonight方向一致，避免因F5刷新而导致的数据缺失
 								// 从而导致night和tonight的不同步性
