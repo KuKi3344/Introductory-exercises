@@ -14,6 +14,22 @@
 	<body>
 		<div :class="{bk:noon,bknight:night}" id="container">
 			<div id="particles-js"></div>
+			<div class = "left">
+			<div class="box1">
+			<h1 class="h1">Welcome!</h1>
+			<a href="#" class="link1">Select?</a>
+			</div>
+			
+			<div class="box2">
+			<h1 class="h2">Do you have an account?</h1>
+			<a href="#" class="link2">Regist?</a>
+			</div>
+			
+			<div class="box3">
+			<h1 class="h3">Choose your like</h1>
+			<a href="#" class="link3">About?</a>
+			</div>
+			</div>
 			<button class = "night" v-if="noon" @click="tonight">夜间模式</button>
 			<button class = "night" v-else @click="tonight">白日模式</button>
 			<div :class="{box:noon,nibox:night}">

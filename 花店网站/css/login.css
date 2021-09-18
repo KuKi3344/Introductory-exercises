@@ -5,8 +5,8 @@
 			.box {
 				position: absolute;
 				background-color: #FFFFFF;
-				top: 150px;
-				left: 550px;
+				top: 140px;
+				left: 930px;
 				width: 450px;
 				height: 450px;
 				box-shadow: 0 15px 25px rgba(217, 217, 217, 0.8);
@@ -14,8 +14,8 @@
 			}
 			.nibox {
 				position: absolute;
-				top: 150px;
-				left: 550px;
+				top: 140px;
+				left: 930px;
 				width: 450px;
 				height: 450px;
 				background: rgba(78, 91, 120, 0.8);
@@ -23,6 +23,95 @@
 				box-shadow: 0 15px 25px rgba(78, 91, 120, 0.8);
 				border-radius: 10px;
 			}
+
+.box1{
+			position:absolute;
+			top:140px;
+			left:160px;
+			height:110px;
+			width:320px;
+			opacity:0.8;
+			background-color:#a5bfcc; 
+			border-radius:0.7rem;
+			box-shadow: 0.5rem 0.9rem 1.2rem rgba(0, 0, 0, 0.25),
+				0.3rem 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+		}
+		.h1{
+			position:absolute;
+			left:15px;
+			top:0;
+			font-size: 30px;
+			color:white;
+			text-shadow: 4px 4px 4px #758481;
+		}
+		.link1{
+			color:#ffffff;
+			position:absolute;
+			left:240px;
+			top:70px;
+			font-size: 16px;
+		}
+		
+		.box2{
+			position:absolute;
+			top:290px;
+			left:280px;
+			height:110px;
+			width:370px;
+			opacity:0.8;
+			background-color:#aac5d3;
+			border-radius:0.7rem;
+			box-shadow: 0.5rem 0.9rem 1.2rem rgba(0, 0, 0, 0.25),
+				0.3rem 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+		}
+		.h2{
+			position:absolute;
+			left:15px;
+			top:5px;
+			font-size: 26px;
+			color:white;
+			text-shadow: 4px 4px 4px #758481;
+		}
+		.link2{
+			color:#ffffff;
+			position:absolute;
+			left:300px;
+			top:70px;
+			font-size: 16px;
+		}
+		
+		.box3{
+			position:absolute;
+			top:450px;
+			left:120px;
+			height:120px;
+			width:350px;
+			opacity:0.8;
+			background-color:#aac5d3;
+			border-radius:0.7rem;
+			box-shadow: 0.5rem 0.9rem 1.2rem rgba(0, 0, 0, 0.25),
+				0.3rem 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+		}
+		.h3{
+			position:absolute;
+			left:25px;
+			top:15px;
+			font-size: 26px;
+			color:white;
+			text-shadow: 4px 4px 4px #758481;
+		}
+		.link3{
+			color:#ffffff;
+			position:absolute;
+			left:270px;
+			top:70px;
+			font-size: 16px;
+		}
+		
+		.left a:hover{
+			color:#77af95;
+		}		
+		
 
 			.head {
 				position: absolute;
@@ -46,24 +135,24 @@
 			.f1 {
 				width: 120px;
 				height: 110px;
-				top: 530px;
-				left: 920px;
+				top: 510px;
+				left: 1330px;
 				position: absolute;
 			}
 
 			.f2 {
 				width: 150px;
 				height: 110px;
-				top: 120px;
-				left: 520px;
+				top: 90px;
+				left: 920px;
 				position: absolute;
 			}
 
 			.f3 {
 				width: 200px;
 				height: 100px;
-				top: 150px;
-				left: 520px;
+				top: 120px;
+				left: 920px;
 				position: absolute;
 
 			}
