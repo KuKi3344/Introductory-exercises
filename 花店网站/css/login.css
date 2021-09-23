@@ -197,11 +197,12 @@
 				top: 340px;
 				padding: 0.5rem;
 				border: 0;
+				margin: 2rem 0 0 auto;
 				border-radius: 60px;
 				width: 100px;
 				background-color: #90e2c0;
 				color: #ffffff;
-				margin: 2rem 0 0 auto;
+				
 			}
 			.nibt1{
 				position: absolute;
@@ -232,7 +233,7 @@
 			.nibt2{
 				position: absolute;
 				left: 280px;
-				top: 300px;
+				top: 340px;
 				padding: 0.5rem;
 				border: 0;
 				border-radius: 60px;

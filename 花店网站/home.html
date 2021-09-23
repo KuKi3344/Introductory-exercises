@@ -16,7 +16,19 @@
 		<div id="particles-js"></div>
 	<button class = "night" @click="tonight">夜间模式</button>
 	
-			<div  :class="{title:noon,nititle:night}"></div>
+			<div  :class="{title:noon,nititle:night}">
+				<div>	<!-- 导航栏 -->
+					<ul>
+						<li><a href="home.html">首页</a></li>
+						<li><a href="purchase.html">购买</a></li>
+						<li><a href="buyshow.html">买家秀</a></li>
+						<li><a href="introduce.html">花类介绍</a></li>
+						<li><a href="order.html">您的订单</a></li>
+						<li><a href="login.html" @click="refor">退出登录</a></li>
+					</ul>
+				</div>
+				
+			</div>
 			
 			<div :class ="{lefttips:noon,nilefttips:night}">
 			<div :class ="{tips:noon,nitips:night}" v-cloak v-if="isLogin">	<!-- v-cloak解决未编译结束就显示的闪烁问题 -->
@@ -109,7 +121,7 @@
 </script>
 		<script src="./js/particles.js"></script>
 		<script src="./js/app.js"></script>
-<script>$(".title").load("./index.html");</script>
-<script>$(".nititle").load("./index.html");</script>
+<!-- <script>$(".title").load("./index.html");</script>
+<script>$(".nititle").load("./index.html");</script> -->
 	</body>
 </html>

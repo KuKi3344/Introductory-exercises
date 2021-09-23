@@ -76,11 +76,6 @@
 				outline: 0;
 				box-shadow: 1px 1px 1px 1px #c3c3c3;
 			}
-
-			.input::-webkit-input-placeholder {
-				color: #c3cccc;
-
-			}
 			.niinput::-webkit-input-placeholder {
 				color: #c5c5c5;
 			}
@@ -310,7 +305,7 @@
 				}
 				.nitips{
 					position:absolute;
-					top:35px;
+					top:15px;
 					left:10px;
 					color:#ffffff;
 					font-size:14px;
