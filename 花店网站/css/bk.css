@@ -1,5 +1,5 @@
 .bk {
-				background: linear-gradient(-180deg, #dfeee2 0%, #ffffff 100%);
+				background: linear-gradient(-180deg, #e5f5eb 0%, #ffffff 100%);
 				backgroud-position: center;
 				background-size: cover;
 				background-attachment: fixed;
@@ -7,20 +7,33 @@
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: 1536px;
-				height: 753px;
+				right:0;
+				bottom:0;
+				width:100%;
+				height:100%;
+				max-width:1900px;
+				max-height:1200px;
+				overflow:scroll;
+				margin:0;
+								padding:0;
+				
 			}
 			.bknight{
-				background: linear-gradient(-180deg, #52588a 0%, #8b91af 100%);
-				backgroud-position:center;
-				background-size: cover;
-				background-attachment: fixed;
-				background-repeat: no-repeat;
-				position:absolute;
-				top:0;
-				left:0;
-				width: 1536px;
-				height: 753px;
+				background: linear-gradient(-180deg, #1f2235 0%, #535668 100%);
+			backgroud-position: center;
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right:0;
+			bottom:0;
+			width:100%;
+			height:100%;
+			max-width:1900px;
+			max-height:1200px;
+			overflow:scroll;
 			}
 			.label {
 				display: block;
@@ -136,7 +149,7 @@
 						border: 0;
 						border-radius: 60px;
 						width: 90px;
-						background-color: #83c0e1;
+						background-color: #6999b3;
 						color: #fff;
 						margin: 2rem 0 0 auto;
 						
@@ -213,7 +226,7 @@
 					border-radius: 8px;
 				}
 				.nititle{
-					background-color: #5e6086;
+					background-color: #42435f;
 					height: 35px;
 					left: 120px;
 					font-size: 15px;
@@ -283,7 +296,7 @@
 				}
 				.nilefttips{
 					opacity:0.9;
-					background-color:#4e77b0;
+					background-color:#414c5d;
 					border-radius:5px;
 					position:fixed;
 					top:170px;
@@ -293,7 +306,7 @@
 					text-align:center;
 					writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/  
 					writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/ 
-					box-shadow:1px -1px 1px 0px #7a88a1,-1px 1px 1px 0px #7a88a1,1px -1px 1px 0px #7a88a1,-1px 1px 1px 0px #7a88a1;
+					box-shadow:1px -1px 1px 0px #363d48,-1px 1px 1px 0px #474f5e,1px -1px 1px 0px #424a58,-1px 1px 1px 0px #292d36;
 				}
 				.tips{
 					position:absolute;
@@ -343,14 +356,37 @@
 					margin-left: 5px;
 					position: absolute;
 					left: 650px;
-					bottom: 10px;
+					top:720px;
 					text-align: center;
 					padding-bottom: 5px;
 				}
-		@media (max-width:1535px) {
-		.bk{
-		  height:1800px;
-		}
+				
+				::-webkit-scrollbar {
+					width: 8px;
+					height: 5px;
+					border-radius: 15px;
+					-webkit-border-radius: 15px;
+				}
+				
+				::-webkit-scrollbar-track-piece {
+					border-radius: 15px;
+					-webkit-border-radius: 15px;
+				}
+				
+				::-webkit-scrollbar-thumb:vertical {
+					height: 8px;
+					background-color: rgba(156, 156, 156, 0.5);
+					border-radius: 15px;
+					-webkit-border-radius: 15px;
+				}
+				
+				::-webkit-scrollbar-thumb:horizontal {
+					width: 8px;
+					background-color: rgba(145, 148, 153, 0.5);
+					border-radius: 15px;
+					-webkit-border-radius: 15px;
+				}
+				
 		[v-cloak] {
 			display: none !important;
 		}

@@ -7,8 +7,10 @@
 		<title>LuLu花房(*￣▽￣*)ブ欢迎您</title>
 		<link rel="stylesheet" href="./css/login.css" />
 		<link rel="stylesheet" href="./css/bk.css" />
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js" ></script>
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 		
 	</head>
 	<body>
@@ -128,7 +130,7 @@
 							setCookieValue("token","yes");
 							setCookieValue("username",vm.name);
 							console.log(getCookieValue("token"));
-							alert('登陆成功！');
+							this.$message('登陆成功');
 							window.location.href = "home.html";
 						} else {
 							vm.tips = "请正确输入帐号和密码！";

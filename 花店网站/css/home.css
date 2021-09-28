@@ -14,16 +14,90 @@
 					box-shadow: 0 15px 25px rgba(217, 217, 217, 0.8);
 				}
 					
+				.move{
+					width:750px;
+					height:400px;
+					position:absolute;
+					left:150px;
+					top:100px;
+				}
+				.el-carousel{
+					box-shadow: 0 15px 25px rgba(158, 158, 158, 0.8);
+					border-radius: 15px;
+				}
+				.bottom{
+					background-color: #f9f9f9;
+					width:850px;
+					height:250px;
+					position:absolute;
+					left:100px;
+					top:450px;
+					border-radius:10px;
+					box-shadow: 0 15px 25px rgba(217, 217, 217, 0.8);
+				}
+				
+				.bottom li{
+					width:780px;
+					color:#8e9bb0;
+					margin: 20px 20px 20px 10px;
+					border-bottom: 1px dashed;
+					border-color: #d1d1d1;
+				}
+				.bottom a{
+					text-decoration:none;	
+					color:#485876;
+				}
+				.bottom li span{
+					position:absolute;
+					left:750px;
+					color:#c1c1c1;
+				}
+				.bottom a:hover{
+					color:#708fc2;
+				
+				}
+				
+				.nibottom{
+					background-color: #c9cce3;
+					width:850px;
+					height:250px;
+					position:absolute;
+					left:100px;
+					top:450px;
+					border-radius:10px;
+					box-shadow: 0 15px 25px rgba(44, 48, 56, 0.8);
+				}
+				
+				.nibottom li{
+					width:780px;
+					color:#616b78;
+					margin: 20px 20px 20px 10px;
+					border-bottom: 1px dashed;
+					border-color: #f9f9f9;
+				}
+				.nibottom a{
+					text-decoration:none;	
+					color:#313c50;
+				}
+				.nibottom li span{
+					position:absolute;
+					left:750px;
+					color:#7b8395;
+				}
+				.nibottom a:hover{
+					color:#708fc2;
+				
+				}				
 					.nibox{
 						opacity:0.8;
-						background-color: #5a658c;
+						background-color: #47506f;
 						position:absolute;
 						left:1000px;
 						top:120px;
 						width:450px;
 						height:550px;
 						border-radius:10px;
-						box-shadow:1px -1px 2px 1px #4c6283,-1px 1px 2px 1px  #4c6283,1px -1px 2px 1px  #4c6283,-1px 1px 2px 1px  #4c6283;
+						box-shadow: 0 15px 25px rgba(44, 48, 56, 0.8);
 					}
 					
 				.text{
@@ -35,7 +109,7 @@
 					
 				}
 				.p1{
-					color:#7bc6a0;
+					color:#508268;
 					font-size:25px;
 					position:absolute;
 					left:20px;
@@ -51,7 +125,7 @@
 				}
 				
 				.p2{
-					color:#93c596;
+					color:#729873;
 					font-size:19px;
 					position:absolute;
 					left:5px;

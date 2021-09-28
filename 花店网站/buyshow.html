@@ -15,7 +15,8 @@
 	<body>
 		<div :class = "{bk:noon,bknight:night}" id = "container">
 			<div id="particles-js"></div>
-			<button class = "night" @click="tonight">夜间模式</button>
+			<button class = "night" v-if="noon" @click="tonight">夜间模式</button>
+			<button class = "night" v-else @click="tonight">白日模式</button>
 				<div :class="{title:noon,nititle:night}"></div>
 				<div class="symbol">LULU</div>
 				<div class = "isLogin" v-cloak v-if="isLogin">
