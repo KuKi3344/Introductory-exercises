@@ -6,7 +6,7 @@
 			content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
 		<link rel="stylesheet" href="./css/home.css" />
-		<link rel="icon" href="./logo/flower.ico" >
+		<link rel="icon" href="./logo/flower.ico">
 		<link rel="stylesheet" href="./css/bk.css" />
 		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 		<script type="text/javascript" src="./js/vue.js"></script>
@@ -40,36 +40,39 @@
 
 
 			<div class="move">
-				<el-carousel :interval="5000" arrow="always" height="300px">
+				<el-carousel :interval="5000" arrow="always" height="350px">
 					<el-carousel-item v-for="item in imgList" :key="item.id">
-						<img :src="item.idView" class="image" height="400px" width="800px">
+						<img :src="item.idView" class="image" height="350px" width="900px">
 					</el-carousel-item>
 				</el-carousel>
 			</div>
 
-			<div :class="{bottom:noon,nibottom:night}">
+			<div :class="{discuss:noon,nidiscuss:night}">
 				<li><a href="#">那些不一样的韩式花盒，素材看这一篇就够了</a><span>09-28</span></li>
 				<li><a href="#">北京举办首届地景艺术节</a><span>09-21</span></li>
 				<li><a href="#">杭州萧山“赏花经济”渐成新宠</a><span>09-15</span></li>
 				<li><a href="#">关于生石花安全度夏的一些体会</a><span>08-29</span></li>
-				<li><a href="#">【花店直供】物流发货通知</a><span>08-15</span></li>
-			</div>
-			<div :class="{box:noon,nibox:night}">
-				<div class="text">
-					<p :class="{p1:noon,nip1:night}">Why buy flowers?
-					</p>
-					<p :class="{p2:noon,nip2:night}">&emsp;&emsp;It is a good choice to buy flowers for family,
-						friends and loved ones during the festival.It sustains our blessing,
-						but also represents romance.In particular, your loved one will love it when you send them
-						flowers
-						,I'd rather call it the beginning of romance than flowers.<br />
-						&emsp;&emsp;Send you flowers, just for you are my</p>
-					<span :class="{R:noon,niR:night}">Romance.</span>
-				</div>
-				<img :class="{fl1:noon,fl2:night}"
-					src="https://picnew9.photophoto.cn/20150721/shouhuiyiduofennendehuapngtoumingsucai-29377668_1.jpg">
+				<li><a href="#">养多肉的必备知识——你养对了吗</a><span>08-15</span></li>
+				<li><a href="#">七夕活动:给你的TA一次浪漫的七夕</a><span>08-13</span></li>
+				<li><a href="#">【花店直供】物流发货通知</a><span>08-10</span></li>
+				<li><a href="#">花艺知识--餐桌花艺的五个重点</a><span>07-28</span></li>
+
 
 			</div>
+			<div class="box">
+				<div class="one"><a href="#"><img src="./img/box1.jpg" height="380px"></a></div>
+				<div class="two"><a href="#"><img src="./img/box2.jpg" height="180px"></a>
+					<a href="#"><img src="./img/box3.jpg" height="180px"></a>
+				</div>
+				<div class="three"><a href="#"><img src="./img/box4.jpg" height="380px"></a></div>
+			</div>
+			<div class = "box2">
+				<div class="four"><a href="#"><img src="./img/box5.png" height="165px"></a></div>
+				<div class="five"><a href="#"><img src="./img/box8.jpg" height="175px"></a></div>				
+				<div class="six"><a href="#"><img src="./img/box6.png" height="165px"></a></div>
+				<div class="seven"><a href="#"><img src="./img/box7.png" height="165px"></a></div>
+				
+				</div>
 			<div :class="{lefttips:noon,nilefttips:night}">
 				<div :class="{tips:noon,nitips:night}" v-cloak v-if="isLogin">
 					<!-- v-cloak解决未编译结束就显示的闪烁问题 -->
@@ -92,20 +95,21 @@
 					night: false,
 					imgList: [{
 							id: 0,
-							idView: './img/move3.png'
+							idView: './img/move1.png'
 						},
 						{
 							id: 1,
-							idView: './img/move6.png'
+							idView: './img/move2.png'
 						},
 						{
 							id: 2,
-							idView: './img/move7.jpg'
+							idView: './img/move3.jpg'
 						},
 						{
-							id: 1,
-							idView: './img/move8.png'
-						}
+							id: 3,
+							idView: './img/move4.png'
+						},
+
 					]
 
 				},
