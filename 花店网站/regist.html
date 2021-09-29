@@ -15,7 +15,7 @@
 
 	</head>
 	<body>
-		<div :class="{bk:noon,bknight:night}" id="container">
+		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
 			<div id="particles-js"></div>
 			<button class="night" v-if="noon" @click="tonight">夜间模式</button>
 			<button class="night" v-else @click="tonight">白日模式</button>
@@ -48,7 +48,7 @@
 				<img class="f1" src="https://pics.prcm.jp/3a638fefa1001/75420560/png/75420560_220x200.png" />
 				<img class="f2" src="https://sozai-good.com/uploads/83454/83454_sample.png" />
 			</div>
-			<div class="footer">Created by LULU @2021.</div>
+			<div class="footer">Created by LULU @2021/仅供学习使用</div>
 		</div>
 		<script type="text/javascript">
 			var vm = new Vue({

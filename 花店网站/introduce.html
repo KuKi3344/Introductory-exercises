@@ -6,15 +6,15 @@
 		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
 		<link rel="stylesheet" href="./css/introduce.css" />
 		<link rel="stylesheet" href="./css/bk.css" />
-		<link rel="stylesheet" href="./css/nologin.css" />
 		<link rel="icon" href="./logo/flower.ico" >
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js" ></script>
 		<script type="text/javascript" src="./js/jquery.js" ></script>
-	
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 	</head>
 	<body>
-		<div :class = "{bk:noon,bknight:night}" id = "container">
+		<div :class = "{bk:noon,bknight:night}" id = "container" v-cloak>
 			<div id="particles-js"></div>
 			<button class = "night" v-if="noon" @click="tonight">夜间模式</button>
 			<button class = "night" v-else @click="tonight">白日模式</button>
@@ -27,24 +27,35 @@
 							<li><a href="buyshow.html">买家秀</a></li>
 							<li><a href="introduce.html">花类介绍</a></li>
 							<li><a href="order.html">您的订单</a></li>
-							<li><a href="login.html" @click="refor">退出登录</a></li>
+							<li><a  @click="refor">退出登录</a></li>
 						</ul>
 					</div>
 					
 					
 				</div>
 				<div class="symbol">LULU</div>
-				<div class = "isLogin" v-cloak v-if="isLogin">
-				<div :class ="{lefttips:noon,nilefttips:night}">
-				<div :class ="{tips:noon,nitips:night}">
-					{{username}},欢迎您
-				</div>
-				</div>	
-			
+				
+		<div :class="{lefttips:noon,nilefttips:night}">
+			<div :class="{tips:noon,nitips:night}" v-cloak v-if="isLogin">
+				<!-- v-cloak解决未编译结束就显示的闪烁问题 -->
+				{{username}},欢迎您
+			</div>
+			<div :class="{tips:noon,nitips:night}" v-cloak v-else>
+				亲，请<a href="login.html" target="_top" id="t1">登录</a>
+			</div>
 		</div>
-	<div class="nologin" v-cloak v-else></div>
-	
-		<div class = "footer">Created by LULU @2021.</div>
+	<el-dialog
+	  title="提示"
+	  :visible.sync="isback"
+	  width="30%"
+	  :before-close="backhome">
+	  <span>退出登录后将清空您的登录信息，请您确认</span>
+	  <span slot="footer" class="dialog-footer">
+	    <el-button @click="backhome">取 消</el-button>
+	    <el-button type="primary" @click="backlogin">确 定</el-button>
+	  </span>
+	</el-dialog>
+		<div class="footer">Created by LULU @2021/仅供学习使用</div>
 	</div>
 	<script>
 	// Vue.component('button-buy', {
@@ -72,6 +83,7 @@
 			isLogin:false,
 			noon:true,
 			night:false,
+			isback:false,
 			
 		},
 		created:function(){
@@ -92,11 +104,24 @@
 			},
 		methods:{
 		refor:function(){			// 点击退出登录后，不管是网页后退还是直接输入首页网址，都要重新登录，cookie直接被删除了
-			alert('退出后，您需要重新登录才能继续使用部分功能，请确认');
+		if(vm.isLogin=true){		// 未登录直接不显示弹窗
+			vm.isback = true;
+		}else{
+			vm.isback = false;
+		}
+			
+		},	
+		backhome:function(){
+			vm.isback = false;
+			window.location.href = "home.html";
+		},
+		backlogin:function(){
+			vm.isback = false;
 			clearCookie("token");
 			clearCookie("username");
 			clearCookie("tonight");
-		},	
+			window.location.href = "login.html";
+		},
 		tonight:function(){
 			if(vm.night){						// 因为监听器会随时监测night是否和tonight方向一致
 				var space = "";					// 所以要先改变tonight的值再去改变night的值才能使night变化

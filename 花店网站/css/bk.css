@@ -1,392 +1,416 @@
 .bk {
-				background: linear-gradient(-180deg, #f4fffa 0%, #ffffff 100%);
-				backgroud-position: center;
-				background-size: cover;
-				background-attachment: fixed;
-				background-repeat: no-repeat;
-				position: absolute;
-				top: 0;
-				left: 0;
-				right:0;
-				bottom:0;
-				width:100%;
-				height:100%;
-				max-width:1900px;
-				max-height:1200px;
-				overflow:scroll;
-				margin:0;
-				padding:0;
-				
-			}
-			.bknight{
-				background: linear-gradient(-180deg, #1f2235 0%, #535668 100%);
-			backgroud-position: center;
-			background-size: cover;
-			background-attachment: fixed;
-			background-repeat: no-repeat;
-			position: absolute;
-			top: 0;
-			left: 0;
-			right:0;
-			bottom:0;
-			width:100%;
-			height:100%;
-			max-width:1900px;
-			max-height:1200px;
-			overflow:scroll;
-			}
-			.label {
-				display: block;
-				margin-bottom: 10px;
-				color: #478349;
-				text-align: center;
-			}
-			.nilabel {
-				display: block;
-				margin-bottom: 10px;
-				color: #ffffff;
-				text-align: center;
-			}
+	background: linear-gradient(-180deg, #f4fffa 0%, #f6fffb 100%);
+	backgroud-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	max-width: 1900px;
+	max-height: 1200px;
+	overflow: scroll;
+	margin: 0;
+	padding: 0;
 
-			.input {
-				display: block;
-				width: 100%;
-				margin: 0 0 1rem 0;
-				padding: 0.5rem;
-				font-size: 1rem;
-				border: 0;
-				border-radius: 0.125rem 0.25rem;
-				background-color: #f7f7f7;
-				opacity:0.8;
-			}
-			.niinput{
-				display: block;
-				width: 100%;
-				margin: 0 0 1rem 0;
-				padding: 0.5rem;
-				font-size: 1rem;
-				color:white;
-				border: 0px;
-				border-radius: 0.125rem 0.25rem;
-				background-color:rgba(78, 91, 120, 0.8);
-				opacity:0.8;
-			}
-			.input:focus {
-				outline: 0;
-				box-shadow: 1px 1px 1px 0px #8dcca2;
-			}
+}
 
-			.input::-webkit-input-placeholder {
-				color: #c3cccc;
+.bknight {
+	background: linear-gradient(-180deg, #1f2235 0%, #535668 100%);
+	backgroud-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	max-width: 1900px;
+	max-height: 1200px;
+	overflow: scroll;
+}
 
-			}
+.label {
+	display: block;
+	margin-bottom: 10px;
+	color: #478349;
+	text-align: center;
+}
 
-			.input:focus::-webkit-input-placeholder {
-				color: #FFFFFF;
-			}
+.nilabel {
+	display: block;
+	margin-bottom: 10px;
+	color: #ffffff;
+	text-align: center;
+}
 
-		.niinput:focus {
-				outline: 0;
-				box-shadow: 1px 1px 1px 1px #c3c3c3;
-			}
-			.niinput::-webkit-input-placeholder {
-				color: #c5c5c5;
-			}
-			.niinput:focus::-webkit-input-placeholder {
-				color: #717171;
-			}		
-			
-			.bt1:hover {
-				background: #90e2c0;
-				color: #fff;
-				border-radius: 60px;
-				box-shadow: 0 0 5px #90e2c0,
-						0 0 25px #90e2c0,
-						0 0 50px #90e2c0,
-						0 0 100px #90e2c0;
-				}
-			.nibt1:hover{
-				background: #7c9bc1;
-				color: #fff;
-				border-radius: 60px;
-				box-shadow: 0 0 5px #7c9bc1,
-						0 0 25px #7c9bc1,
-						0 0 50px #7c9bc1,
-						0 0 100px #7c9bc1;
-			}
-			.bt2:hover {
-				background: #90e2c0;
-				color: #fff;
-				border-radius: 60px;
-				box-shadow: 0 0 5px #90e2c0,
-						0 0 25px #90e2c0,
-						0 0 50px #90e2c0,
-						0 0 100px #90e2c0;
-				}
-				.nibt2:hover {
-					background: #7c9bc1;
-					color: #fff;
-					border-radius: 60px;
-					box-shadow: 0 0 5px #7c9bc1,
-							0 0 25px #7c9bc1,
-							0 0 50px #7c9bc1,
-							0 0 100px #7c9bc1;
-					}
-			.bt1:focus {
-				
-				outline: 0;
-			}
-			.bt2:focus {
-				
-				outline: 0;
-			}
-			
-			.night{
-						position:absolute;
-						left:1350px;
-						top:-25px;
-						padding: 0.5rem;
-						border: 0;
-						border-radius: 60px;
-						width: 90px;
-						background-color: #6999b3;
-						color: #fff;
-						margin: 2rem 0 0 auto;
-						
-				}
-				
-				.night:hover {
-					background:  #8eb8dc;
-					color: #fff;
-					border-radius: 60px;
-					box-shadow: 0 0 5px   #8eb8dc,
-						0 0 25px  #8eb8dc,
-						0 0 50px   #8eb8dc,
-						0 0 100px   #8eb8dc;
-				}
-				
-				.night:focus {
-					outline: 0;
-				}
+.input {
+	display: block;
+	width: 100%;
+	margin: 0 0 1rem 0;
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: 0;
+	border-radius: 0.125rem 0.25rem;
+	background-color: #f7f7f7;
+	opacity: 0.8;
+}
+
+.niinput {
+	display: block;
+	width: 100%;
+	margin: 0 0 1rem 0;
+	padding: 0.5rem;
+	font-size: 1rem;
+	color: white;
+	border: 0px;
+	border-radius: 0.125rem 0.25rem;
+	background-color: rgba(78, 91, 120, 0.8);
+	opacity: 0.8;
+}
+
+.input:focus {
+	outline: 0;
+	box-shadow: 1px 1px 1px 0px #8dcca2;
+}
+
+.input::-webkit-input-placeholder {
+	color: #c3cccc;
+
+}
+
+.input:focus::-webkit-input-placeholder {
+	color: #FFFFFF;
+}
+
+.niinput:focus {
+	outline: 0;
+	box-shadow: 1px 1px 1px 1px #c3c3c3;
+}
+
+.niinput::-webkit-input-placeholder {
+	color: #c5c5c5;
+}
+
+.niinput:focus::-webkit-input-placeholder {
+	color: #717171;
+}
+
+.bt1:hover {
+	background: #90e2c0;
+	color: #fff;
+	border-radius: 60px;
+	box-shadow: 0 0 5px #90e2c0,
+		0 0 25px #90e2c0,
+		0 0 50px #90e2c0,
+		0 0 100px #90e2c0;
+}
+
+.nibt1:hover {
+	background: #7c9bc1;
+	color: #fff;
+	border-radius: 60px;
+	box-shadow: 0 0 5px #7c9bc1,
+		0 0 25px #7c9bc1,
+		0 0 50px #7c9bc1,
+		0 0 100px #7c9bc1;
+}
+
+.bt2:hover {
+	background: #90e2c0;
+	color: #fff;
+	border-radius: 60px;
+	box-shadow: 0 0 5px #90e2c0,
+		0 0 25px #90e2c0,
+		0 0 50px #90e2c0,
+		0 0 100px #90e2c0;
+}
+
+.nibt2:hover {
+	background: #7c9bc1;
+	color: #fff;
+	border-radius: 60px;
+	box-shadow: 0 0 5px #7c9bc1,
+		0 0 25px #7c9bc1,
+		0 0 50px #7c9bc1,
+		0 0 100px #7c9bc1;
+}
+
+.bt1:focus {
+
+	outline: 0;
+}
+
+.bt2:focus {
+
+	outline: 0;
+}
+
+.night {
+	position: absolute;
+	left: 1350px;
+	top: -25px;
+	padding: 0.5rem;
+	border: 0;
+	border-radius: 60px;
+	width: 90px;
+	background-color: #6999b3;
+	color: #fff;
+	margin: 2rem 0 0 auto;
+
+}
+
+.night:hover {
+	background: #8eb8dc;
+	color: #fff;
+	border-radius: 60px;
+	box-shadow: 0 0 5px #8eb8dc,
+		0 0 25px #8eb8dc,
+		0 0 50px #8eb8dc,
+		0 0 100px #8eb8dc;
+}
+
+.night:focus {
+	outline: 0;
+}
 
 
-			.title {
-					background-color: #ababab;
-					height: 35px;
-					left: 120px;
-					font-size: 15px;
-					width: 1200px;
-					margin-left: 0;
-					position: absolute;
-					top: 3px;
-					;
-					color: white;
-					margin-bottom: 1px;
-					overflow: hidden;
-					border-radius: 8px;
-				}
-		
-				.title ul {
-					/* 清除ul标签的默认样式 */
-					width: 1100px;
-					position: absolute;
-					left: 200px;
-					list-style-type: none;
-					margin: 0;
-					padding: 0;
-		
-				}
-		
-				.title li {
-					float: left;
-					/* 使li内容横向浮动，即横向排列  */
-					margin-right:90px;
-					/* 两个li之间的距离*/
-					position: relative;
-					top: 0.;
-					
-					border-color: #222222;
-					border-radius: 8px;
-				}
-		
-				.title li a {
-					/* 设置链接内容显示的格式*/
-					display: block;
-					/* 把链接显示为块元素可使整个链接区域可点击 */
-					color: #ffffff;
-					text-align: center;
-					padding: 8px 15px;
-					text-decoration: none;
-					/* 去除下划线 */
-				}
-		
-				.title li a:hover {
-					/* 鼠标选中时背景变为深色 */
-					background-color: #83b19c;
-					border-radius: 8px;
-				}
-				.nititle{
-					background-color: #42435f;
-					height: 35px;
-					left: 120px;
-					font-size: 15px;
-					width: 1200px;
-					margin-left: 0;
-					position: absolute;
-					top: 3px;
-					color: white;
-					margin-bottom: 1px;
-					overflow: hidden;
-					border-radius: 8px;
-				}
-				
-				.nititle ul {
-					/* 清除ul标签的默认样式 */
-					width: 1100px;
-					position: absolute;
-					left: 200px;
-					list-style-type: none;
-					margin: 0;
-					padding: 0;
-						
-				}
-						
-				.nititle li {
-					float: left;
-					/* 使li内容横向浮动，即横向排列  */
-					margin-right:90px;
-					/* 两个li之间的距离*/
-					position: relative;
-					top: 0.;
-					
-					border-color: #222222;
-					border-radius: 8px;
-				}
-						
-				.nititle li a {
-					/* 设置链接内容显示的格式*/
-					display: block;
-					/* 把链接显示为块元素可使整个链接区域可点击 */
-					color: #ffffff;
-					text-align: center;
-					padding: 8px 15px;
-					text-decoration: none;
-					/* 去除下划线 */
-				}
-						
-				.nititle li a:hover {
-					/* 鼠标选中时背景变为深色 */
-					background-color: #8599ce;
-					border-radius: 8px;
-				}
-				
-				.lefttips{
-					opacity:0.9;
-					background-color:#fff;
-					border-radius:5px;
-					position:fixed;
-					top:170px;
-					left:0;
-					height:180px;
-					width:40px;
-					text-align:center;
-					writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/  
-					writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/ 
-					box-shadow:1px -1px 1px 0px #bcf5ac,-1px 1px 1px 0px #bcf5ac,1px -1px 1px 0px #bcf5ac,-1px 1px 1px 0px #bcf5ac;
-				}
-				.nilefttips{
-					opacity:0.9;
-					background-color:#414c5d;
-					border-radius:5px;
-					position:fixed;
-					top:170px;
-					left:0;
-					height:180px;
-					width:40px;
-					text-align:center;
-					writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/  
-					writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/ 
-					box-shadow:1px -1px 1px 0px #363d48,-1px 1px 1px 0px #474f5e,1px -1px 1px 0px #424a58,-1px 1px 1px 0px #292d36;
-				}
-				.tips{
-					position:absolute;
-					top:15px;
-					left:10px;
-					color:#678b70;
-					font-size:14px;
+.title {
+	background-color: #ababab;
+	height: 35px;
+	left: 120px;
+	font-size: 15px;
+	width: 1200px;
+	margin-left: 0;
+	position: absolute;
+	top: 3px;
+	;
+	color: white;
+	margin-bottom: 1px;
+	overflow: hidden;
+	border-radius: 8px;
+}
 
-				}
-				.nitips{
-					position:absolute;
-					top:15px;
-					left:10px;
-					color:#ffffff;
-					font-size:14px;
-				
-				}
-				#t1{
-					color:#88d88a;
-				}
-				#t1:hover{
-					color:#b2eeb5;
-					text-shadow:0 0 2px #b2eeb5,
-					0 0 4px #b2eeb5,
-					0 0 6px #b2eeb5;
-				}
-				
-				.symbol{
-					font:italic 1em Georgia, serif;
-					font-size:35px;
-					color: #ffc0c1;
-					text-shadow:2px 2px 2px #e7e7e7;
-					position:absolute;
-					left:150px;
-					top:1px;
-					border-color: #ffa2a7;
-				}
-			#particles-js {
-				position: absolute;
-				width: 1530px;
-				height: 752px;
-			}
-			.footer {
-					width: 200px;
-					color: white;
-					font-size: 15px;
-					margin-left: 5px;
-					position: relative;
-					left: 650px;
-					top:900px;
-					text-align: center;
-					padding-bottom: 5px;
-				}
-				
-				::-webkit-scrollbar {
-					width: 10px;
-					height: 8px;
-					border-radius: 15px;
-					-webkit-border-radius: 15px;
-				}
-				
-				::-webkit-scrollbar-track-piece {
-					border-radius: 15px;
-					-webkit-border-radius: 15px;
-				}
-				
-				::-webkit-scrollbar-thumb:vertical {
-					height: 10px;
-					background-color: rgba(162, 162, 162, 0.5);
-					border-radius: 15px;
-					-webkit-border-radius: 15px;
-				}
-				
-				::-webkit-scrollbar-thumb:horizontal {
-					width: 8px;
-					background-color: rgba(160, 163, 168, 0.5);
-					border-radius: 15px;
-					-webkit-border-radius: 15px;
-				}
-				
-		[v-cloak] {
-			display: none !important;
-		}
+.title ul {
+	/* 清除ul标签的默认样式 */
+	width: 1100px;
+	position: absolute;
+	left: 200px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+.title li {
+	float: left;
+	/* 使li内容横向浮动，即横向排列  */
+	margin-right: 90px;
+	/* 两个li之间的距离*/
+	position: relative;
+	top: 0.;
+
+	border-color: #222222;
+	border-radius: 8px;
+}
+
+.title li a {
+	/* 设置链接内容显示的格式*/
+	display: block;
+	/* 把链接显示为块元素可使整个链接区域可点击 */
+	color: #ffffff;
+	text-align: center;
+	padding: 8px 15px;
+	text-decoration: none;
+	/* 去除下划线 */
+}
+
+.title li a:hover {
+	/* 鼠标选中时背景变为深色 */
+	background-color: #83b19c;
+	border-radius: 8px;
+}
+
+.nititle {
+	background-color: #42435f;
+	height: 35px;
+	left: 120px;
+	font-size: 15px;
+	width: 1200px;
+	margin-left: 0;
+	position: absolute;
+	top: 3px;
+	color: white;
+	margin-bottom: 1px;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.nititle ul {
+	/* 清除ul标签的默认样式 */
+	width: 1100px;
+	position: absolute;
+	left: 200px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+.nititle li {
+	float: left;
+	/* 使li内容横向浮动，即横向排列  */
+	margin-right: 90px;
+	/* 两个li之间的距离*/
+	position: relative;
+	top: 0.;
+
+	border-color: #222222;
+	border-radius: 8px;
+}
+
+.nititle li a {
+	/* 设置链接内容显示的格式*/
+	display: block;
+	/* 把链接显示为块元素可使整个链接区域可点击 */
+	color: #ffffff;
+	text-align: center;
+	padding: 8px 15px;
+	text-decoration: none;
+	/* 去除下划线 */
+}
+
+.nititle li a:hover {
+	/* 鼠标选中时背景变为深色 */
+	background-color: #8599ce;
+	border-radius: 8px;
+}
+
+.lefttips {
+	opacity: 0.9;
+	background-color: #fff;
+	border-radius: 5px;
+	position: fixed;
+	top: 170px;
+	left: 0;
+	height: 180px;
+	width: 40px;
+	text-align: center;
+	writing-mode: vertical-rl;
+	/*从左向右 从右向左是 writing-mode: vertical-rl;*/
+	writing-mode: tb-rl;
+	/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
+	box-shadow: 1px -1px 1px 0px #bcf5ac, -1px 1px 1px 0px #bcf5ac, 1px -1px 1px 0px #bcf5ac, -1px 1px 1px 0px #bcf5ac;
+}
+
+.nilefttips {
+	opacity: 0.9;
+	background-color: #414c5d;
+	border-radius: 5px;
+	position: fixed;
+	top: 170px;
+	left: 0;
+	height: 180px;
+	width: 40px;
+	text-align: center;
+	writing-mode: vertical-rl;
+	/*从左向右 从右向左是 writing-mode: vertical-rl;*/
+	writing-mode: tb-rl;
+	/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
+	box-shadow: 1px -1px 1px 0px #363d48, -1px 1px 1px 0px #474f5e, 1px -1px 1px 0px #424a58, -1px 1px 1px 0px #292d36;
+}
+
+.tips {
+	position: absolute;
+	top: 15px;
+	left: 10px;
+	color: #678b70;
+	font-size: 14px;
+
+}
+
+.nitips {
+	position: absolute;
+	top: 15px;
+	left: 10px;
+	color: #ffffff;
+	font-size: 14px;
+
+}
+
+#t1 {
+	color: #88d88a;
+}
+
+#t1:hover {
+	color: #b2eeb5;
+	text-shadow: 0 0 2px #b2eeb5,
+		0 0 4px #b2eeb5,
+		0 0 6px #b2eeb5;
+}
+
+.symbol {
+	font: italic 1em Georgia, serif;
+	font-size: 35px;
+	color: #ffc0c1;
+	text-shadow: 2px 2px 2px #e7e7e7;
+	position: absolute;
+	left: 150px;
+	top: 1px;
+	border-color: #ffa2a7;
+}
+
+#particles-js {
+	position: absolute;
+	width: 1530px;
+	height: 752px;
+}
+
+.footer {
+	width: 300px;
+	color: #b3b3b3;
+	font-size: 15px;
+	margin-left: 5px;
+	position: relative;
+	left: 600px;
+	top: 900px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 8px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+::-webkit-scrollbar-track-piece {
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	height: 10px;
+	background-color: rgba(162, 162, 162, 0.5);
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+	width: 8px;
+	background-color: rgba(160, 163, 168, 0.5);
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+[v-cloak] {
+	display: none !important;
+}
