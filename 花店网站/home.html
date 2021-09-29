@@ -6,6 +6,7 @@
 			content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
 		<link rel="stylesheet" href="./css/home.css" />
+		<link rel="icon" href="./logo/flower.ico" >
 		<link rel="stylesheet" href="./css/bk.css" />
 		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 		<script type="text/javascript" src="./js/vue.js"></script>
@@ -35,15 +36,6 @@
 
 			</div>
 
-			<div :class="{lefttips:noon,nilefttips:night}">
-				<div :class="{tips:noon,nitips:night}" v-cloak v-if="isLogin">
-					<!-- v-cloak解决未编译结束就显示的闪烁问题 -->
-					{{username}},欢迎您
-				</div>
-				<div :class="{tips:noon,nitips:night}" v-cloak v-else>
-					亲，请<a href="login.html" target="_top" id="t1">登录</a>
-				</div>
-			</div>
 			<div class="symbol">LULU</div>
 
 
@@ -65,7 +57,7 @@
 			<div :class="{box:noon,nibox:night}">
 				<div class="text">
 					<p :class="{p1:noon,nip1:night}">Why buy flowers?
-					<p>
+					</p>
 					<p :class="{p2:noon,nip2:night}">&emsp;&emsp;It is a good choice to buy flowers for family,
 						friends and loved ones during the festival.It sustains our blessing,
 						but also represents romance.In particular, your loved one will love it when you send them
@@ -77,6 +69,15 @@
 				<img :class="{fl1:noon,fl2:night}"
 					src="https://picnew9.photophoto.cn/20150721/shouhuiyiduofennendehuapngtoumingsucai-29377668_1.jpg">
 
+			</div>
+			<div :class="{lefttips:noon,nilefttips:night}">
+				<div :class="{tips:noon,nitips:night}" v-cloak v-if="isLogin">
+					<!-- v-cloak解决未编译结束就显示的闪烁问题 -->
+					{{username}},欢迎您
+				</div>
+				<div :class="{tips:noon,nitips:night}" v-cloak v-else>
+					亲，请<a href="login.html" target="_top" id="t1">登录</a>
+				</div>
 			</div>
 			<div class="footer">Created by LULU @2021.</div>
 		</div>
