@@ -18,8 +18,7 @@
 	height:753px;
 	max-width: 1900px;
 	max-height: 1200px;
-	overflow-y: scroll;
-	overflow-x: hidden;
+	overflow: scroll;
 	margin: 0;
 	padding: 0;
 
@@ -375,7 +374,7 @@
 
 #particles-js {
 	position: absolute;
-	width: 1530px;
+	width: 1500px;
 	height: 752px;
 }
 
