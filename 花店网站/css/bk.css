@@ -1,3 +1,10 @@
+		html {
+		  height: 100%;
+		}
+		body {
+		  margin:0;
+		  padding:0;
+		}
 .bk {
 	background: linear-gradient(-180deg, #f4fffa 0%, #f6fffb 100%);
 	backgroud-position: center;
@@ -7,13 +14,12 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
+	width:1535px;
+	height:753px;
 	max-width: 1900px;
 	max-height: 1200px;
-	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
 
@@ -378,9 +384,9 @@
 	color: #b3b3b3;
 	font-size: 15px;
 	margin-left: 5px;
-	position: relative;
+	position: absolute;
 	left: 600px;
-	top: 900px;
+	bottom:0px;
 	text-align: center;
 	padding-bottom: 5px;
 }
