@@ -351,14 +351,14 @@
 }
 
 #t1 {
-	color: #88d88a;
+	color: #6aa86b;
 }
 
 #t1:hover {
-	color: #b2eeb5;
-	text-shadow: 0 0 2px #b2eeb5,
-		0 0 4px #b2eeb5,
-		0 0 6px #b2eeb5;
+	color: #75b975;
+	text-shadow: 0 0 2px #75b975,
+		0 0 4px #75b975,
+		0 0 6px #75b975;
 }
 
 .symbol {
@@ -374,8 +374,8 @@
 
 #particles-js {
 	position: absolute;
-	width: 1500px;
-	height: 752px;
+	width:1500px;
+	height:100%;
 }
 
 .footer {

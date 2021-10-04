@@ -94,8 +94,8 @@
 				this.username = getCookieValue('username');
 			}else{
 				this.isLogin = false; 				
-				this.$message('请先登录');
-				window.location.href = "home.html";
+				alert('请先登录');
+				window.location.href = "login.html";
 				
 			}
 			var tonight = getCookieValue("tonight");	// 读取在别的页面是否夜间模式来决定此页面是否为夜间模式
