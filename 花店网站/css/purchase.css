@@ -9,7 +9,6 @@ html {
 	position: absolute;
 	left: 70px;
 	top: 100px;
-	opacity: 0.8;
 	border: 10px;
 	border-style: solid;
 	border-color: #f7f7f7;
@@ -21,14 +20,58 @@ html {
 
 	position: absolute;
 	left: 20px;
-	top: 500px;
-	color: #a5a5a5;
+	top: 480px;
+	color: #ffffff;
 	font-size: 30px;
+	width:180px;
+	height:50px;
+	border:2px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	text-align: center;
+	padding-top: 5px;
+	
 }
 
 .left img {
 	border-radius: 5px;
 }
+
+.left2 {
+	width: 300px;
+	height: 450px;
+	background-color: #ffffff;
+	position: absolute;
+	left: 70px;
+	top: 750px;
+	border: 10px;
+	border-style: solid;
+	border-color: #f7f7f7;
+	border-radius: 10px;
+	padding: 10px 10px 10px 10px;
+}
+
+.left2 span {
+
+	position: absolute;
+	left: 40px;
+	top: 380px;
+	color: #ffffff;
+	font-size: 30px;
+	width:170px;
+	height:50px;
+	border:2px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	text-align: center;
+	padding-top: 5px;
+	
+}
+
+.left2 img {
+	border-radius: 5px;
+}
+
 
 .card {
 	position: absolute;
@@ -37,9 +80,9 @@ html {
 	bottom: 30px;
 	bottom: 100px;
 	border-radius: 10px;
-	width:1000px;
+	width:950px;
 	height:640px;
-	background-color: #f9fefd;
+	background-color: #edf7ee;
 }
 
 .card1 {
