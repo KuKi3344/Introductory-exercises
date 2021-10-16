@@ -23,14 +23,14 @@ html {
 	top: 480px;
 	color: #ffffff;
 	font-size: 30px;
-	width:180px;
-	height:50px;
-	border:2px;
+	width: 180px;
+	height: 50px;
+	border: 2px;
 	border-style: solid;
 	border-color: #FFFFFF;
 	text-align: center;
 	padding-top: 5px;
-	
+
 }
 
 .left img {
@@ -58,14 +58,14 @@ html {
 	top: 380px;
 	color: #ffffff;
 	font-size: 30px;
-	width:170px;
-	height:50px;
-	border:2px;
+	width: 170px;
+	height: 50px;
+	border: 2px;
 	border-style: solid;
 	border-color: #FFFFFF;
 	text-align: center;
 	padding-top: 5px;
-	
+
 }
 
 .left2 img {
@@ -80,10 +80,11 @@ html {
 	bottom: 30px;
 	bottom: 100px;
 	border-radius: 10px;
-	width:950px;
-	height:640px;
-	background-color: #edf7ee;
+	width: 950px;
+	height: 640px;
+	background-color: #f2f8f3;
 }
+
 .cardtwo {
 	position: absolute;
 	top: 780px;
@@ -91,14 +92,13 @@ html {
 	bottom: 30px;
 	bottom: 100px;
 	border-radius: 10px;
-	width:950px;
-	height:640px;
+	width: 950px;
+	height: 640px;
 	background-color: #edf7ee;
 }
 
 .card1 {
 	background-color: #FFFFFF;
-	box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
 	position: absolute;
 	left: 20px;
 	top: 10px;
@@ -109,7 +109,6 @@ html {
 
 .card2 {
 	background-color: #FFFFFF;
-	box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
 	position: absolute;
 	left: 20px;
 	top: 330px;
@@ -119,7 +118,6 @@ html {
 
 .card3 {
 	background-color: #FFFFFF;
-	box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
 	position: absolute;
 	left: 250px;
 	top: 10px;
@@ -129,7 +127,6 @@ html {
 
 .card4 {
 	background-color: #FFFFFF;
-	box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
 	position: absolute;
 	left: 250px;
 	top: 330px;
@@ -139,7 +136,6 @@ html {
 
 .card5 {
 	background-color: #FFFFFF;
-	box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
 	position: absolute;
 	left: 480px;
 	top: 10px;
@@ -149,31 +145,32 @@ html {
 
 .card6 {
 	background-color: #FFFFFF;
-	box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
 	position: absolute;
 	left: 480px;
 	top: 330px;
 	width: 220px;
 	height: 300px;
 }
+
 .card7 {
 	background-color: #FFFFFF;
-	box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
 	position: absolute;
 	left: 710px;
 	top: 10px;
 	width: 220px;
 	height: 300px;
 }
+
 .card8 {
 	background-color: #FFFFFF;
-	box-shadow: 2px 2px 1px 1px #fcfcfc, -2px -2px 1px 1px #fcfcfc;
 	position: absolute;
 	left: 710px;
 	top: 330px;
 	width: 220px;
 	height: 300px;
 }
+
+
 .pic {
 	position: absolute;
 	top: 3px;
@@ -191,6 +188,7 @@ html {
 	top: 240px;
 	left: 10px;
 }
+
 .cardtwo span {
 	font-size: 13px;
 	color: #313131;
