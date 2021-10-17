@@ -5,9 +5,9 @@
 		  margin:0;
 		  padding:0;
 		}
-.bk {
-	background: linear-gradient(-180deg, #f4fffa 0%, #f6fffb 100%);
-	backgroud-position: center;
+.bk,
+.bknight{
+	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -21,42 +21,29 @@
 	overflow: scroll;
 	margin: 0;
 	padding: 0;
-
+}
+.bk {
+	background: linear-gradient(-180deg, #f4fffa 0%, #f6fffb 100%);
 }
 
 .bknight {
 	background: linear-gradient(-180deg, #1f2235 0%, #535668 100%);
-	backgroud-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	max-width: 1900px;
-	max-height: 1200px;
-	overflow: scroll;
 }
-
-.label {
+.label,
+.nilabel{
 	display: block;
 	margin-bottom: 10px;
-	color: #478349;
 	text-align: center;
+}
+.label {
+	color: #478349;
 }
 
 .nilabel {
-	display: block;
-	margin-bottom: 10px;
 	color: #ffffff;
-	text-align: center;
 }
-
-.input {
+.input,
+.niinput{
 	display: block;
 	width: 100%;
 	margin: 0 0 1rem 0;
@@ -64,21 +51,15 @@
 	font-size: 1rem;
 	border: 0;
 	border-radius: 0.125rem 0.25rem;
-	background-color: #f7f7f7;
 	opacity: 0.8;
+}
+.input {
+	background-color: #f7f7f7;
 }
 
 .niinput {
-	display: block;
-	width: 100%;
-	margin: 0 0 1rem 0;
-	padding: 0.5rem;
-	font-size: 1rem;
 	color: white;
-	border: 0px;
-	border-radius: 0.125rem 0.25rem;
 	background-color: rgba(78, 91, 120, 0.8);
-	opacity: 0.8;
 }
 
 .input:focus {
@@ -371,6 +352,29 @@
 	top: 1px;
 	border-color: #ffa2a7;
 }
+.isLogin button {
+					position: absolute;
+					top: 200px;
+					left: 130px;
+					width: 60px;
+					height: 25px;
+					border: 0;
+					border-radius: 60px;
+					background-color: #a5e1bb;
+					color: #fff;
+					margin: 2rem 0 0 auto;
+				}
+
+				.isLogin button:hover {
+					background: #a5e1bb;
+					color: #fff;
+					border-radius: 60px;
+					box-shadow: 0 0 5px #a5e1bb,
+						0 0 25px #a5e1bb,
+						0 0 50px #a5e1bb,
+						0 0 100px #a5e1bb;
+				}
+
 
 #particles-js {
 	position: absolute;

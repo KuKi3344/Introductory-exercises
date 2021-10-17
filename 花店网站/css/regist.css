@@ -2,28 +2,22 @@
 			html {
 				height: 100%;
 			}
-
-			.box {
+			.box,
+			.nibox{
 				position: absolute;
-				background-color: #FFFFFF;
 				top: 100px;
 				left: 500px;
 				width: 500px;
 				height: 550px;
-				box-shadow: 0 15px 25px rgba(217, 217, 217, 0.8);
 				border-radius: 10px;
 			}
-			.nibox {
-				position: absolute;
+			.box {
 				background-color: #FFFFFF;
-				top: 100px;
-				left: 500px;
-				width: 500px;
-				height: 550px;
+				box-shadow: 0 15px 25px rgba(217, 217, 217, 0.8);
+				}
+			.nibox {
 				background: rgba(78, 91, 120, 0.8);
-				box-sizing: border-box;
 				box-shadow: 0 15px 25px rgba(78, 91, 120, 0.8);
-				border-radius: 10px;
 			}
 
 			.head {
@@ -44,11 +38,7 @@
 				width: 100%;
 				max-width: 300px;
 			}
-
-			.bt1 {
-				position: absolute;
-				left: 80px;
-				top: 440px;
+			.bt1,.bt2{
 				padding: 0.5rem;
 				border: 0;
 				border-radius: 60px;
@@ -57,16 +47,23 @@
 				color: #fff;
 				margin: 2rem 0 0 auto;
 			}
+			.bt1 {
+				position: absolute;
+				left: 80px;
+				top: 440px;
+			}
 
 			.bt2 {
 				position: absolute;
 				left: 300px;
 				top: 440px;
+			}
+			.nibt1,.nibt2{
 				padding: 0.5rem;
 				border: 0;
 				border-radius: 60px;
 				width: 100px;
-				background-color: #90e2c0;
+				background-color: #617aaf;
 				color: #fff;
 				margin: 2rem 0 0 auto;
 			}
@@ -74,25 +71,11 @@
 				position: absolute;
 				left: 80px;
 				top: 440px;
-				padding: 0.5rem;
-				border: 0;
-				border-radius: 60px;
-				width: 100px;
-				background-color: #617aaf;
-				color: #fff;
-				margin: 2rem 0 0 auto;
 			}
 			.nibt2{
 				position: absolute;
 				left: 300px;
 				top: 440px;
-				padding: 0.5rem;
-				border: 0;
-				border-radius: 60px;
-				width: 100px;
-				background-color: #617aaf;
-				color: #fff;
-				margin: 2rem 0 0 auto;
 			}
 
 			.f1 {
