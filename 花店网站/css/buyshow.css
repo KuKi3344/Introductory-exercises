@@ -13,9 +13,9 @@
 	position: absolute;
 	left: 1100px;
 	top: 150px;
-	height: 650px;
+	height: 700px;
 	width: 300px;
-	background-color: #fcfcfc;
+	background-color: #ffffff;
 	border-radius: 20px;
 	box-shadow: 0 15px 25px rgba(212, 212, 212, 0.8);
 }
@@ -145,40 +145,76 @@
 .recom1,
 .recom2,
 .recom3 {
-	background-color: #fefefe;
+	background: linear-gradient(45deg,#ffffff,#fefefe,#d9e1d7);
 	width: 250px;
 	height: 160px;
 	border-radius: 20px;
-	border: 1px dashed #a5af9e;
+	box-shadow:0 2px 2px rgba(229, 229, 229, 0.6);
 }
 
 .recom1 {
 	position: absolute;
 	left: 20px;
-	top: 20px;
+	top: 70px;
 }
 
 .recom2 {
 	position: absolute;
 	left: 20px;
-	top: 220px;
+	top: 270px;
 }
 
 .recom3 {
 	position: absolute;
 	left: 20px;
-	top: 420px;
+	top: 470px;
 }
 
 .recomhead {
 	position: absolute;
 	left: 20px;
-	top: 10px;
+	top: 40px;
 
 }
-
+.recomId a{
+	position:absolute;
+	left:120px;
+	top:40px;
+	color:#4b4b4b;
+	text-decoration: none;
+	
+}
+.recomId a:hover{
+	color:#4f9898;
+	text-decoration: underline;	
+}
+.recomintro{
+		font-size:12px;
+		color:#5b5e5c;
+		position:absolute;
+		left:100px;
+		top:75px;
+		
+	}
+	#focus{
+		position:absolute;
+		left:130px;
+		top:105px;
+		width:80px;
+		height:35px;
+		background-color:#fff;
+		border:1px solid #94c8a7;
+		border-radius:5px;
+		color:#616161;
+		
+	}
+	#focus:hover{
+		background-color: rgba(159, 195, 155, 0.6);
+		border: 1px solid #fff;
+		color:#fff;
+	}
 #foot {
 	position: absolute;
 	left: 150px;
-	top: 620px;
+	top: 670px;
 }

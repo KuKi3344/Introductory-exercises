@@ -1,26 +1,17 @@
-		html {
-		  height: 100%;
-		}
-		body {
-		  margin:0;
-		  padding:0;
-		}
 .bk,
 .bknight{
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
 	position: absolute;
 	top: 0;
 	left: 0;
-	width:1535px;
-	height:753px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;	
+	min-height: 100vh;
+	min-width: 100vw;
+	max-height: 1920px;
 	max-width: 1900px;
-	max-height: 1200px;
 	overflow: scroll;
-	margin: 0;
-	padding: 0;
 }
 .bk {
 	background: linear-gradient(-180deg, #f4fffa 0%, #f6fffb 100%);
