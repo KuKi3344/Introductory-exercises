@@ -9,9 +9,9 @@
 	"pose": "remu.pose.json",
 	"lip_sync": "false",
 	"layout": {
-		"width": 2.6,
+		"width": 2.1,
 		"center_x": 0,
-		"center_y": -0.29
+		"center_y": 0
 	},
 	"hit_areas": [{
 			"name": "head",

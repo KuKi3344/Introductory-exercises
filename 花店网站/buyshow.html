@@ -2,9 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport"
-			content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
-		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link rel="stylesheet" href="./css/buyshow.css" />
 		<link rel="stylesheet" href="./css/bk.css" />
 		<link rel="icon" href="./logo/flower.ico">
@@ -12,20 +10,18 @@
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js"></script>
 		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-		<link rel="stylesheet" type="text/css" href="./css/live2d.css" />		<!-- 看板娘 -->
-		<script src="./js/jquery.min.js"></script>				<!-- 看板娘 -->
+		<link rel="stylesheet" type="text/css" href="./css/live2d.css" /> <!-- 看板娘 -->
+		<script src="./js/jquery.min.js"></script> <!-- 看板娘 -->
 	</head>
 	<body>
-		
-		<script src="./js/live2d.min.js"></script>			<!-- 	 看板娘 -->
+		<script src="./js/live2d.min.js"></script> <!-- 	 看板娘 -->
 		<div id="landlord">
-		<canvas id="live2d" width="280" height="310" class="live2d"></canvas>
+			<canvas id="live2d" width="300px" height="350px" class="live2d"></canvas>
 		</div>
 		<script type="text/javascript">
-		loadlive2d('live2d', './js/11/11.json');
-		</script>											<!-- 看板娘 -->
-		
-		
+			loadlive2d('live2d', './js/11/11.json');
+		</script> <!-- 看板娘 -->
+
 		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
 			<div id="particles-js"></div>
 			<button class="night" v-if="noon" @click="tonight">夜间模式</button>
@@ -84,7 +80,8 @@
 					</div>
 				</div>
 				<div class="contain2">
-					<div class="headpic"> <img src="./img/145643554.png" width="70px" height="70px"	style="border-radius: 50%;border:2px solid #bebebe;"></div>
+					<div class="headpic"> <img src="./img/145643554.png" width="70px" height="70px"
+							style="border-radius: 50%;border:2px solid #bebebe;"></div>
 					<div class="comt">第一次送女朋友花，选择了这家店。看了官方推荐选择了这款，女朋友超级感动，说我终于开窍了要拉着我去领结婚证，不说了她催我走了
 						<div class="compic"><img src="img/-186527570.png"
 								style="width:100px;height:130px;border-radius:5px;margin-right:5px;">
