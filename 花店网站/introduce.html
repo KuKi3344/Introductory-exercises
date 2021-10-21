@@ -2,161 +2,160 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
 		<link rel="stylesheet" href="./css/introduce.css" />
 		<link rel="stylesheet" href="./css/bk.css" />
-		<link rel="icon" href="./logo/flower.ico" >
+		<link rel="icon" href="./logo/flower.ico">
 		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 		<script type="text/javascript" src="./js/vue.js"></script>
-		<script type="text/javascript" src="./js/cookie_utils.js" ></script>
-		<script type="text/javascript" src="./js/jquery.js" ></script>
+		<script type="text/javascript" src="./js/cookie_utils.js"></script>
+		<script type="text/javascript" src="./js/jquery.js"></script>
 		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+		<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>	<!-- 前三个看板娘资源 -->
 	</head>
 	<body>
-		<div :class = "{bk:noon,bknight:night}" id = "container" v-cloak>
+		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
 			<div id="particles-js"></div>
-			<button class = "night" v-if="noon" @click="tonight">夜间模式</button>
-			<button class = "night" v-else @click="tonight">白日模式</button>
-				<div :class="{title:noon,nititle:night}">
-					
-					<div>	<!-- 导航栏 -->
-						<ul>
-							<li><a href="home.html">首页</a></li>
-							<li><a href="purchase.html">购买</a></li>
-							<li><a href="buyshow.html">买家秀</a></li>
-							<li><a href="introduce.html">花类介绍</a></li>
-							<li><a href="order.html">您的订单</a></li>
-							<li><a  @click="refor">退出登录</a></li>
-						</ul>
-					</div>
-					
-					
+			<button class="night" v-if="noon" @click="tonight">夜间模式</button>
+			<button class="night" v-else @click="tonight">白日模式</button>
+			<div :class="{title:noon,nititle:night}">
+
+				<div>
+					<!-- 导航栏 -->
+					<ul>
+						<li><a href="home.html">首页</a></li>
+						<li><a href="purchase.html">购买</a></li>
+						<li><a href="buyshow.html">买家秀</a></li>
+						<li><a href="introduce.html">花类介绍</a></li>
+						<li><a href="order.html">您的订单</a></li>
+						<li><a @click="refor">退出登录</a></li>
+					</ul>
 				</div>
-				<div class="symbol">LULU</div>
-				
-		<div :class="{lefttips:noon,nilefttips:night}">
-			<div :class="{tips:noon,nitips:night}" v-cloak v-if="isLogin">
-				<!-- v-cloak解决未编译结束就显示的闪烁问题 -->
-				{{username}},欢迎您
+
+
 			</div>
-			<div :class="{tips:noon,nitips:night}" v-cloak v-else>
-				亲，请<a href="login.html" target="_top" id="t1">登录</a>
+			<div class="symbol">LULU</div>
+
+			<div :class="{lefttips:noon,nilefttips:night}">
+				<div :class="{tips:noon,nitips:night}" v-cloak v-if="isLogin">
+					<!-- v-cloak解决未编译结束就显示的闪烁问题 -->
+					{{username}},欢迎您
+				</div>
+				<div :class="{tips:noon,nitips:night}" v-cloak v-else>
+					亲，请<a href="login.html" target="_top" id="t1">登录</a>
+				</div>
 			</div>
+			<el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
+				<span>退出登录后将清空您的登录信息，请您确认</span>
+				<span slot="footer" class="dialog-footer">
+					<el-button @click="backhome">取 消</el-button>
+					<el-button type="primary" @click="backlogin">确 定</el-button>
+				</span>
+			</el-dialog>
+			<div class="footer">Created by LULU @2021/仅供学习使用</div>
 		</div>
-	<el-dialog
-	  title="提示"
-	  :visible.sync="isback"
-	  width="30%"
-	  :before-close="backhome">
-	  <span>退出登录后将清空您的登录信息，请您确认</span>
-	  <span slot="footer" class="dialog-footer">
-	    <el-button @click="backhome">取 消</el-button>
-	    <el-button type="primary" @click="backlogin">确 定</el-button>
-	  </span>
-	</el-dialog>
-		<div class="footer">Created by LULU @2021/仅供学习使用</div>
-	</div>
-	<script>
-	// Vue.component('button-buy', {
-	// 	template: '<button @click="buy">购买</button>'
-	//   data: function () {
-	//     return {
-	//       flowernum:;
-	//     }
-	//   },
-	//   methods: {
-	// 	  buy() {
-	// 		  setCookieValue(this.); 
-	// 		  } 
-	// 	  }
-	// })
-	
-	</script>
-	
-	<script>
-	var vm = new Vue({
-		el:"#container",
-		data:{
-			username:"",
-			img:"./img/head.png",
-			isLogin:false,
-			noon:true,
-			night:false,
-			isback:false,
-			
-		},
-		created:function(){
-			//从cookie中获取token、username
-			var token = getCookieValue("token");
-			if(token!=null && token!=""){
-				this.isLogin = true;
-				this.username = getCookieValue('username');
-			}
-			var tonight = getCookieValue("tonight");	// 读取在别的页面是否夜间模式来决定此页面是否为夜间模式
-			 if(tonight!=null && tonight!=""){
-				 this.noon=false;
-				 this.night=true;
-			}else{
-				this.noon=true;
-				this.night=false;
-			}
-			},
-		methods:{
-		refor:function(){			// 点击退出登录后，不管是网页后退还是直接输入首页网址，都要重新登录，cookie直接被删除了
-		if(vm.isLogin=true){		// 未登录直接不显示弹窗
-			vm.isback = true;
-		}else{
-			vm.isback = false;
-		}
-			
-		},	
-		backhome:function(){
-			vm.isback = false;
-			window.location.href = "home.html";
-		},
-		backlogin:function(){
-			vm.isback = false;
-			clearCookie("token");
-			clearCookie("username");
-			clearCookie("tonight");
-			window.location.href = "login.html";
-		},
-		tonight:function(){
-			if(vm.night){						// 因为监听器会随时监测night是否和tonight方向一致
-				var space = "";					// 所以要先改变tonight的值再去改变night的值才能使night变化
-				setCookieValue("tonight",space);	//不然night一变化就会被强制和tonight保持一致而恢复原来状态
-				vm.night=false;							//就会产生不论怎么点击都无法改变的状况
-				vm.noon=true;
-			}else if(vm.noon){
-				setCookieValue("tonight",vm.noon);
-				vm.noon=false;
-				vm.night=true;
-		}
-		
-		},
-		},
-		watch: {		// 随时监听night是否和cookie里的tonight方向一致，避免因F5刷新而导致的数据缺失
-						// 从而导致night和tonight的不同步性
-		
-		   night() {
-			   var isnight = getCookieValue("tonight");
-			  if (isnight!=null && isnight!=""){
-				  this.noon = false;
-				  this.night = true;
-			  }else{
-				  this.noon = true;
-				  this.night = false;
-			  }
-		   }
-		
-		},
-	})
-	
+		<script>
+			// Vue.component('button-buy', {
+			// 	template: '<button @click="buy">购买</button>'
+			//   data: function () {
+			//     return {
+			//       flowernum:;
+			//     }
+			//   },
+			//   methods: {
+			// 	  buy() {
+			// 		  setCookieValue(this.); 
+			// 		  } 
+			// 	  }
+			// })
+		</script>
+
+		<script>
+			var vm = new Vue({
+				el: "#container",
+				data: {
+					username: "",
+					img: "./img/head.png",
+					isLogin: false,
+					noon: true,
+					night: false,
+					isback: false,
+
+				},
+				created: function() {
+					//从cookie中获取token、username
+					var token = getCookieValue("token");
+					if (token != null && token != "") {
+						this.isLogin = true;
+						this.username = getCookieValue('username');
+					}
+					var tonight = getCookieValue("tonight"); // 读取在别的页面是否夜间模式来决定此页面是否为夜间模式
+					if (tonight != null && tonight != "") {
+						this.noon = false;
+						this.night = true;
+					} else {
+						this.noon = true;
+						this.night = false;
+					}
+				},
+				methods: {
+					refor: function() { // 点击退出登录后，不管是网页后退还是直接输入首页网址，都要重新登录，cookie直接被删除了
+						if (vm.isLogin = true) { // 未登录直接不显示弹窗
+							vm.isback = true;
+						} else {
+							vm.isback = false;
+						}
+
+					},
+					backhome: function() {
+						vm.isback = false;
+						window.location.href = "home.html";
+					},
+					backlogin: function() {
+						vm.isback = false;
+						clearCookie("token");
+						clearCookie("username");
+						clearCookie("tonight");
+						window.location.href = "login.html";
+					},
+					tonight: function() {
+						if (vm.night) { // 因为监听器会随时监测night是否和tonight方向一致
+							var space = ""; // 所以要先改变tonight的值再去改变night的值才能使night变化
+							setCookieValue("tonight", space); //不然night一变化就会被强制和tonight保持一致而恢复原来状态
+							vm.night = false; //就会产生不论怎么点击都无法改变的状况
+							vm.noon = true;
+						} else if (vm.noon) {
+							setCookieValue("tonight", vm.noon);
+							vm.noon = false;
+							vm.night = true;
+						}
+
+					},
+				},
+				watch: { // 随时监听night是否和cookie里的tonight方向一致，避免因F5刷新而导致的数据缺失
+					// 从而导致night和tonight的不同步性
+
+					night() {
+						var isnight = getCookieValue("tonight");
+						if (isnight != null && isnight != "") {
+							this.noon = false;
+							this.night = true;
+						} else {
+							this.noon = true;
+							this.night = false;
+						}
+					}
+
+				},
+			})
 		</script>
 		<script src="./js/particles.js"></script>
 		<script src="./js/app.js"></script>
-<!-- 		<script>$(".title").load("./index.html");</script>
+		<!-- 		<script>$(".title").load("./index.html");</script>
 		<script>$(".nititle").load("./index.html");</script> -->
 	</body>
 </html>

@@ -12,14 +12,20 @@
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js"></script>
 		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-		 
-		<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-		 
-		<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
-
+		<link rel="stylesheet" type="text/css" href="./css/live2d.css" />		<!-- 看板娘 -->
+		<script src="./js/jquery.min.js"></script>				<!-- 看板娘 -->
 	</head>
 	<body>
+		
+		<script src="./js/live2d.min.js"></script>			<!-- 	 看板娘 -->
+		<div id="landlord">
+		<canvas id="live2d" width="280" height="310" class="live2d"></canvas>
+		</div>
+		<script type="text/javascript">
+		loadlive2d('live2d', './js/11/11.json');
+		</script>											<!-- 看板娘 -->
+		
+		
 		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
 			<div id="particles-js"></div>
 			<button class="night" v-if="noon" @click="tonight">夜间模式</button>
