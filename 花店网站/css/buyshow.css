@@ -196,7 +196,7 @@
 		top:75px;
 		
 	}
-	#focus{
+	.focus{
 		position:absolute;
 		left:130px;
 		top:105px;
@@ -208,7 +208,7 @@
 		color:#616161;
 		
 	}
-	#focus:hover{
+	.focus:hover{
 		background-color: rgba(159, 195, 155, 0.6);
 		border: 1px solid #fff;
 		color:#fff;
