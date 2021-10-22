@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
 		<link rel="stylesheet" href="./css/buyshow.css" />
 		<link rel="stylesheet" href="./css/bk.css" />
 		<link rel="icon" href="./logo/flower.ico">
@@ -10,20 +10,12 @@
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js"></script>
 		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-		<link rel="stylesheet" type="text/css" href="./css/live2d.css" /> <!-- 看板娘 -->
-		<script src="./js/jquery.min.js"></script> <!-- 看板娘 -->
 	</head>
 	<body>
-		<script src="./js/live2d.min.js"></script> <!-- 	 看板娘 -->
-		<div id="landlord">
-			<canvas id="live2d" width="300px" height="350px" class="live2d"></canvas>
-		</div>
-		<script type="text/javascript">
-			loadlive2d('live2d', './js/11/11.json');
-		</script> <!-- 看板娘 -->
 
 		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
-			<div id="particles-js"></div>
+			<div id="particles-js">
+				<div class = "main">
 			<button class="night" v-if="noon" @click="tonight">夜间模式</button>
 			<button class="night" v-else @click="tonight">白日模式</button>
 			<div :class="{title:noon,nititle:night}">
@@ -139,6 +131,8 @@
 				<div id="foot"><button>更多</button></div>
 			</div>
 			<div class="footer" style="top:1350px">Created by LULU @2021/仅供学习使用</div>
+		</div>
+		</div>
 		</div>
 
 		<script>

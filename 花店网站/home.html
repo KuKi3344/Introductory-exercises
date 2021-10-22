@@ -2,8 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport"
-			content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
 		<title>LULU Flower</title>
 		<link rel="stylesheet" href="./css/home.css" />
 		<link rel="icon" href="./logo/flower.ico">
@@ -11,14 +10,14 @@
 		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js"></script>
-		<script type="text/javascript" src="./js/jquery.js"></script>
 		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 		
 
 	</head>
 	<body>
 		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
-			<div id="particles-js"></div>
+			<div id="particles-js">
+				<div class = "main">
 			<button class="night" v-if="noon" @click="tonight">夜间模式</button>
 			<button class="night" v-else @click="tonight">白日模式</button>
 
@@ -95,6 +94,8 @@
 			  </span>
 			</el-dialog>
 			<div class="footer" style="top:900px;">Created by LULU @2021/仅供学习使用</div>
+		</div>
+		</div>
 		</div>
 		<script>
 			var vm = new Vue({

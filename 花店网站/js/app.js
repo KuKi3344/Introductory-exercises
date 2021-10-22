@@ -23,8 +23,8 @@ particlesJS("particles-js",
         },
         "image": {
           "src": "img/github.svg",
-          "width": 100,
-          "height": 100
+          "width": 80,
+          "height": 80
         }
       },
       "opacity": {
@@ -38,7 +38,7 @@ particlesJS("particles-js",
         }
       },
       "size": {
-        "value": 3,
+        "value": 2.2,
         "random": true,
         "anim": {
           "enable": false,
@@ -56,7 +56,7 @@ particlesJS("particles-js",
       },
       "move": {
         "enable": true,
-        "speed": 3,
+        "speed": 2.4,
         "direction": "bottom",
         "random": false,
         "straight": false,
@@ -110,8 +110,8 @@ particlesJS("particles-js",
     "config_demo": {
       "hide_card": false,
       "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
+      "background_position": "fixed",
+      "background_repeat": "repeat",
     }
   }
 

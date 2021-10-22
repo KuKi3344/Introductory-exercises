@@ -2,8 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport"
-			content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+<!-- 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
 		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
 		<link rel="stylesheet" href="./css/purchase.css" />
 		<link rel="stylesheet" href="./css/bk.css" />
@@ -11,13 +10,13 @@
 		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js"></script>
-		<script type="text/javascript" src="./js/jquery.js"></script>
 		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 
 	</head>
 	<body>
 		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
-			<div id="particles-js"></div>
+			<div id="particles-js">
+				<div class ="main">
 			<button class="night" v-if="noon" @click="tonight">夜间模式</button>
 			<button class="night" v-else @click="tonight">白日模式</button>
 			<div :class="{title:noon,nititle:night}">
@@ -56,49 +55,49 @@
 						<div class="card1">
 							<img class="pic" src="./img/00001.jpg">
 							<span>&emsp;&emsp;&emsp;初心不负<br />&emsp;&emsp;价格:80r<br /></span>
-							<div id="sold">销量:5000+</div>
+							<div class="sold">销量:5000+</div>
 							<button class="bt">购买</button>
 						</div>
 						<div class="card2">
 							<img class="pic" src="./img/00002.jpg">
 							<span>&emsp;&emsp;&emsp;岁月静好<br />&emsp;价格:100r<br /></span>
-							<div id="sold">销量:2500+</div>
+							<div class="sold">销量:2500+</div>
 							<button class="bt">购买</button>
 						</div>
 						<div class="card3">
 							<img class="pic" src="./img/00003.jpg">
 							<span>&emsp;&emsp;温柔的你<br />&emsp;价格:75r<br /></span>
-							<div id="sold">销量:3000+</div>
+							<div class="sold">销量:3000+</div>
 							<button class="bt">购买</button>
 						</div>
 						<div class="card4">
 							<img class="pic" src="./img/00004.jpg">
 							<span>&emsp;爱如暖阳<br />&emsp;Price:90r<br /></span>
-							<div id="sold">销量:500+</div>
+							<div class="sold">销量:500+</div>
 							<button class="bt">购买</button>
 						</div>
 						<div class="card5">
 							<img class="pic" src="./img/00005.jpg">
 							<span>&emsp;&emsp;公主的假日<br />&emsp;Price:50r<br /></span>
-							<div id="sold">销量:2000+</div>
+							<div class="sold">销量:2000+</div>
 							<button class="bt">购买</button>
 						</div>
 						<div class="card6">
 							<img class="pic" src="./img/00006.jpg">
 							<span>&emsp;&emsp;月光女神<br />&emsp;&emsp;Price:78r<br /></span>
-							<div id="sold">销量:1000+</div>
+							<div class="sold">销量:1000+</div>
 							<button class="bt">购买</button>
 						</div>
 						<div class="card7">
 							<img class="pic" src="./img/00007.jpg">
 							<span>&emsp;&emsp;粉黛佳人<br />&emsp;&emsp;Price:128r<br /></span>
-							<div id="sold">销量:1000+</div>
+							<div class="sold">销量:1000+</div>
 							<button class="bt">购买</button>
 						</div>
 						<div class="card8">
 							<img class="pic" src="./img/00008.jpg">
 							<span>&emsp;&emsp;乘风破浪<br />&emsp;&emsp;Price:128r<br /></span>
-							<div id="sold">销量:1000+</div>
+							<div class="sold">销量:1000+</div>
 							<button class="bt">购买</button>
 						</div>
 					</div>
@@ -112,49 +111,49 @@
 						<div class="card1">
 							<img class="pic" src="./img/00001.jpg">
 							<span>&emsp;&emsp;&emsp;初心不负<br />&emsp;&emsp;价格:80r<br /></span>
-							<div id="sold">销量:5000+</div>
+							<div class="sold">销量:5000+</div>
 							<button class="bt">购买</button>
 						</div>
 						<div class="card2">
 							<img class="pic" src="./img/00005.jpg">
 							<span>&emsp;&emsp;公主的假日<br />&emsp;Price:50r<br /></span>
-							<div id="sold">销量:2000+</div>
+							<div class="sold">销量:2000+</div>
 							<button class="bt">购买</button>
 						</div>
 						<div class="card3">
 							<img class="pic" src="./img/00007.jpg">
 							<span>&emsp;&emsp;粉黛佳人<br />&emsp;&emsp;Price:128r<br /></span>
-							<div id="sold">销量:1000+</div>
+							<div class="sold">销量:1000+</div>
 							<button class="bt">购买</button>
 						</div>
 						<div class="card4">
 							<img class="pic" src="./img/00004.jpg">
 							<span>&emsp;爱如暖阳<br />&emsp;Price:90r<br /></span>
-							<div id="sold">销量:500+</div>
+							<div class="sold">销量:500+</div>
 							<button class="bt">购买</button>
 						</div>
 						<div class="card5">
 							<img class="pic" src="./img/00002.jpg">
 							<span>&emsp;&emsp;&emsp;岁月静好<br />&emsp;价格:100r<br /></span>
-							<div id="sold">销量:2500+</div>
+							<div class="sold">销量:2500+</div>
 							<button class="bt">购买</button>
 						</div>
 						<div class="card6">
 							<img class="pic" src="./img/00006.jpg">
 							<span>&emsp;&emsp;月光女神<br />&emsp;&emsp;Price:78r<br /></span>
-							<div id="sold">销量:1000+</div>
+							<div class="sold">销量:1000+</div>
 							<button class="bt">购买</button>
 						</div>
 						<div class="card7">
 							<img class="pic" src="./img/00007.jpg">
 							<span>&emsp;&emsp;粉黛佳人<br />&emsp;&emsp;Price:128r<br /></span>
-							<div id="sold">销量:1000+</div>
+							<div class="sold">销量:1000+</div>
 							<button class="bt">购买</button>
 						</div>
 						<div class="card8">
 							<img class="pic" src="./img/00008.jpg">
 							<span>&emsp;&emsp;乘风破浪<br />&emsp;&emsp;Price:128r<br /></span>
-							<div id="sold">销量:1000+</div>
+							<div class="sold">销量:1000+</div>
 							<button class="bt">购买</button>
 						</div>
 
@@ -168,6 +167,8 @@
 					</el-dialog>
 					<div class="footer" style="top:1500px">Created by LULU @2021/仅供学习使用</div>
 				</div>
+			</div>
+			</div>
 			</div>
 			</div>
 			<script>

@@ -157,7 +157,7 @@
 	top: 240px;
 	left: 10px;
 }
-#sold {
+.sold {
 	color: #7e7e7e;
 	position: absolute;
 	font-size: 12px;
