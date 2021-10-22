@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-<!-- 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
 		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
 		<link rel="stylesheet" href="./css/regist.css" />
 		<link rel="icon" href="./logo/flower.ico">
@@ -15,41 +14,46 @@
 	</head>
 	<body>
 		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
-			<div id="particles-js"></div>
-			<button class="night" v-if="noon" @click="tonight">夜间模式</button>
-			<button class="night" v-else @click="tonight">白日模式</button>
-			<div :class="{box:noon,nibox:night}">
-				<img class="head" v-bind:src="user.img">
-				<div class="Regist">
-					<form>
-						<label for="name" :class="{label:noon,nilabel:night}">Name</label>
-						<input type="text" :class="{input:noon,niinput:night}" placeholder="请输入用户名" v-model="user.name"
-							@keyup="checkRegistInfo">
-						<label for="email" :class="{label:noon,nilabel:night}">Email</label>
-						<input type="text" :class="{input:noon,niinput:night}" placeholder="请输入邮箱" v-model="user.email"
-							@keyup="checkRegistInfo">
-						<label for="password" :class="{label:noon,nilabel:night}">Password</label>
-						<input type="password" :class="{input:noon,niinput:night}" placeholder="请输入密码"
-							v-model="user.password" @keyup="checkRegistInfo">
-						<label for="con-password" :class="{label:noon,nilabel:night}">Confirm Password</label>
-						<input type="password" :class="{input:noon,niinput:night}" placeholder="请再次输入密码"
-							v-model="user.conpassword" @keyup="checkRegistInfo">
+			<div id="particles-js">
+				<div class = "main">
+				<div class="page">
+					<button class="night" v-if="noon" @click="tonight">夜间模式</button>
+					<button class="night" v-else @click="tonight">白日模式</button>
+					<div :class="{box:noon,nibox:night}">
+						<img class="head" v-bind:src="user.img">
+						<div class="Regist">
+							<form>
+								<label for="name" :class="{label:noon,nilabel:night}">Name</label>
+								<input type="text" :class="{input:noon,niinput:night}" placeholder="请输入用户名"
+									v-model="user.name" @keyup="checkRegistInfo">
+								<label for="email" :class="{label:noon,nilabel:night}">Email</label>
+								<input type="text" :class="{input:noon,niinput:night}" placeholder="请输入邮箱"
+									v-model="user.email" @keyup="checkRegistInfo">
+								<label for="password" :class="{label:noon,nilabel:night}">Password</label>
+								<input type="password" :class="{input:noon,niinput:night}" placeholder="请输入密码"
+									v-model="user.password" @keyup="checkRegistInfo">
+								<label for="con-password" :class="{label:noon,nilabel:night}">Confirm Password</label>
+								<input type="password" :class="{input:noon,niinput:night}" placeholder="请再次输入密码"
+									v-model="user.conpassword" @keyup="checkRegistInfo">
 
-					</form>
-					<div id="strtips">{{strtips}}</div>
-					<button :class="{bt1:noon,nibt1:night}" type="reset">重设</button>
-					<button :class="{bt2:noon,nibt2:night}" @click="doRegist">提交</button>
+							</form>
+							<div id="strtips">{{strtips}}</div>
+							<button :class="{bt1:noon,nibt1:night}" type="reset">重设</button>
+							<button :class="{bt2:noon,nibt2:night}" @click="doRegist">提交</button>
 
+						</div>
+						<div id="tips">{{tips}}</div>
+					</div>
+					<div class="picture">
+						<img class="f1" src="https://pics.prcm.jp/3a638fefa1001/75420560/png/75420560_220x200.png" />
+						<img class="f2" src="https://sozai-good.com/uploads/83454/83454_sample.png" />
+					</div>
+					<div class="footer">Created by LULU @2021/仅供学习使用</div>
 				</div>
-				<div id="tips">{{tips}}</div>
 			</div>
-			<div class="picture">
-				<img class="f1" src="https://pics.prcm.jp/3a638fefa1001/75420560/png/75420560_220x200.png" />
-				<img class="f2" src="https://sozai-good.com/uploads/83454/83454_sample.png" />
 			</div>
-			<div class="footer">Created by LULU @2021/仅供学习使用</div>
 		</div>
-		<script type="text/javascript">
+		<script>
 			var vm = new Vue({
 				el: "#container",
 				data: {
@@ -157,12 +161,12 @@
 							vm.tips = "请确认注册信息输入完整且正确！";
 						} else {
 							this.$message({
-							         showClose: true,
-							         message: '注册成功',
-							         type: 'success'
-							       });
-							url= "login.html";
-							setTimeout("location.href = '" + url + "'",1000)
+								showClose: true,
+								message: '注册成功',
+								type: 'success'
+							});
+							url = "login.html";
+							setTimeout("location.href = '" + url + "'", 1000)
 
 						}
 					},

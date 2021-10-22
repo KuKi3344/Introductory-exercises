@@ -1,10 +1,10 @@
 			.box,
 			.nibox{
 				position: absolute;
-				top: 100px;
-				left: 500px;
-				width: 500px;
-				height: 550px;
+				top: 150px;
+				left: 550px;
+				width: 400px;
+				height: 420px;
 				border-radius: 10px;
 			}
 			.box {
@@ -18,17 +18,17 @@
 
 			.head {
 				position: absolute;
-				left: 205px;
-				top: 45px;
-				height: 70px;
-				width: 70px;
+				left: 170px;
+				top: 20px;
+				height: 60px;
+				width: 60px;
 				border-radius: 50%;
 			}
 
 			form {
 				position: absolute;
-				left: 90px;
-				top: 120px;
+				left:50px;
+				top: 80px;
 				margin: auto;
 				position: absolute;
 				width: 100%;
@@ -38,63 +38,79 @@
 				padding: 0.5rem;
 				border: 0;
 				border-radius: 60px;
-				width: 100px;
+				width: 80px;
 				background-color: #90e2c0;
 				color: #fff;
 				margin: 2rem 0 0 auto;
 			}
-			.bt1 {
+			.bt1,
+			.nibt1{
 				position: absolute;
-				left: 80px;
-				top: 440px;
+				left: 60px;
+				top: 330px;
 			}
 
-			.bt2 {
+			.bt2 ,
+			.nibt2{
 				position: absolute;
-				left: 300px;
-				top: 440px;
+				left: 250px;
+				top: 330px;
 			}
 			.nibt1,.nibt2{
 				padding: 0.5rem;
 				border: 0;
 				border-radius: 60px;
-				width: 100px;
+				width: 80px;
 				background-color: #617aaf;
 				color: #fff;
 				margin: 2rem 0 0 auto;
 			}
-			.nibt1{
-				position: absolute;
-				left: 80px;
-				top: 440px;
+			.bt1:hover,
+			.bt2:hover {
+				background: #90e2c0;
+				color: #fff;
+				border-radius: 60px;
+				box-shadow: 0 0 5px #90e2c0,
+					0 0 25px #90e2c0,
+					0 0 50px #90e2c0,
+					0 0 100px #90e2c0;
 			}
-			.nibt2{
-				position: absolute;
-				left: 300px;
-				top: 440px;
+			.nibt1:hover,
+			.nibt2:hover {
+				background: #7c9bc1;
+				color: #fff;
+				border-radius: 60px;
+				box-shadow: 0 0 5px #7c9bc1,
+					0 0 25px #7c9bc1,
+					0 0 50px #7c9bc1,
+					0 0 100px #7c9bc1;
+			}
+			.bt1:focus,
+			.bt2:focus {
+				outline: 0;
 			}
 
 			.f1 {
 				width: 120px;
 				height: 110px;
-				top: 600px;
-				left: 450px;
+				top: 510px;
+				left: 500px;
 				position: absolute;
 			}
 
 			.f2 {
-				width: 260px;
-				height: 100px;
-				top: 80px;
-				left: 800px;
+				width: 200px;
+				height: 80px;
+				top: 100px;
+				left: 780px;
 				position: absolute;
 			}
 
 			#tips {
 				font-size: 12px;
 				position: absolute;
-				top: 440px;
-				left: 100px;
+				top: 340px;
+				left: 70px;
 				color: #ee8183;
 				opacity: 0.9;
 
@@ -102,7 +118,67 @@
 			#strtips{
 				font-size:13px;
 				position: absolute;
-				left:330px;
-				top:360px;
+				left:280px;
+				top:270px;
 				color:#93d554;
+			}
+			.label,
+			.nilabel{
+				display: block;
+				margin-bottom: 5px;
+				text-align: center;
+				font-size:12px;
+			}
+			.label {
+				color: #478349;
+			}
+			
+			.nilabel {
+				color: #ffffff;
+			}
+			.input,
+			.niinput{
+				display: block;
+				width: 90%;
+				margin: 0 0 1rem 0.5rem;
+				padding: 0.5rem;
+				font-size: 12px;
+				border: 0;
+				border-radius: 0.125rem 0.25rem;
+				opacity: 0.8;
+			}
+			.input {
+				background-color: #f7f7f7;
+			}
+			
+			.niinput {
+				color: white;
+				background-color: rgba(78, 91, 120, 0.8);
+			}
+			
+			.input:focus {
+				outline: 0;
+				box-shadow: 1px 1px 1px 0px #8dcca2;
+			}
+			
+			.input::-webkit-input-placeholder {
+				color: #c3cccc;
+			
+			}
+			
+			.input:focus::-webkit-input-placeholder {
+				color: #FFFFFF;
+			}
+			
+			.niinput:focus {
+				outline: 0;
+				box-shadow: 1px 1px 1px 1px #c3c3c3;
+			}
+			
+			.niinput::-webkit-input-placeholder {
+				color: #c5c5c5;
+			}
+			
+			.niinput:focus::-webkit-input-placeholder {
+				color: #717171;
 			}

@@ -11,6 +11,10 @@
 	max-width: auto;
 	overflow: scroll;
 }
+.page{
+	position: absolute;
+	left:0;
+}
 .bk {
 	background: linear-gradient(-180deg, #f4fffa 0%, #f6fffb 100%);
 }
@@ -18,116 +22,6 @@
 .bknight {
 	background: linear-gradient(-180deg, #1f2235 0%, #535668 100%);
 }
-.label,
-.nilabel{
-	display: block;
-	margin-bottom: 10px;
-	text-align: center;
-}
-.label {
-	color: #478349;
-}
-
-.nilabel {
-	color: #ffffff;
-}
-.input,
-.niinput{
-	display: block;
-	width: 100%;
-	margin: 0 0 1rem 0;
-	padding: 0.5rem;
-	font-size: 1rem;
-	border: 0;
-	border-radius: 0.125rem 0.25rem;
-	opacity: 0.8;
-}
-.input {
-	background-color: #f7f7f7;
-}
-
-.niinput {
-	color: white;
-	background-color: rgba(78, 91, 120, 0.8);
-}
-
-.input:focus {
-	outline: 0;
-	box-shadow: 1px 1px 1px 0px #8dcca2;
-}
-
-.input::-webkit-input-placeholder {
-	color: #c3cccc;
-
-}
-
-.input:focus::-webkit-input-placeholder {
-	color: #FFFFFF;
-}
-
-.niinput:focus {
-	outline: 0;
-	box-shadow: 1px 1px 1px 1px #c3c3c3;
-}
-
-.niinput::-webkit-input-placeholder {
-	color: #c5c5c5;
-}
-
-.niinput:focus::-webkit-input-placeholder {
-	color: #717171;
-}
-
-.bt1:hover {
-	background: #90e2c0;
-	color: #fff;
-	border-radius: 60px;
-	box-shadow: 0 0 5px #90e2c0,
-		0 0 25px #90e2c0,
-		0 0 50px #90e2c0,
-		0 0 100px #90e2c0;
-}
-
-.nibt1:hover {
-	background: #7c9bc1;
-	color: #fff;
-	border-radius: 60px;
-	box-shadow: 0 0 5px #7c9bc1,
-		0 0 25px #7c9bc1,
-		0 0 50px #7c9bc1,
-		0 0 100px #7c9bc1;
-}
-
-.bt2:hover {
-	background: #90e2c0;
-	color: #fff;
-	border-radius: 60px;
-	box-shadow: 0 0 5px #90e2c0,
-		0 0 25px #90e2c0,
-		0 0 50px #90e2c0,
-		0 0 100px #90e2c0;
-}
-
-.nibt2:hover {
-	background: #7c9bc1;
-	color: #fff;
-	border-radius: 60px;
-	box-shadow: 0 0 5px #7c9bc1,
-		0 0 25px #7c9bc1,
-		0 0 50px #7c9bc1,
-		0 0 100px #7c9bc1;
-}
-
-.bt1:focus {
-
-	outline: 0;
-}
-
-.bt2:focus {
-
-	outline: 0;
-}
-
 .night {
 	position: absolute;
 	left: 1350px;
@@ -157,8 +51,8 @@
 }
 
 
-.title {
-	background-color: #ababab;
+.title,
+.nititle{
 	height: 35px;
 	left: 120px;
 	font-size: 15px;
@@ -166,14 +60,17 @@
 	margin-left: 0;
 	position: absolute;
 	top: 3px;
-	;
 	color: white;
 	margin-bottom: 1px;
 	overflow: hidden;
 	border-radius: 8px;
 }
+.title{
+		background-color: #ababab;
+}
 
-.title ul {
+.title ul,
+.nititle ul{
 	/* 清除ul标签的默认样式 */
 	width: 1100px;
 	position: absolute;
@@ -184,7 +81,8 @@
 
 }
 
-.title li {
+.title li,
+.nititle li {
 	float: left;
 	/* 使li内容横向浮动，即横向排列  */
 	margin-right: 90px;
@@ -196,7 +94,8 @@
 	border-radius: 8px;
 }
 
-.title li a {
+.title li a,
+.nititle li a{
 	/* 设置链接内容显示的格式*/
 	display: block;
 	/* 把链接显示为块元素可使整个链接区域可点击 */
@@ -215,62 +114,16 @@
 
 .nititle {
 	background-color: #42435f;
-	height: 35px;
-	left: 120px;
-	font-size: 15px;
-	width: 1200px;
-	margin-left: 0;
-	position: absolute;
-	top: 3px;
-	color: white;
-	margin-bottom: 1px;
-	overflow: hidden;
-	border-radius: 8px;
 }
-
-.nititle ul {
-	/* 清除ul标签的默认样式 */
-	width: 1100px;
-	position: absolute;
-	left: 200px;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-
-}
-
-.nititle li {
-	float: left;
-	/* 使li内容横向浮动，即横向排列  */
-	margin-right: 90px;
-	/* 两个li之间的距离*/
-	position: relative;
-	top: 0.;
-
-	border-color: #222222;
-	border-radius: 8px;
-}
-
-.nititle li a {
-	/* 设置链接内容显示的格式*/
-	display: block;
-	/* 把链接显示为块元素可使整个链接区域可点击 */
-	color: #ffffff;
-	text-align: center;
-	padding: 8px 15px;
-	text-decoration: none;
-	/* 去除下划线 */
-}
-
 .nititle li a:hover {
 	/* 鼠标选中时背景变为深色 */
 	background-color: #8599ce;
 	border-radius: 8px;
 }
 
-.lefttips {
+.lefttips,
+.nilefttips{
 	opacity: 0.9;
-	background-color: #fff;
 	border-radius: 5px;
 	position: fixed;
 	top: 170px;
@@ -284,39 +137,28 @@
 	/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
 	box-shadow: 1px -1px 1px 0px #bcf5ac, -1px 1px 1px 0px #bcf5ac, 1px -1px 1px 0px #bcf5ac, -1px 1px 1px 0px #bcf5ac;
 }
-
+.lefttips{	
+	background-color: #fff;
+	box-shadow: 1px -1px 1px 0px #bcf5ac, -1px 1px 1px 0px #bcf5ac, 1px -1px 1px 0px #bcf5ac, -1px 1px 1px 0px #bcf5ac;
+	}
 .nilefttips {
-	opacity: 0.9;
 	background-color: #414c5d;
-	border-radius: 5px;
-	position: fixed;
-	top: 170px;
-	left: 0;
-	height: 180px;
-	width: 40px;
-	text-align: center;
-	writing-mode: vertical-rl;
-	/*从左向右 从右向左是 writing-mode: vertical-rl;*/
-	writing-mode: tb-rl;
-	/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
 	box-shadow: 1px -1px 1px 0px #363d48, -1px 1px 1px 0px #474f5e, 1px -1px 1px 0px #424a58, -1px 1px 1px 0px #292d36;
 }
 
-.tips {
+.tips,
+.nitips{
 	position: absolute;
 	top: 15px;
 	left: 10px;
-	color: #678b70;
 	font-size: 14px;
 
 }
-
+.tips{
+	color: #678b70;
+}
 .nitips {
-	position: absolute;
-	top: 15px;
-	left: 10px;
 	color: #ffffff;
-	font-size: 14px;
 
 }
 
@@ -377,8 +219,8 @@
 	font-size: 15px;
 	margin-left: 5px;
 	position: absolute;
-	left: 600px;
-	bottom:0px;
+	left:600px;
+	top:720px;
 	text-align: center;
 	padding-bottom: 5px;
 }
@@ -411,4 +253,29 @@
 
 [v-cloak] {
 	display: none !important;
+}
+@media screen and (min-width: 1700px) { 
+.page{position:relative;left:5%} 
+} 
+@media screen and (min-width: 1900px) { 
+.page{position:relative;left:10%;top:2%;} 
+} 
+@media screen and (min-width: 2000px) { 
+.page{position:relative;left:12%;top:5%;} 
+} 
+@media screen and (min-width: 2200px) { 
+.page{position:relative;left:15%;top:10%;} 
+} 
+@media screen and (min-width: 2400px) { 
+.page{position:relative;left:24%;top:15%;} 
+} 
+@media screen and (min-width: 3200px) { 
+.page{position:relative;left:18%;top:17%} 
+}
+@media screen and (min-width: 4500px) { 
+.page{position:relative;left:32%;top:17%} 
+}
+
+@media screen and (min-width: 5000px) { 
+.page{position:relative;left:35%;top:22%;} 
 }

@@ -17,6 +17,7 @@
 		<div :class = "{bk:noon,bknight:night}" id = "container" v-cloak>
 			<div id="particles-js">
 				<div class = "main">
+					<div class = "page">
 			<button class = "night" v-if="noon" @click="tonight">夜间模式</button>
 			<button class = "night" v-else @click="tonight">白日模式</button>
 				<div :class="{title:noon,nititle:night}">
@@ -32,6 +33,7 @@
 						</ul>
 					</div>
 				</div>
+				<div class="symbol">LULU</div>
 				<el-dialog title="提示" :visible.sync="noLogin" width="30%" :before-close="backhome">
 					<span>登陆后才能访问此页面，请先登录</span>
 					<span slot="footer" class="dialog-footer">
@@ -39,8 +41,19 @@
 						<el-button type="primary" @click="backlogin">确 定</el-button>
 					</span>
 				</el-dialog>
-				
-				<div class="symbol">LULU</div>
+				<el-dialog
+				  title="提示"
+				  :visible.sync="isback"
+				  width="30%"
+				  :before-close="backhome">
+				  <span>退出登录后将清空您的登录信息，请您确认</span>
+				  <span slot="footer" class="dialog-footer">
+				    <el-button @click="backhome">取 消</el-button>
+				    <el-button type="primary" @click="backlogin">确 定</el-button>
+				  </span>
+				</el-dialog>
+					<div class="footer">Created by LULU @2021/仅供学习使用</div>
+				</div>
 				<div class = "isLogin" v-cloak  v-if="!noLogin">
 				<div :class ="{lefttips:noon,nilefttips:night}">
 				<div :class ="{tips:noon,nitips:night}">
@@ -49,18 +62,6 @@
 				</div>	
 			
 		</div>
-	<el-dialog
-	  title="提示"
-	  :visible.sync="isback"
-	  width="30%"
-	  :before-close="backhome">
-	  <span>退出登录后将清空您的登录信息，请您确认</span>
-	  <span slot="footer" class="dialog-footer">
-	    <el-button @click="backhome">取 消</el-button>
-	    <el-button type="primary" @click="backlogin">确 定</el-button>
-	  </span>
-	</el-dialog>
-		<div class="footer">Created by LULU @2021/仅供学习使用</div>
 	</div>
 	</div>
 	</div>

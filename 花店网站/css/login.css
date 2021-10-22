@@ -166,18 +166,6 @@ form a:hover {
 	border-radius: 60px;
 	width: 100px;
 }
-
-.bt1 {
-	background-color: #90e2c0;
-	color: #ffffff;
-
-}
-
-.nibt1 {
-	background-color: #617aaf;
-	color: #ffffff;
-}
-
 .bt2,
 .nibt2 {
 	position: absolute;
@@ -189,15 +177,98 @@ form a:hover {
 	width: 100px;
 	margin: 2rem 0 0 auto;
 }
-
-.bt2 {
+.bt1,
+.bt2{
 	background-color: #90e2c0;
-	color: #fff;
+	color: #ffffff;
 
 }
 
-.nibt2 {
+.nibt1,
+.nibt2{
 	background-color: #617aaf;
+	color: #ffffff;
+}
+.bt1:hover,
+.bt2:hover {
+	background: #90e2c0;
 	color: #fff;
+	border-radius: 60px;
+	box-shadow: 0 0 5px #90e2c0,
+		0 0 25px #90e2c0,
+		0 0 50px #90e2c0,
+		0 0 100px #90e2c0;
+}
+.nibt1:hover,
+.nibt2:hover {
+	background: #7c9bc1;
+	color: #fff;
+	border-radius: 60px;
+	box-shadow: 0 0 5px #7c9bc1,
+		0 0 25px #7c9bc1,
+		0 0 50px #7c9bc1,
+		0 0 100px #7c9bc1;
+}
+.bt1:focus,
+.bt2:focus {
+	outline: 0;
+}
+.label,
+.nilabel{
+	display: block;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.label {
+	color: #478349;
+}
 
+.nilabel {
+	color: #ffffff;
+}
+.input,
+.niinput{
+	display: block;
+	width: 100%;
+	margin: 0 0 1rem 0;
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: 0;
+	border-radius: 0.125rem 0.25rem;
+	opacity: 0.8;
+}
+.input {
+	background-color: #f7f7f7;
+}
+
+.niinput {
+	color: white;
+	background-color: rgba(78, 91, 120, 0.8);
+}
+
+.input:focus {
+	outline: 0;
+	box-shadow: 1px 1px 1px 0px #8dcca2;
+}
+
+.input::-webkit-input-placeholder {
+	color: #c3cccc;
+
+}
+
+.input:focus::-webkit-input-placeholder {
+	color: #FFFFFF;
+}
+
+.niinput:focus {
+	outline: 0;
+	box-shadow: 1px 1px 1px 1px #c3c3c3;
+}
+
+.niinput::-webkit-input-placeholder {
+	color: #c5c5c5;
+}
+
+.niinput:focus::-webkit-input-placeholder {
+	color: #717171;
 }
