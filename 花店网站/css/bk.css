@@ -16,7 +16,7 @@
 	left:0;
 }
 .bk {
-	background-color: #FFFEFD;
+	background-color: #f5f8f5;
 }
 
 .bknight {
@@ -66,7 +66,7 @@
 	border-radius: 8px;
 }
 .title{
-		background-color: #ababab;
+		background-color: #868686;
 }
 
 .title ul,
@@ -183,30 +183,6 @@
 	top: 1px;
 	border-color: #ffa2a7;
 }
-.isLogin button {
-					position: absolute;
-					top: 200px;
-					left: 130px;
-					width: 60px;
-					height: 25px;
-					border: 0;
-					border-radius: 60px;
-					background-color: #a5e1bb;
-					color: #fff;
-					margin: 2rem 0 0 auto;
-				}
-
-				.isLogin button:hover {
-					background: #a5e1bb;
-					color: #fff;
-					border-radius: 60px;
-					box-shadow: 0 0 5px #a5e1bb,
-						0 0 25px #a5e1bb,
-						0 0 50px #a5e1bb,
-						0 0 100px #a5e1bb;
-				}
-
-
 #particles-js {
 	position:fixed;
 	width:100vw;
