@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			html {
+				height: 100%;
+				width: 100%;
+			}
+
+			.sea {
+				width: 100vw;
+				height: 100vh;
+				background-color: #1192e7;
+				opacity: 0.8;
+				border-radius: 5px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+			}
+
+			.sea .wave {
+				position: absolute;
+				top: -3400px;
+				left: -1200px;
+				width: 4000px;
+				height: 4000px;
+				background: #fff;
+				border-radius: 45%;
+				filter: opacity(0.8);
+				animation: drift linear infinite;
+				transform-origin: 50% 49%;
+			}
+
+			.bk {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: auto;
+				min-width: 100vw;
+				max-width: auto;
+				overflow: scroll;
+			}
+			.box{
+				position:absolute;
+				left:30%;
+				right:30%;
+				top:15%;
+				width:600px;
+				height:600px;
+			}
+			.title{
+				font-size:35px;
+				position:absolute;
+				left:200px;
+				top:40px;
+				color:#535353;
+			}
+			.titletwo{
+				font-size:35px;
+				position:absolute;
+				left:200px;
+				top:90px;
+				color:#6d7288;
+			}
+			.Login{
+				position: absolute;
+				background-color: #FFFFFF;
+				top: 150px;
+				left: 110px;
+				width: 400px;
+				height: 350px;
+				box-shadow: 0 15px 25px rgba(212, 212, 212, 0.8);
+				border-radius: 10px;
+				opacity:0.9;
+			}
+			.Login form {
+				position: absolute;
+				left: 30px;
+				top: 25px;
+				margin:auto;
+				position: absolute;
+				width: 300px;
+			}
+			.Login form a{
+				color:#4b6590;
+				text-decoration:underline;
+				position:absolute;
+				top:190px;
+				left:220px;
+				font-size:12px;
+			}
+			.Login form a:hover{
+				color:#6290ab;
+			}
+			#checkCode{
+				background-color: #697c87;
+				color:#fff;
+				width:85px;
+				height:30px;
+				text-align: center;
+				letter-spacing: 3px;
+				position:absolute;
+				left:215px;
+				top:160px;
+				border-radius:3px;
+				font-size:20px;
+				
+			}
+			
+			.Login input {
+				display: block;
+				width:250px;
+				margin: 30px;;
+				padding: 0.5rem;
+				font-size: 1rem;
+				border: 0;
+				border-radius: 0.125rem 0.25rem;
+				background-color: #f7f7f7;
+				opacity:0.8;
+			}
+			#verify{
+				width:150px;
+			}
+			.Login input:focus {
+				outline: 0;
+				box-shadow: 1px 1px 1px 0px #c6c6c6;
+			}
+			
+			.Login input::-webkit-input-placeholder {
+				color: #9ca3a3;
+			
+			}
+			
+			.Login input:focus::-webkit-input-placeholder {
+				color: #FFFFFF;
+			}
+			
+			.switch{
+				position:absolute;
+				left:280px;
+				top:280px;
+				color:#6d9ec8;
+				font-size:14px;
+			}
+			
+			.bt{
+				position:absolute;
+				left:90px;
+				top:260px;
+				width:100px;
+				height:40px;
+				border-radius:10px;
+				padding: 0.5rem;
+				border: 0;
+				background-color:#2072b0;
+				color:#fff;
+			}
+			button:hover{
+				background-color: #4a6688;
+				color:#ffffff;
+			}
+			button :focus {
+				
+				outline: 0;
+			}
+			#tips {
+				font-size: 12px;
+				position: absolute;
+				top: 230px;
+				left: 60px;
+				color: #ee8183;
+				opacity: 0.9;
+			
+			}
+			::-webkit-scrollbar {
+				width: 8px;
+				height: 6px;
+				border-radius: 15px;
+				-webkit-border-radius: 15px;
+			}
+			
+			::-webkit-scrollbar-track-piece {
+				border-radius: 15px;
+				-webkit-border-radius: 15px;
+			}
+			
+			::-webkit-scrollbar-thumb:vertical {
+				height: 8px;
+				background-color: rgba(162, 162, 162, 0.5);
+				border-radius: 15px;
+				-webkit-border-radius: 15px;
+			}
+			
+			::-webkit-scrollbar-thumb:horizontal {
+				width: 6px;
+				background-color: rgba(160, 163, 168, 0.5);
+				border-radius: 15px;
+				-webkit-border-radius: 15px;
+			}
+			.sea .wave:nth-of-type(1) {
+				animation-duration: 10s;
+			}
+
+			.sea .wave:nth-of-type(2) {
+				animation-duration: 16s;
+			}
+
+			.sea .wave:nth-of-type(3) {
+				animation-duration: 22s;
+				filter: opacity(0.2);
+			}
+
+			@keyframes drift {
+				from {
+					transform: rotate(360deg)
+				}
+
+				to {
+					transform: rotate(0deg)
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sea">
+			<span class="wave"></span>
+			<span class="wave"></span>
+			<span class="wave"></span>
+
+		</div>
+		<div class="bk">
+			<div class="box">
+				<div class="title">大连民族大学</div>
+				<div class="titletwo">自动排课系统</div>
+				<div class="Login">
+			
+					<form>
+						<input type="text" v-model="name" placeholder="用户名" @keyup="checkInfo">
+						<input type="password" v-model="password" placeholder="密码" @keyup="checkInfo">
+						<input type="text" id="verify" v-model="verify" placeholder="验证码" @keyup="checkInfo">
+						<div class="code" id="checkCode" @click="createCode"></div>
+						<a @click="createCode">看不清换一张</a>
+					</form>
+					<a class="switch" href="./masterLogin.html">管理员登录</a>
+					<!-- <div id="tips">{{tips}}</div> -->
+			
+					<button class="bt" type="button" @click="doSubmit">登录</button>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
