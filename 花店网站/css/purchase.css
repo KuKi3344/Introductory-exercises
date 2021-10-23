@@ -1,3 +1,47 @@
+.buy{
+	position:absolute;
+	top:50px;
+}
+.search{
+	position:absolute;
+	left:1150px;
+	top:70px;
+	width:220px;
+	height:40px;
+}
+.search input{
+	width:180px;
+	height:35px;
+	background-color: #fdfdfd;
+	border-radius: 50px;
+	box-shadow: 1px 1px 0 1px #ececec;
+	border:0;
+	padding-left:30px;
+}
+.search i{
+	position:absolute;
+	left:170px;
+	top:10px;
+	color:#919191;
+}
+.search input:focus {
+	outline: 0;
+	box-shadow: inset 1px 1px 1px 0px #f0f0f0;
+}
+
+.search input::-webkit-input-placeholder {
+	position:absolute;
+	left:40px;
+	top:8px;
+	font-size:15px;
+	color: #b1b9b9;
+
+}
+
+.search input:focus::-webkit-input-placeholder {
+	color: #ebebeb;
+}
+
 .left,
 .left2 {
 	width: 300px;
@@ -148,19 +192,78 @@
 	height: 220px;
 	border-radius: 5px;
 }
-.card span,
-.cardtwo span{
-	font-size: 13px;
-	color: #313131;
-	text-shadow: 1px 1px 1px #cbcbcb;
+.name{
+	font-size: 15px;
+	color: #6a6a6a;
+	text-shadow: 1px 1px 1px #e6e6e6;
 	position: absolute;
-	top: 240px;
-	left: 10px;
+	top: 15px;
+	left: 35px;
 }
+.card a{
+	position:absolute;
+	width:220px;
+	height:300px;
+}
+.price{
+	position:absolute;
+	top:240px !important;
+	left:140px !important;
+}
+.mge{
+	position:absolute;
+	top:180px;
+	left:40px;
+	width:140px;
+	height:80px;
+	border-radius:10px;
+	background-color: #FFFFFF;
+}
+
 .sold {
 	color: #7e7e7e;
 	position: absolute;
 	font-size: 12px;
 	top: 270px;
-	left: 140px;
+	left: 130px;
 }
+.bt{
+					position: absolute;
+					top: 220px;
+					left: 30px;
+					width: 80px;
+					height: 30px;
+					border: 0;
+					border-radius: 60px;
+					background-color: #a5e1bb;
+					color: #fff;
+					margin: 2rem 0 0 auto;
+					box-shadow: 1px 1px 0 1px #f3f3f3;
+				}
+
+.bt:hover {
+					background: #a5e1bb;
+					color: #fff;
+					border-radius: 60px;
+					box-shadow: 0 0 5px #a5e1bb,
+						0 0 25px #a5e1bb,
+						0 0 50px #a5e1bb,
+						0 0 100px #a5e1bb;
+				}
+				.card a:hover .price,
+				.card a:hover .sold,
+				.cardtwo a:hover .sold,
+				.cardtwo a:hover .price
+				{
+				  color: #FF734C;
+				}
+				.card a:hover .name,
+				.cardtwo a:hover .name{
+					color: #FF734C;
+				}
+				.card a:hover .pic,
+				.cardtwo a:hover .pic{
+					width:210px;
+					height:230px;
+					left:5px;
+				}
