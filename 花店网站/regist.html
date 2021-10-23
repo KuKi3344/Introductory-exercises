@@ -15,6 +15,11 @@
 	<body>
 		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
 			<div id="particles-js">
+				<div :class="{sea:noon}">
+					<span :class="{wave:noon}"></span>
+					<span :class="{wave:noon}"></span>
+					<span :class="{wave:noon}"></span>				
+				</div>
 				<div class = "main">
 				<div class="page">
 					<button class="night" v-if="noon" @click="tonight">夜间模式</button>
