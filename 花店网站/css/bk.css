@@ -1,3 +1,7 @@
+*{
+	margin:0;
+	padding:0;
+}
 .bk,
 .bknight,
 .main{
@@ -6,7 +10,8 @@
 	left: 0;
 	right: 0;
 	bottom: 0;	
-	height:auto;
+	min-height: 100vh;
+	max-height:auto;
 	min-width: 100vw;
 	max-width: auto;
 	overflow: scroll;
