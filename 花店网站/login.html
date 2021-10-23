@@ -17,19 +17,24 @@
 		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
 			<div id="particles-js">
 				<div class = "main">
+					<div :class="{sea:noon,ntsea:night}">
+						<span :class="{wave:noon}"></span>
+						<span :class="{wave:noon}"></span>
+						<span :class="{wave:noon}"></span>				
+					</div>
 			<div class = "page">
 			<div class = "left">
-			<div class="box1">
+			<div :class="{box1:noon,ntbox1:night}">
 			<h1 class="h1">Welcome!</h1>
 			<a href="#" class="link1">Select?</a>
 			</div>
 			
-			<div class="box2">
+			<div :class="{box2:noon,ntbox2:night}">
 			<h1 class="h2">Do you have an account?</h1>
 			<a href="#" class="link2">Regist?</a>
 			</div>
 			
-			<div class="box3">
+			<div :class="{box3:noon,ntbox3:night}">
 			<h1 class="h3">Choose your like</h1>
 			<a href="#" class="link3">About?</a>
 			</div>

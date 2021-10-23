@@ -16,7 +16,7 @@
 	left:0;
 }
 .bk {
-	background: linear-gradient(-180deg, #f4fffa 0%, #f6fffb 100%);
+	background-color: #FFFEFD;
 }
 
 .bknight {
@@ -227,7 +227,7 @@
 
 ::-webkit-scrollbar {
 	width: 8px;
-	height: 6px;
+	height: 8px;
 	border-radius: 15px;
 	-webkit-border-radius: 15px;
 }
@@ -239,14 +239,14 @@
 
 ::-webkit-scrollbar-thumb:vertical {
 	height: 8px;
-	background-color: rgba(162, 162, 162, 0.5);
+	background-color: rgba(115, 115, 115, 0.5);
 	border-radius: 15px;
 	-webkit-border-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-	width: 6px;
-	background-color: rgba(160, 163, 168, 0.5);
+	width: 8px;
+	background-color: rgba(110, 112, 115, 0.5);
 	border-radius: 15px;
 	-webkit-border-radius: 15px;
 }

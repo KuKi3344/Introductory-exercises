@@ -17,19 +17,77 @@
 	background: rgba(78, 91, 120, 0.8);
 	box-shadow: 0 15px 25px rgba(78, 91, 120, 0.8);
 }
-
+	.sea{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;	
+		height:auto;
+		min-width: 100%;
+		max-width: auto;
+		opacity: 0.8;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+	.sea{background-color: #c8eec7;}
+	
+	.wave{
+		position: absolute;
+		top: -3400px;
+		left: -1200px;
+		width: 4000px;
+		height: 4000px;
+		border-radius: 46%;
+		filter: opacity(0.7);
+		animation: drift linear infinite;
+		transform-origin: 50% 49%;
+	}
+	.wave{background: #fcfcfc;}
+	.wave:nth-of-type(1){
+		animation-duration: 10s;
+	}
+	
+	.wave:nth-of-type(2){
+		animation-duration: 16s;
+	}
+	
+	.wave:nth-of-type(3){
+		animation-duration: 22s;
+		filter: opacity(0.2);
+	}
+	
+	@keyframes drift {
+		from {
+			transform: rotate(360deg)
+		}
+	
+		to {
+			transform: rotate(0deg)
+		}
+	}
 .box1,
 .box2,
-.box3 {
+.box3{
 	height: 110px;
 	width: 320px;
 	opacity: 0.8;
-	background-color: #a5bfcc;
+	background-color: #bbccc0;
 	border-radius: 0.7rem;
 	box-shadow: 0.5rem 0.9rem 1.2rem rgba(0, 0, 0, 0.25),
 		0.3rem 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
 }
-
+.ntbox1,
+.ntbox2,
+.ntbox3{
+	height: 110px;
+	width: 320px;
+	opacity: 0.8;
+	background-color: #595d7e;
+	border-radius: 0.7rem;
+	box-shadow: 0.5rem 0.9rem 1.2rem rgba(0, 0, 0, 0.25),
+		0.3rem 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+}
 .h1,
 .h2,
 .h3 {
@@ -51,19 +109,22 @@
 	top: 70px;
 }
 
-.box1 {
+.box1,
+.ntbox1{
 	position: absolute;
 	top: 140px;
 	left: 160px;
 }
 
-.box2 {
+.box2,
+.ntbox2{
 	position: absolute;
 	top: 290px;
 	left: 280px;
 }
 
-.box3 {
+.box3,
+.ntbox3{
 	position: absolute;
 	top: 450px;
 	left: 120px;
@@ -179,7 +240,7 @@ form a:hover {
 }
 .bt1,
 .bt2{
-	background-color: #90e2c0;
+	background-color: #a6d1be;
 	color: #ffffff;
 
 }
@@ -191,13 +252,13 @@ form a:hover {
 }
 .bt1:hover,
 .bt2:hover {
-	background: #90e2c0;
+	background: #86d1b2;
 	color: #fff;
 	border-radius: 60px;
-	box-shadow: 0 0 5px #90e2c0,
-		0 0 25px #90e2c0,
-		0 0 50px #90e2c0,
-		0 0 100px #90e2c0;
+	box-shadow: 0 0 5px #86d1b2,
+		0 0 25px #86d1b2,
+		0 0 50px #86d1b2,
+		0 0 100px #86d1b2;
 }
 .nibt1:hover,
 .nibt2:hover {
