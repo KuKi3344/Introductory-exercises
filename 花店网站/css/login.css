@@ -17,58 +17,67 @@
 	background: rgba(78, 91, 120, 0.8);
 	box-shadow: 0 15px 25px rgba(78, 91, 120, 0.8);
 }
-	.sea{
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;	
-		height:auto;
-		min-width: 100%;
-		max-width: auto;
-		opacity: 0.8;
-		border-radius: 5px;
-		overflow: hidden;
+
+.sea {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: auto;
+	min-width: 100%;
+	max-width: auto;
+	opacity: 0.8;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.sea {
+	background-color: #c8eec7;
+}
+
+.wave {
+	position: absolute;
+	top: -3400px;
+	left: -1200px;
+	width: 4000px;
+	height: 4000px;
+	border-radius: 46%;
+	filter: opacity(0.7);
+	animation: drift linear infinite;
+	transform-origin: 50% 49%;
+}
+
+.wave {
+	background: #fcfcfc;
+}
+
+.wave:nth-of-type(1) {
+	animation-duration: 10s;
+}
+
+.wave:nth-of-type(2) {
+	animation-duration: 16s;
+}
+
+.wave:nth-of-type(3) {
+	animation-duration: 22s;
+	filter: opacity(0.2);
+}
+
+@keyframes drift {
+	from {
+		transform: rotate(360deg)
 	}
-	.sea{background-color: #c8eec7;}
-	
-	.wave{
-		position: absolute;
-		top: -3400px;
-		left: -1200px;
-		width: 4000px;
-		height: 4000px;
-		border-radius: 46%;
-		filter: opacity(0.7);
-		animation: drift linear infinite;
-		transform-origin: 50% 49%;
+
+	to {
+		transform: rotate(0deg)
 	}
-	.wave{background: #fcfcfc;}
-	.wave:nth-of-type(1){
-		animation-duration: 10s;
-	}
-	
-	.wave:nth-of-type(2){
-		animation-duration: 16s;
-	}
-	
-	.wave:nth-of-type(3){
-		animation-duration: 22s;
-		filter: opacity(0.2);
-	}
-	
-	@keyframes drift {
-		from {
-			transform: rotate(360deg)
-		}
-	
-		to {
-			transform: rotate(0deg)
-		}
-	}
+}
+
 .box1,
 .box2,
-.box3{
+.box3 {
 	height: 110px;
 	width: 320px;
 	opacity: 0.8;
@@ -77,9 +86,10 @@
 	box-shadow: 0.5rem 0.9rem 1.2rem rgba(0, 0, 0, 0.25),
 		0.3rem 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
 }
+
 .ntbox1,
 .ntbox2,
-.ntbox3{
+.ntbox3 {
 	height: 110px;
 	width: 320px;
 	opacity: 0.8;
@@ -88,6 +98,7 @@
 	box-shadow: 0.5rem 0.9rem 1.2rem rgba(0, 0, 0, 0.25),
 		0.3rem 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
 }
+
 .h1,
 .h2,
 .h3 {
@@ -110,21 +121,21 @@
 }
 
 .box1,
-.ntbox1{
+.ntbox1 {
 	position: absolute;
 	top: 140px;
 	left: 160px;
 }
 
 .box2,
-.ntbox2{
+.ntbox2 {
 	position: absolute;
 	top: 290px;
 	left: 280px;
 }
 
 .box3,
-.ntbox3{
+.ntbox3 {
 	position: absolute;
 	top: 450px;
 	left: 120px;
@@ -227,6 +238,7 @@ form a:hover {
 	border-radius: 60px;
 	width: 100px;
 }
+
 .bt2,
 .nibt2 {
 	position: absolute;
@@ -238,18 +250,20 @@ form a:hover {
 	width: 100px;
 	margin: 2rem 0 0 auto;
 }
+
 .bt1,
-.bt2{
+.bt2 {
 	background-color: #a6d1be;
 	color: #ffffff;
 
 }
 
 .nibt1,
-.nibt2{
+.nibt2 {
 	background-color: #617aaf;
 	color: #ffffff;
 }
+
 .bt1:hover,
 .bt2:hover {
 	background: #86d1b2;
@@ -260,6 +274,7 @@ form a:hover {
 		0 0 50px #86d1b2,
 		0 0 100px #86d1b2;
 }
+
 .nibt1:hover,
 .nibt2:hover {
 	background: #7c9bc1;
@@ -270,16 +285,19 @@ form a:hover {
 		0 0 50px #7c9bc1,
 		0 0 100px #7c9bc1;
 }
+
 .bt1:focus,
 .bt2:focus {
 	outline: 0;
 }
+
 .label,
-.nilabel{
+.nilabel {
 	display: block;
 	margin-bottom: 10px;
 	text-align: center;
 }
+
 .label {
 	color: #478349;
 }
@@ -287,8 +305,9 @@ form a:hover {
 .nilabel {
 	color: #ffffff;
 }
+
 .input,
-.niinput{
+.niinput {
 	display: block;
 	width: 100%;
 	margin: 0 0 1rem 0;
@@ -298,6 +317,7 @@ form a:hover {
 	border-radius: 0.125rem 0.25rem;
 	opacity: 0.8;
 }
+
 .input {
 	background-color: #f7f7f7;
 }
