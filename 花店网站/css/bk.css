@@ -35,7 +35,7 @@ html, body {
 }
 
 .pageone {
-	height: 700px;
+	height: 700px auto;		/* 可以随内涵元素的位置和宽高而变化高度,可以使foot一直保持在底部 */
 }
 
 .bk {
@@ -228,7 +228,7 @@ html, body {
 	margin-left: 5px;
 	position: absolute;
 	left: 600px;
-	top: 720px;
+	bottom:0;
 	text-align: center;
 	padding-bottom: 5px;
 }
