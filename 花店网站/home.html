@@ -17,8 +17,8 @@
 	<body>
 		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
 			<div id="particles-js">
-				<div class = "main">
-<div class = "page">					
+				<div class = "main">	<!-- pariticles粒子背景会覆盖掉之前的bk，并且它是fixed的，若没有拥有overflow：scroll的main再覆盖到上面，直接把含所有内容的page放到上面,会导致页面滑动条的问题，所以需要叠加 -->
+					<div class = "page">		
 			<button class="night" v-if="noon" @click="tonight">夜间模式</button>
 			<button class="night" v-else @click="tonight">白日模式</button>
 
