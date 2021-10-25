@@ -26,7 +26,7 @@ html, body {
 	top: 0;
 	right: 0;
 	bottom: 0;
-	width: 1500px;
+	width: 1520px;
 	margin: 0 auto;
 }
 
@@ -76,9 +76,9 @@ html, body {
 
 
 .title,
-.nititle {
+.nititle{
 	height: 35px;
-	left: 120px;
+	left: 100px;
 	font-size: 15px;
 	width: 1200px;
 	margin-left: 0;
@@ -87,13 +87,16 @@ html, body {
 	color: white;
 	margin-bottom: 1px;
 	overflow: hidden;
-	border-radius: 8px;
+	border-radius: 5px;
 }
 
 .title {
-	background-color: #868686;
+	background-color: #585858;
 }
 
+.nititle {
+	background-color: #41435f;
+}
 .title ul,
 .nititle ul {
 	/* 清除ul标签的默认样式 */
@@ -133,12 +136,8 @@ html, body {
 
 .title li a:hover {
 	/* 鼠标选中时背景变为深色 */
-	background-color: #83b19c;
+	background-color: #707070;
 	border-radius: 8px;
-}
-
-.nititle {
-	background-color: #42435f;
 }
 
 .nititle li a:hover {
@@ -167,7 +166,6 @@ html, body {
 
 .lefttips {
 	background-color: #fff;
-	box-shadow: 1px -1px 1px 0px #bcf5ac, -1px 1px 1px 0px #bcf5ac, 1px -1px 1px 0px #bcf5ac, -1px 1px 1px 0px #bcf5ac;
 }
 
 .nilefttips {
@@ -223,6 +221,7 @@ html, body {
 
 .footer {
 	width: 300px;
+	height:30px;
 	color: #b3b3b3;
 	font-size: 15px;
 	margin-left: 5px;
