@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-<!-- 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+		<!-- 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
 		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
 		<link rel="stylesheet" href="./css/introduce.css" />
 		<link rel="stylesheet" href="./css/bk.css" />
@@ -15,52 +15,64 @@
 	<body>
 		<div class="bk" id="container" v-cloak>
 			<div id="particles-js">
-			<img style="position: fixed; left: 0%; top: 0%;width:100vw; height:77vh;overflow: hidden;z-index: -1;" src="https://tpl-ce608fd-pic20.websiteonline.cn/upload/1_cxif.jpg">
-				<div class = "main">
-					<div class= "intro-main"></div>
-					<div class = "page">
-			<div class="title">
+				<img style="position: fixed; left: 0%; top: 0%;width:100vw; height:77vh;overflow: hidden;z-index: -1;"
+					src="https://tpl-ce608fd-pic20.websiteonline.cn/upload/1_cxif.jpg">
+				<div class="main">
+					<div class="intro-main">
+						<div class="aside"></div>
+						<div class="intro-title1"><b>关于我们</b></div>
+						<div class="intro-title1-btm">ABOUT US</div>
+						<img src="./img/intropic1.jpg" style="position:absolute;top:100px;left:180px;">
+						<div class="wp-title_content"
+							style="word-wrap: break-word; padding: 0px; border-color: transparent; border-width: 0px; height: 209px; width: 672px; display: block;">
+							<div class= "intro-text1">
+								以一种别致的浪漫，为她送去芬芳，奔跑在普罗旺斯的薰衣草中间，唯美到无可挑剔。万里挑一遇见某某秘密花园花店和**真爱，万分之一的选择，厄瓜多尔玫瑰为你述说**真爱...<br><br>某某秘密花园花店产品多为自家设计制作，亦全世界搜罗气质相投单品，涵盖花艺、家居、艺术品和个性配饰，关注人的情感以及拥有潮流左右的品味，赋予一花一物自由自尊的灵魂。提供24小时网上订购鲜花礼品服务。配送服务网络日臻完善：直辖市、省会城市、大中型城市及国内大多数县级以上城市、港澳台地区，均建立了分支加盟连锁机构，配送范围覆盖全国900多个城市，较快3小时左右送货上门，真正实现：全国连锁，千里真情、瞬间传递!
+							</div>
+						</div>
+					</div>
+					<div class="page">
+						<div class="title">
 
-				<div>
-					<!-- 导航栏 -->
-					<ul>
-						<li><a href="home.html">首页</a></li>
-						<li><a href="purchase.html">购买</a></li>
-						<li><a href="buyshow.html">买家秀</a></li>
-						<li><a href="introduce.html">科普小课堂</a></li>
-						<li><a href="order.html">您的订单</a></li>
-						<li><a @click="refor">退出登录</a></li>
-					</ul>
+							<div>
+								<!-- 导航栏 -->
+								<ul>
+									<li><a href="home.html">首页</a></li>
+									<li><a href="purchase.html">购买</a></li>
+									<li><a href="buyshow.html">买家秀</a></li>
+									<li><a href="introduce.html">科普小课堂</a></li>
+									<li><a href="order.html">您的订单</a></li>
+									<li><a @click="refor">退出登录</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="box">
+							<span id="one">花的背面</span>
+							<span id="two">藏</span>
+							<span id="three">着</span>
+							<span id="four">彩蝶</span>
+							<span id="five">某某秘密花园花店，只在于遇见心里的你</span>
+							<img src="./img/introtxt.png" style="position:absolute;left:190px;top:130px;">
+						</div>
+						<div class="footer" style="top:2000px">Created by LULU @2021/仅供学习使用</div>
+						<el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
+							<span>退出登录后将清空您的登录信息，请您确认</span>
+							<span slot="footer" class="dialog-footer">
+								<el-button @click="backhome">取 消</el-button>
+								<el-button type="primary" @click="backlogin">确 定</el-button>
+							</span>
+						</el-dialog>
+					</div>
+					<div class="lefttips">
+						<div class="tips" v-cloak v-if="isLogin">
+							<!-- v-cloak解决未编译结束就显示的闪烁问题 -->
+							{{username}},欢迎您
+						</div>
+						<div class="tips" v-cloak v-else>
+							亲，请<a href="login.html" target="_top" id="t1">登录</a>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class = "box">
-				<span id = "one">花的背面</span>
-				<span id = "two">藏</span>
-				<span id = "three">着</span>
-				<span id = "four">彩蝶</span>
-				<span id = "five">某某秘密花园花店，只在于遇见心里的你</span>
-				<img src="./img/introtxt.png" style="position:absolute;left:190px;top:130px;">
-				</div>
-			<div class="footer" style="top:2000px">Created by LULU @2021/仅供学习使用</div>
-			<el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
-				<span>退出登录后将清空您的登录信息，请您确认</span>
-				<span slot="footer" class="dialog-footer">
-					<el-button @click="backhome">取 消</el-button>
-					<el-button type="primary" @click="backlogin">确 定</el-button>
-				</span>
-			</el-dialog>
-</div>
-			<div class="lefttips">
-				<div class="tips" v-cloak v-if="isLogin">
-					<!-- v-cloak解决未编译结束就显示的闪烁问题 -->
-					{{username}},欢迎您
-				</div>
-				<div class="tips" v-cloak v-else>
-					亲，请<a href="login.html" target="_top" id="t1">登录</a>
-				</div>
-			</div>
-		</div>
-		</div>
 		</div>
 
 		<script>
@@ -100,7 +112,7 @@
 						clearCookie("username");
 						clearCookie("tonight");
 						window.location.href = "login.html";
-					},					
+					},
 				},
 				// watch: { // 随时监听night是否和cookie里的tonight方向一致，避免因F5刷新而导致的数据缺失
 				// 	// 从而导致night和tonight的不同步性

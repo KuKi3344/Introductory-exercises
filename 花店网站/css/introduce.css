@@ -70,20 +70,65 @@
 #five {
 	color: rgb(137, 159, 145);
 	position: absolute;
-	left:120px;
-	top:100px;
-	width:300px;
-	height:35px;
+	left: 120px;
+	top: 100px;
+	width: 300px;
+	height: 35px;
 }
-.intro-main{
+
+.intro-main {
 	position: absolute;
 	left: 0;
 	top: 570px;
 	right: 0;
-	margin:0;
+	margin: 0;
 	background-color: #fff;
-	z-index:0;
+	z-index: 0;
 	width: 1525px;
 	height: 1300px;
-	margin:0 auto;
+	margin: 0 auto;
+}
+
+.aside {
+	background-color: #adadad;
+	width: 5px;
+	height: 35px;
+	position: absolute;
+	left: 180px;
+	top: 50px;
+}
+
+.intro-title1 {
+	font: 12px/140% Arial, "宋体", Helvetica, sans-serif, Verdana;
+	visibility: visible;
+	word-wrap: break-word;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	line-height: 28px;
+	color: rgb(47, 63, 53);
+	position: absolute;
+	left: 200px;
+	top: 45px;
+}
+
+.intro-title1-btm {
+	position: absolute;
+	left: 210px;
+	top: 70px;
+	color: rgb(84, 86, 93);
+	font-size:12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.intro-text1{
+	position:absolute;
+	color:#1b1b1b;
+	font-family:Microsoft YaHei;
+	font-size: 14px;
+	 line-height: 23.3799991607666px;
+	 position:absolute;
+	 left:700px;
+	 top:120px;
+	 width:600px;
+	 height:400px;
 }
