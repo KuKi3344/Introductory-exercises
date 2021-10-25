@@ -31,7 +31,7 @@
 .contain1,
 .contain2,
 .contain3 {
-	background-color: #f1f7f1;
+	background:linear-gradient(45deg,#fff,#e6e7e6);
 	border-radius: 10px;
 	box-shadow: 0 5px 5px rgba(229, 229, 229, 0.8);
 	width: 650px;
