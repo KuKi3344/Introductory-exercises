@@ -11,9 +11,18 @@
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js" ></script>
 		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/live2d.css" /> <!-- 看板娘 -->
+		<script src="./js/jquery.min.js"></script> <!-- 看板娘 -->
 	
 	</head>
 	<body>
+		<script src="./js/live2d.min.js"></script> <!-- 	 看板娘 -->
+		<div id="landlord">
+			<canvas id="live2d" width="300px" height="350px" class="live2d"></canvas>
+		</div>
+		<script type="text/javascript">
+			loadlive2d('live2d', './js/11/11.json');
+		</script> <!-- 看板娘 -->
 		<div :class = "{bk:noon,bknight:night}" id = "container" v-cloak>
 			<div id="particles-js">
 				<div class = "main">
