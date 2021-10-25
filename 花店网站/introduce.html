@@ -11,24 +11,15 @@
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js"></script>
 		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-		<link rel="stylesheet" type="text/css" href="./css/live2d.css" /> <!-- 看板娘 -->
-		<script src="./js/jquery.min.js"></script> <!-- 看板娘 -->
 	</head>
 	<body>
-		<script src="./js/live2d.min.js"></script> <!-- 	 看板娘 -->
-		<div id="landlord">
-			<canvas id="live2d" width="300px" height="350px" class="live2d"></canvas>
-		</div>
-		<script type="text/javascript">
-			loadlive2d('live2d', './js/11/11.json');
-		</script> <!-- 看板娘 -->
-		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
+		<div class="bk" id="container" v-cloak>
 			<div id="particles-js">
+			<img style="position: fixed; left: 0%; top: 0%;width:100vw; height:77vh;overflow: hidden;z-index: -1;" src="https://tpl-ce608fd-pic20.websiteonline.cn/upload/1_cxif.jpg">
 				<div class = "main">
+					<div class= "intro-main"></div>
 					<div class = "page">
-			<button class="night" v-if="noon" @click="tonight">夜间模式</button>
-			<button class="night" v-else @click="tonight">白日模式</button>
-			<div :class="{title:noon,nititle:night}">
+			<div class="title">
 
 				<div>
 					<!-- 导航栏 -->
@@ -42,16 +33,15 @@
 					</ul>
 				</div>
 			</div>
-			<div class="symbol">LULU</div>
 			<div class = "box">
-				<div class = "k1">
-					<div class = "intro">
-					
-						
-					</div>
+				<span id = "one">花的背面</span>
+				<span id = "two">藏</span>
+				<span id = "three">着</span>
+				<span id = "four">彩蝶</span>
+				<span id = "five">某某秘密花园花店，只在于遇见心里的你</span>
+				<img src="./img/introtxt.png" style="position:absolute;left:190px;top:130px;">
 				</div>
-			</div>
-			<div class="footer">Created by LULU @2021/仅供学习使用</div>
+			<div class="footer" style="top:2000px">Created by LULU @2021/仅供学习使用</div>
 			<el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
 				<span>退出登录后将清空您的登录信息，请您确认</span>
 				<span slot="footer" class="dialog-footer">
@@ -60,33 +50,18 @@
 				</span>
 			</el-dialog>
 </div>
-			<div :class="{lefttips:noon,nilefttips:night}">
-				<div :class="{tips:noon,nitips:night}" v-cloak v-if="isLogin">
+			<div class="lefttips">
+				<div class="tips" v-cloak v-if="isLogin">
 					<!-- v-cloak解决未编译结束就显示的闪烁问题 -->
 					{{username}},欢迎您
 				</div>
-				<div :class="{tips:noon,nitips:night}" v-cloak v-else>
+				<div class="tips" v-cloak v-else>
 					亲，请<a href="login.html" target="_top" id="t1">登录</a>
 				</div>
 			</div>
 		</div>
 		</div>
 		</div>
-		<script>
-			// Vue.component('button-buy', {
-			// 	template: '<button @click="buy">购买</button>'
-			//   data: function () {
-			//     return {
-			//       flowernum:;
-			//     }
-			//   },
-			//   methods: {
-			// 	  buy() {
-			// 		  setCookieValue(this.); 
-			// 		  } 
-			// 	  }
-			// })
-		</script>
 
 		<script>
 			var vm = new Vue({
@@ -95,8 +70,6 @@
 					username: "",
 					img: "./img/head.png",
 					isLogin: false,
-					noon: true,
-					night: false,
 					isback: false,
 
 				},
@@ -106,14 +79,6 @@
 					if (token != null && token != "") {
 						this.isLogin = true;
 						this.username = getCookieValue('username');
-					}
-					var tonight = getCookieValue("tonight"); // 读取在别的页面是否夜间模式来决定此页面是否为夜间模式
-					if (tonight != null && tonight != "") {
-						this.noon = false;
-						this.night = true;
-					} else {
-						this.noon = true;
-						this.night = false;
 					}
 				},
 				methods: {
@@ -135,36 +100,23 @@
 						clearCookie("username");
 						clearCookie("tonight");
 						window.location.href = "login.html";
-					},
-					tonight: function() {
-						if (vm.night) { // 因为监听器会随时监测night是否和tonight方向一致
-							var space = ""; // 所以要先改变tonight的值再去改变night的值才能使night变化
-							setCookieValue("tonight", space); //不然night一变化就会被强制和tonight保持一致而恢复原来状态
-							vm.night = false; //就会产生不论怎么点击都无法改变的状况
-							vm.noon = true;
-						} else if (vm.noon) {
-							setCookieValue("tonight", vm.noon);
-							vm.noon = false;
-							vm.night = true;
-						}
-
-					},
+					},					
 				},
-				watch: { // 随时监听night是否和cookie里的tonight方向一致，避免因F5刷新而导致的数据缺失
-					// 从而导致night和tonight的不同步性
+				// watch: { // 随时监听night是否和cookie里的tonight方向一致，避免因F5刷新而导致的数据缺失
+				// 	// 从而导致night和tonight的不同步性
 
-					night() {
-						var isnight = getCookieValue("tonight");
-						if (isnight != null && isnight != "") {
-							this.noon = false;
-							this.night = true;
-						} else {
-							this.noon = true;
-							this.night = false;
-						}
-					}
+				// 	night() {
+				// 		var isnight = getCookieValue("tonight");
+				// 		if (isnight != null && isnight != "") {
+				// 			this.noon = false;
+				// 			this.night = true;
+				// 		} else {
+				// 			this.noon = true;
+				// 			this.night = false;
+				// 		}
+				// 	}
 
-				},
+				// },
 			})
 		</script>
 		<script src="./js/particles.js"></script>
