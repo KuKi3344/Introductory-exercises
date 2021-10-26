@@ -15,9 +15,10 @@ html, body {
 	max-height: auto;
 	min-width: 100vw;
 	max-width: auto;
+}
+.main{
 	overflow: scroll;
 }
-
 .page,
 .pageone {
 	position: absolute;
@@ -42,7 +43,7 @@ html, body {
 }
 
 .title{
-	height: 35px;
+	height: 40px;
 	left: 100px;
 	font-size: 15px;
 	width: 1300px;
@@ -74,8 +75,6 @@ html, body {
 	/* 两个li之间的距离*/
 	position: relative;
 	top: 0.;
-
-	border-color: #222222;
 	border-radius: 8px;
 }
 
@@ -83,7 +82,7 @@ html, body {
 	/* 设置链接内容显示的格式*/
 	display: block;
 	/* 把链接显示为块元素可使整个链接区域可点击 */
-	color: #5e675f;
+	color: #5b645c;
 	text-align: center;
 	padding: 8px 15px;
 	text-decoration: none;
@@ -94,8 +93,16 @@ html, body {
 	/* 鼠标选中时背景变为深色 */
 	background-color: none;
 	color: #658f61;
+	animation-name:ona;
+	animation-duration: 0.5s;
+	border-bottom: 1px solid #61885c;
 	
 }
+@keyframes ona{
+	from{border:none;}
+	to{color: #658f61;border-bottom: 1px solid #61885c;}
+}
+
 #particles-js {
 	position: fixed;
 	width: 100vw;
