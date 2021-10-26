@@ -6,7 +6,7 @@ html, body {
         }
 .bk,
 .main {
-	position: absolute;
+position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -44,23 +44,24 @@ html, body {
 
 .title{
 	height: 40px;
-	left: 0px;
+	left: 300px;
 	font-size: 15px;
-	width: 1525px;
+	width: 1220px;
 	margin-left: 0;
 	position: absolute;
 	top: 0;
 	color: white;
 	margin-bottom: 1px;
 	overflow: hidden;
-	background-color: rgba(231, 231, 231, 0.3);
+	background-color: rgba(231, 231, 231, 0.2);
+	border-bottom-left-radius: 5px ;
 }
 
 .title ul{
 	/* 清除ul标签的默认样式 */
 	width: 1200px;
 	position: absolute;
-	left: 400px;
+	left: 300px;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -103,9 +104,13 @@ html, body {
 }
 
 #particles-js {
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
+	position: absolute;
+	left:0;
+	top:0;
+	max-width: 100vw;
+	max-height: 100vh;
+	min-width:1526px;
+	min-height:750px;
 }
 
 .footer {

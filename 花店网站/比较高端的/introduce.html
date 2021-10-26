@@ -14,12 +14,7 @@
 	</head>
 	<body>
 		<div class="bk" id="container" v-cloak>
-			<div id="particles-js">
-				<!-- 粒子背景为fixed -->
-				<div style="position:absolute;margin:0 auto;left:0;top:0;right:0;bottom:0;width:1536px;height:600px;">
-					<img style="position:absolute;left:0;top:0;overflow: hidden;z-index: -1;width:1536px;height:600px;"
-						src="./img/introbk.jpg">
-				</div>
+				<img src = "./img/introbk.jpg" style = "position:fixed;left:0;top:0px;right:0;bottom:0;width:100vw;min-height:750px;min-width:1525px;height:100vh;overflow: hidden;margin:0 auto;">
 				<div class="main">
 					<div class="intro-main">
 						<div class="main1">
@@ -94,7 +89,7 @@
 							<span id="five">LULU秘密花园花店，只在于遇见心里的你</span>
 							<!-- <img src="./img/introtxt.png" style="position:absolute;left:190px;top:130px;"> -->
 						</div>
-						<div class="footer" style="top:2000px">Created by LULU @2021/仅供学习使用</div>
+						<div class="footer" style="top:1900px">Created by LULU @2021/仅供学习使用</div>
 						<el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
 							<span>退出登录后将清空您的登录信息，请您确认</span>
 							<span slot="footer" class="dialog-footer">
@@ -103,7 +98,6 @@
 							</span>
 						</el-dialog>
 					</div>
-				</div>
 			</div>
 		</div>
 
