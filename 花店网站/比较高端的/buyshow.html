@@ -13,104 +13,24 @@
 	</head>
 	<body>
 
-		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
+		<div class="bk" id="container" v-cloak>
 			<div id="particles-js">
 				<div class = "main">
 					<div class = "page">
-			<button class="night" v-if="noon" @click="tonight">夜间模式</button>
-			<button class="night" v-else @click="tonight">白日模式</button>
-			<div :class="{title:noon,nititle:night}">
+			<div class="title">
 
 				<div>
 					<!-- 导航栏 -->
 					<ul>
 						<li><a href="home.html">首页</a></li>
 						<li><a href="purchase.html">购买</a></li>
-						<li><a href="buyshow.html">买家秀</a></li>
-						<li><a href="introduce.html">科普小课堂</a></li>
+						<li><a href="introduce.html">关于我们</a></li>
 						<li><a href="order.html">您的订单</a></li>
 						<li><a @click="refor">退出登录</a></li>
 					</ul>
 				</div>
 
 
-			</div>
-			<div class="symbol">LULU</div>
-			<div class="box">
-				<span id="top">最新评论:</span>
-				<div class="contain1">
-					<div class="headpic"> <img src="./img/121513512.png" width="70px" height="70px"
-							style="border-radius: 50%;border:2px solid #bebebe;"> </div>
-					<div class="comt">超级棒，女朋友非常喜欢，七夕节送女友求婚再适合不过啦~女朋友现在已经同意了！明年就结婚！
-						<div class="compic"><img src="img/-1296544337.png"
-								style="width:100px;height:130px;border-radius:5px;margin-right:5px;">
-							<img src="./img/-1289744974.png"
-								style="width:100px;height:130px;border-radius:5px;margin-right: 5px;">
-							<img src="./img/1930811460.png"
-								style="width:100px;height:130px;border-radius:5px;margin-right: 5px;">
-							<img src="./img/938444368.png"
-								style="width:100px;height:130px;border-radius:5px;margin-right: 5px;">
-						</div>
-					</div>
-				</div>
-				<div class="contain2">
-					<div class="headpic"> <img src="./img/145643554.png" width="70px" height="70px"
-							style="border-radius: 50%;border:2px solid #bebebe;"></div>
-					<div class="comt">第一次送女朋友花，选择了这家店。看了官方推荐选择了这款，女朋友超级感动，说我终于开窍了要拉着我去领结婚证，不说了她催我走了
-						<div class="compic"><img src="img/-186527570.png"
-								style="width:100px;height:130px;border-radius:5px;margin-right:5px;">
-							<img src="./img/1663393205.png"
-								style="width:100px;height:130px;border-radius:5px;margin-right: 5px;">
-							<img src="./img/-570933886.png"
-								style="width:100px;height:130px;border-radius:5px;margin-right: 5px;">
-							<img src="./img/801518509.png"
-								style="width:100px;height:130px;border-radius:5px;margin-right:5px;">
-						</div>
-					</div>
-				</div>
-				<div class="contain3">
-					<div class="headpic"> <img src="./img/wa'da'w'da'w.png" width="70px" height="70px"
-							style="border-radius: 50%;border:2px solid #bebebe;"></div>
-					<div class="comt">送给我的好姐妹的花，祝我们友谊长存~七夕节姐妹没有人送她花怎么办，当然是替她未来男朋友送她啦
-						<div class="compic"><img src="img/-887532272.png"
-								style="width:90px;height:130px;border-radius:5px;margin-right:5px;">
-							<img src="./img/1795711174.png"
-								style="width:100px;height:130px;border-radius:5px;margin-right: 5px;">
-							<img src="img/-1736121066.png"
-								style="width:100px;height:130px;border-radius:5px;margin-right:5px;">
-							<img src="./img/-1910055890.png"
-								style="width:100px;height:130px;border-radius:5px;margin-right: 5px;">
-						</div>
-					</div>
-				</div>
-				<div class="gomore">
-					<button>点击查看更多</button>
-				</div>
-			</div>
-			<div class="box2">
-				<span id="title">达人推荐</span>
-				<div class="recom1">
-					<div class="recomhead"><img src="./img/5a036de79.jpeg"
-							style="width:70px;height:70px;border-radius:50%;border:2px solid #b1b1b1;"></div>
-					<span class="recomId"><a href="#">花艺师-娜拉</a></span>
-					<span class="recomintro">知名花艺师，知名博主</span>
-					<button class="focus">关注</button>
-				</div>
-				<div class="recom2">
-					<div class="recomhead"><img src="./img/170f22a.jpeg"
-							style="width:70px;height:70px;border-radius:50%;border:2px solid #b1b1b1;"></div>
-					<span class="recomId"><a href="#">花艺师-九九</a></span>
-					<span class="recomintro">插花风格独特,知名花艺师</span>
-					<button class="focus">关注</button>
-				</div>
-				<div class="recom3">
-					<div class="recomhead"><img src="./img/227df07a.jpeg"
-							style="width:70px;height:70px;border-radius:50%;border:2px solid #b1b1b1;"></div>
-					<span class="recomId"><a href="#">花艺师-轩轩</a></span>
-					<span class="recomintro">将自然引入室的天才花艺师</span>
-					<button class="focus">关注</button>
-				</div>
-				<div id="foot"><button>更多</button></div>
 			</div>
 			<div class="footer" style="top:1350px">Created by LULU @2021/仅供学习使用</div>
 			<el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
@@ -121,18 +41,6 @@
 				</span>
 			</el-dialog>
 			</div>
-		<div class="isLogin">
-			<div :class="{lefttips:noon,nilefttips:night}">
-				<div :class="{tips:noon,nitips:night}" v-cloak v-if="isLogin">
-					<!-- v-cloak解决未编译结束就显示的闪烁问题 -->
-					{{username}},欢迎您
-				</div>
-				<div :class="{tips:noon,nitips:night}" v-cloak v-else>
-					亲，请<a href="login.html" target="_top" id="t1">登录</a>
-				</div>
-			</div>
-		
-		</div>
 		</div>
 		</div>
 		</div>
@@ -142,10 +50,7 @@
 				el: "#container",
 				data: {
 					username: "",
-					img: "./img/head.png",
 					isLogin: false,
-					noon: true,
-					night: false,
 					isback: false,
 
 				},
@@ -155,14 +60,6 @@
 					if (token != null && token != "") {
 						this.isLogin = true;
 						this.username = getCookieValue('username');
-					}
-					var tonight = getCookieValue("tonight"); // 读取在别的页面是否夜间模式来决定此页面是否为夜间模式
-					if (tonight != null && tonight != "") {
-						this.noon = false;
-						this.night = true;
-					} else {
-						this.noon = true;
-						this.night = false;
 					}
 				},
 				methods: {
@@ -182,37 +79,8 @@
 						vm.isback = false;
 						clearCookie("token");
 						clearCookie("username");
-						clearCookie("tonight");
 						window.location.href = "login.html";
 					},
-					tonight: function() {
-						if (vm.night) { // 因为监听器会随时监测night是否和tonight方向一致
-							var space = ""; // 所以要先改变tonight的值再去改变night的值才能使night变化
-							setCookieValue("tonight", space); //不然night一变化就会被强制和tonight保持一致而恢复原来状态
-							vm.night = false; //就会产生不论怎么点击都无法改变的状况
-							vm.noon = true;
-						} else if (vm.noon) {
-							setCookieValue("tonight", vm.noon);
-							vm.noon = false;
-							vm.night = true;
-						}
-
-					},
-				},
-				watch: { // 随时监听night是否和cookie里的tonight方向一致，避免因F5刷新而导致的数据缺失
-					// 从而导致night和tonight的不同步性
-
-					night() {
-						var isnight = getCookieValue("tonight");
-						if (isnight != null && isnight != "") {
-							this.noon = false;
-							this.night = true;
-						} else {
-							this.noon = true;
-							this.night = false;
-						}
-					}
-
 				},
 			})
 		</script>

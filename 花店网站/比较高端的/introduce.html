@@ -80,8 +80,7 @@
 								<ul>
 									<li><a href="home.html">首页</a></li>
 									<li><a href="purchase.html">购买</a></li>
-									<li><a href="buyshow.html">买家秀</a></li>
-									<li><a href="introduce.html">科普小课堂</a></li>
+									<li><a href="introduce.html">关于我们</a></li>
 									<li><a href="order.html">您的订单</a></li>
 									<li><a @click="refor">退出登录</a></li>
 								</ul>
@@ -104,15 +103,6 @@
 							</span>
 						</el-dialog>
 					</div>
-					<div class="lefttips">
-						<div class="tips" v-cloak v-if="isLogin">
-							<!-- v-cloak解决未编译结束就显示的闪烁问题 -->
-							{{username}},欢迎您
-						</div>
-						<div class="tips" v-cloak v-else>
-							亲，请<a href="login.html" target="_top" id="t1">登录</a>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -122,7 +112,6 @@
 				el: "#container",
 				data: {
 					username: "",
-					img: "./img/head.png",
 					isLogin: false,
 					isback: false,
 
@@ -152,25 +141,9 @@
 						vm.isback = false;
 						clearCookie("token");
 						clearCookie("username");
-						clearCookie("tonight");
 						window.location.href = "login.html";
 					},
 				},
-				// watch: { // 随时监听night是否和cookie里的tonight方向一致，避免因F5刷新而导致的数据缺失
-				// 	// 从而导致night和tonight的不同步性
-
-				// 	night() {
-				// 		var isnight = getCookieValue("tonight");
-				// 		if (isnight != null && isnight != "") {
-				// 			this.noon = false;
-				// 			this.night = true;
-				// 		} else {
-				// 			this.noon = true;
-				// 			this.night = false;
-				// 		}
-				// 	}
-
-				// },
 			})
 		</script>
 		<script src="./js/particles.js"></script>

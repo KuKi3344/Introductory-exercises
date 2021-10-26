@@ -2,19 +2,6 @@
 	background-color: #7f8f73 !important;
 }
 
-.title {
-	background: none !important;
-}
-
-.title li a {
-	color: #5e675f !important;
-}
-
-.title li a:hover {
-	color: #658f61 !important;
-	background: none !important;
-}
-
 .box {
 	position: absolute;
 	top: 120px;
