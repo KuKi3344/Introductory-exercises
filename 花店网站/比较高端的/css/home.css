@@ -3,7 +3,7 @@
 }
 
 .title li a {
-	color: #313631 !important;
+	color: #525a52 !important;
 }
 
 .title li a:hover {
@@ -30,7 +30,8 @@
 }
 
 .home-title a,
-.home-main2 a{
+.home-main2 a
+{
 	position: absolute;
 	width: 160px;
 	border: 2px solid #fff;
@@ -38,17 +39,32 @@
 	color: #fff;
 	text-align: center;
 }
-.home-title a{
+.home-title a {
 	left: 50px;
 	top: 170px;
 	height: 50px;
 	line-height: 50px;
 }
-.home-main2 a{
+
+.home-main2 a {
 	left: 650px;
 	top: 270px;
 	height: 60px;
 	line-height: 60px;
+}
+#a2{
+	font-size:10px !important;
+	position: absolute;
+	width: 130px;
+	border: 2px solid rgb(32, 88, 79);
+	text-decoration: none;
+	color: rgb(32, 88, 79);
+	text-align: center;
+	left:40px;
+	top:140px;
+	height:40px;
+	line-height: 40px;
+	
 }
 .home-title a:hover,
 .home-main2 a:hover{
@@ -57,7 +73,12 @@
 	color: rgb(32, 88, 79);
 	background-color: #fff;
 }
-
+#a2:hover{
+	animation-name: change2;
+	animation-duration: 1s;
+	color: #fff;
+	background-color: rgb(32, 88, 79);
+}
 @keyframes change {
 	from {
 		color: #fff;
@@ -69,20 +90,98 @@
 		background-color: #fff;
 	}
 }
+@keyframes change2 {
+	from {
+		color:  rgb(32, 88, 79);
+		background: none;
+	}
+
+	to {
+		color: #fff;
+		background-color: rgb(32, 88, 79);
+	}
+}
 
 .home-main {
 	position: absolute;
 	background-color: #fff;
-	top: 720px;
+	top: 750px;
 	left: 0;
-	width: 1525px;
+	width: 1524px;
 	height: 500px;
+}
+
+.aside {
+	background-color: #adadad;
+	width: 50px;
+	height: 5px;
+	position: absolute;
+	left: 100px;
+	top: 50px;
+}
+
+.home-title2 {
+	font: 12px/140% Arial, "宋体", Helvetica, sans-serif, Verdana;
+	visibility: visible;
+	word-wrap: break-word;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	line-height: 28px;
+	color: rgb(47, 63, 53);
+	position: absolute;
+	left: 100px;
+	top: 70px;
+	writing-mode: vertical-rl;
+	/*从左向右 从右向左是 writing-mode: vertical-rl;*/
+	writing-mode: tb-rl;
+	/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
+}
+
+.home-title2-btm {
+	position: absolute;
+	left: 135px;
+	top: 70px;
+	color: rgb(84, 86, 93);
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	writing-mode: vertical-rl;
+	/*从左向右 从右向左是 writing-mode: vertical-rl;*/
+	writing-mode: tb-rl;
+	/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
+}
+
+.home-title2-text {
+	position: absolute;
+	top: 150px;
+	left: 680px;
+	width: 500px;
+	height: 210px;
+	background-color: #fff;
+}
+
+#home-title2-text-1 {
+	font-size: 30px;
+	font-family: 微软雅黑;
+	color: rgb(88, 88, 88);
+	position: absolute;
+	left: 30px;
+	top: 25px;
+}
+
+#home-title2-text-2 {
+	font-size: 15px;
+	font-family: 微软雅黑;
+	color: rgb(204, 204, 204);
+	position:absolute;
+	top:80px;
+	left:30px;
 }
 
 .home-main2 {
 	position: absolute;
 	background: none;
-	top: 1220px;
+	top: 1250px;
 	left: 0;
 	width: 1525px;
 	height: 450px;
@@ -120,7 +219,7 @@
 .home-main3 {
 	position: absolute;
 	background: none;
-	top: 1620px;
+	top: 1650px;
 	left: 0;
 	width: 1525px;
 	height: 470px;

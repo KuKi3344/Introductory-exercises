@@ -14,11 +14,11 @@
 	<body>
 
 		<div class="bk" id="container" v-cloak>
-			<img src = "./img/151313.jpg" style = "position:absolute;left:0;top:0px;width:1536px;height:750px;overflow: hidden;filter:blur(10px);opacity:0.7;margin:0 auto;">
+			<img src = "./img/151313.jpg" style = "position:absolute;left:0;top:0px;right:0;bottom:0;width:100vw;min-height:750px;min-width:1525px;height:100vh;overflow: hidden;filter:blur(10px);opacity:0.7;margin:0 auto;">
 			<div class="main">
 				<div class="page">
-					<div style="position:absolute;left:-5px;top:0;right:0;bottom:0;width:1528px;height:720px;overflow:hidden">
-						<img style="position:absolute;left:0;top:0;overflow: hidden;width:1600px;height:720px;z-index:0;"
+					<div style="position:absolute;left:-5px;top:0;right:0;bottom:0;width:1528px;height:750px;overflow:hidden">
+						<img style="position:absolute;left:0;top:0;overflow: hidden;width:1600px;height:750px;z-index:0;"
 							src="https://flowers-1135368-pic36.websiteonline.cn/upload/ss_01.jpg">
 
 					</div>
@@ -28,7 +28,14 @@
 						<a href="purchase.html">查看详情</a>
 						</div>
 						<div class = "home-main">
-							
+						<div class="aside"></div>
+						<div class="home-title2"><b>热销系列</b></div>
+						<div class="home-title2-btm">HOT SALE SERIES</div>
+						<a href="purchase.html"><img src="https://flowers-1135368-pic36.websiteonline.cn/upload/vx_21.jpg"  style="width: 500px; height: 350px;position:absolute;left:280px;top:80px;"></a>
+						<div class = "home-title2-text"><span id = "home-title2-text-1"><strong>浪漫爱情</strong></span>
+						<p><span id = "home-title2-text-2">xx花艺在线，是在《xxx》社的大力支持下，由北京龙焱世纪文化交流有限公司投资成立的国内</span></p>
+						<a id = "a2" href="purchase.html">查看详情</a>
+						</div>	
 						</div>
 						<div class = "home-main2">
 							<span id = "home-main2-1"><strong>为较爱的TA，送上较好的礼物</strong></span>
@@ -54,7 +61,7 @@
 
 
 					</div>
-					<div class="footer" style="top:2100px">Created by LULU @2021/仅供学习使用</div>
+					<div class="footer" style="top:2140px">Created by LULU @2021/仅供学习使用</div>
 					<el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
 						<span>退出登录后将清空您的登录信息，请您确认</span>
 						<span slot="footer" class="dialog-footer">
