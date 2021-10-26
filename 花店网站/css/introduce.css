@@ -1,5 +1,5 @@
 .bk {
-	background-color: #ccd4be !important;
+	background-color: #7f8f73 !important;
 }
 
 .title {
@@ -7,7 +7,7 @@
 }
 
 .title li a {
-	color: #4a514b !important;
+	color: #5e675f !important;
 }
 
 .title li a:hover {
@@ -18,26 +18,26 @@
 .box {
 	position: absolute;
 	top: 120px;
-	left: 485px;
+	left: 480px;
 }
 
 #one {
 	position: absolute;
-	left: 120px;
+	left: 110px;
 	top: 50px;
-	width: 160px;
+	width: 200px;
 	height: 50px;
 	font-family: Microsoft YaHei;
-	font-size: 30px;
+	font-size: 35px;
 	letter-spacing: 10px;
-	color: rgb(47, 63, 53);
+	color: rgb(54, 74, 61);
 }
 
 #two {
 	position: absolute;
 	font-family: NSimSun;
-	font-size: 42px;
-	left: 280px;
+	font-size: 47px;
+	left: 290px;
 	top: 40px;
 	width: 160px;
 	height: 50px;
@@ -47,31 +47,31 @@
 #three {
 	position: absolute;
 	font-family: NSimSun;
-	left: 325px;
+	left: 335px;
 	top: 50px;
 	width: 160px;
 	height: 50px;
-	font-size: 20px;
+	font-size: 25px;
 	color: rgb(94, 86, 63)
 }
 
 #four {
 	position: absolute;
-	left: 350px;
+	left: 370px;
 	top: 50px;
 	width: 160px;
 	height: 50px;
 	font-family: Microsoft YaHei;
-	font-size: 30px;
+	font-size: 35px;
 	letter-spacing: 10px;
-	color: rgb(193, 149, 76);
+	color: rgb(199, 143, 94);
 }
 
 #five {
-	color: rgb(137, 159, 145);
+	color: rgb(141, 158, 138);
 	position: absolute;
-	left: 120px;
-	top: 100px;
+	left: 130px;
+	top: 120px;
 	width: 300px;
 	height: 35px;
 }
@@ -84,9 +84,25 @@
 	margin: 0;
 	background-color: #fff;
 	z-index: 0;
-	width: 1525px;
-	height: 1300px;
+	width: 1528px;
+	height: 1320px;
 	margin: 0 auto;
+}
+
+.main1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1520px;
+	height: 450px;
+}
+
+.main2 {
+	position: absolute;
+	top: 450px;
+	left: 0;
+	width: 1520px;
+	height: 720px;
 }
 
 .aside {
@@ -117,19 +133,70 @@
 	left: 210px;
 	top: 70px;
 	color: rgb(84, 86, 93);
-	font-size:12px;
+	font-size: 12px;
 	font-family: Arial, Helvetica, sans-serif;
 }
-.intro-text1{
-	position:absolute;
-	color:#1b1b1b;
-	font-family:Microsoft YaHei;
+
+.intro-text1 {
+	position: absolute;
+	color: #1b1b1b;
+	font-family: Microsoft YaHei;
 	font-size: 14px;
-	 line-height: 23.3799991607666px;
-	 position:absolute;
-	 left:700px;
-	 top:120px;
-	 width:600px;
-	 height:400px;
+	line-height: 23.3799991607666px;
+	position: absolute;
+	left: 700px;
+	top: 120px;
+	width: 600px;
+	height: 300px;
 }
 
+.img_over,
+.img_over2,
+.img_over3,
+.img_over4 {
+	overflow: hidden;
+	border-color: transparent;
+	border-width: 0px;
+	height: 178px;
+	width: 250px;
+	position: absolute;
+	top: 100px;
+}
+
+.img_over {
+	left: 120px;
+}
+
+.img_over2 {
+	left: 470px;
+}
+
+.img_over3 {
+	left: 810px;
+}
+
+.img_over4 {
+	left: 1150px;
+}
+
+.main2_text {
+	position: absolute;
+	left: 150px;
+	top: 320px;
+	word-wrap: break-word;
+	padding: 0px;
+	border-color: transparent;
+	border-width: 0px;
+	width: 1100px;
+	height: 400px;
+	display: block;
+	border-style: solid;
+
+}
+
+.main2_text span {
+	font-size: 13px;
+	font-family: Microsoft YaHei;
+	line-height: 200%;
+	letter-spacing: 3px;
+}
