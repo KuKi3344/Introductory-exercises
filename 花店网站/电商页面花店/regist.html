@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>LULU花房(*￣▽￣*)ブ欢迎您</title>
+		<link rel="stylesheet" href="./css/regist.css" />
+		<link rel="icon" href="./logo/flower.ico">
+		<link rel="stylesheet" href="./css/bk.css" />
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		<script type="text/javascript" src="./js/vue.js"></script>
+		<script type="text/javascript" src="./js/cookie_utils.js"></script>
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+	</head>
+	<body>
+		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
+			<div id="particles-js">
+				<div :class="{sea:noon}">
+					<span :class="{wave:noon}"></span>
+					<span :class="{wave:noon}"></span>
+					<span :class="{wave:noon}"></span>				
+				</div>
+				<div class = "main">
+				<div class="pageone">
+					<button class="night" v-if="noon" @click="tonight">夜间模式</button>
+					<button class="night" v-else @click="tonight">白日模式</button>
+					<div :class="{box:noon,nibox:night}">
+						<img class="head" v-bind:src="user.img">
+						<div class="Regist">
+							<form>
+								<label for="name" :class="{label:noon,nilabel:night}">Name</label>
+								<input type="text" :class="{input:noon,niinput:night}" placeholder="请输入用户名"
+									v-model="user.name" @keyup="checkRegistInfo">
+								<label for="email" :class="{label:noon,nilabel:night}">Email</label>
+								<input type="text" :class="{input:noon,niinput:night}" placeholder="请输入邮箱"
+									v-model="user.email" @keyup="checkRegistInfo">
+								<label for="password" :class="{label:noon,nilabel:night}">Password</label>
+								<input type="password" :class="{input:noon,niinput:night}" placeholder="请输入密码"
+									v-model="user.password" @keyup="checkRegistInfo">
+								<label for="con-password" :class="{label:noon,nilabel:night}">Confirm Password</label>
+								<input type="password" :class="{input:noon,niinput:night}" placeholder="请再次输入密码"
+									v-model="user.conpassword" @keyup="checkRegistInfo">
+
+							</form>
+							<div id="strtips">{{strtips}}</div>
+							<button :class="{bt1:noon,nibt1:night}" type="reset">重设</button>
+							<button :class="{bt2:noon,nibt2:night}" @click="doRegist">提交</button>
+
+						</div>
+						<div id="tips">{{tips}}</div>
+					</div>
+					<div class="picture">
+						<img class="f1" src="https://pics.prcm.jp/3a638fefa1001/75420560/png/75420560_220x200.png" />
+						<img class="f2" src="https://sozai-good.com/uploads/83454/83454_sample.png" />
+					</div>
+					<div class="footer">Created by LULU @2021/仅供学习使用</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<script>
+			var vm = new Vue({
+				el: "#container",
+				data: {
+					user: {
+						name: "",
+						email: "",
+						password: "",
+						conpassword: "",
+						img: "./img/head.png",
+					},
+					tips: "",
+					strtips: "",
+					isRight: false,
+					night: false,
+					noon: true,
+				},
+				created: function() {
+					var tonight = getCookieValue("tonight"); // 读取在别的页面是否夜间模式来决定此页面是否为夜间模式
+					if (tonight != null && tonight != "") {
+						this.noon = false;
+						this.night = true;
+					} else {
+						this.noon = true;
+						this.night = false;
+					}
+				},
+				methods: {
+					checkRegistInfo: function() {
+						//1.校验账号
+						if (vm.user.name == "") {
+							vm.tips = "请输入账号！";
+							vm.isRight = false;
+						} else if (vm.user.name.length < 8 || vm.user.name.length > 15) {
+							vm.tips = "账号长度必须为8-15个字符！";
+							vm.isRight = false;
+						} else {
+							//2.校验邮箱
+							var regEmail = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+							if (vm.user.email == "") {
+								vm.tips = "请输入邮箱！";
+								vm.isRight = false;
+							} else if (vm.user.email != '' && !regEmail.test(vm.user.email)) {
+								//正则校验
+								vm.tips = "邮箱格式不正确！";
+								vm.isRight = false;
+							} else {
+								//3.校验密码
+								var pwd1 = /^(\d{8,16})|([a-z]{8,16})|([A-Z])$/;
+								var pwd2 = /^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{8,16}$/;
+								var pwd3 = /(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{8,16}/;
+								if (vm.user.password == "") {
+									vm.tips = "请输入密码！";
+									vm.strtips = "";
+									vm.isRight = false;
+								} else if (vm.user.password.length < 8 || vm.user.password.length > 16) {
+									vm.tips = "密码长度必须为8-16个字符！";
+									vm.strtips = "";
+									vm.isRight = false;
+								} else {
+									if (pwd1.test(vm.user.password)) {
+										vm.tips = "密码强度过弱,请至少包含两种字符";
+										vm.strtips = "";
+										vm.isRight = false;
+										if (pwd2.test(vm.user.password)) {
+											vm.strtips = "密码强度:中 ";
+											if (pwd3.test(vm.user.password)) {
+												vm.strtips = "密码强度:强";
+											}
+											if (vm.user.conpassword == "") {
+												vm.tips = "请输入确认密码！"
+												vm.isRight = false;
+											} else if (vm.user.conpassword != vm.user.password) {
+												vm.tips = "两次密码输入不一致！";
+												vm.isRight = false;
+											} else {
+												vm.tips = "";
+												vm.isRight = true;
+											}
+										}
+									} else if (pwd2.test(vm.user.password)) {
+										vm.strtips = "密码强度:中 ";
+										if (pwd3.test(vm.user.password)) {
+											vm.strtips = "密码强度:强";
+
+										}
+										if (vm.user.conpassword == "") {
+											vm.tips = "请输入确认密码！"
+											vm.isRight = false;
+										} else if (vm.user.conpassword != vm.user.password) {
+											vm.tips = "两次密码输入不一致！";
+											vm.isRight = false;
+										} else {
+											vm.tips = "";
+											vm.isRight = true;
+										}
+									}
+								}
+							}
+
+
+						}
+					},
+					doRegist: function() {
+						if (!vm.isRight) {
+							vm.tips = "请确认注册信息输入完整且正确！";
+						} else {
+							this.$message({
+								showClose: true,
+								message: '注册成功',
+								type: 'success'
+							});
+							url = "login.html";
+							setTimeout("location.href = '" + url + "'", 1000)
+
+						}
+					},
+					tonight: function() {
+						if (vm.night) { // 因为监听器会随时监测night是否和tonight方向一致
+							var space = ""; // 所以要先改变tonight的值再去改变night的值才能使night变化
+							setCookieValue("tonight", space); //不然night一变化就会被强制和tonight保持一致而恢复原来状态
+							vm.night = false; //就会产生不论怎么点击都无法改变的状况
+							vm.noon = true;
+						} else if (vm.noon) {
+							setCookieValue("tonight", vm.noon);
+							vm.noon = false;
+							vm.night = true;
+						}
+
+					},
+				},
+				watch: { // 随时监听night是否和cookie里的tonight方向一致，避免因F5刷新而导致的数据缺失
+					// 从而导致night和tonight的不同步性
+
+					night() {
+						var isnight = getCookieValue("tonight");
+						if (isnight != null && isnight != "") {
+							this.noon = false;
+							this.night = true;
+						} else {
+							this.noon = true;
+							this.night = false;
+						}
+					}
+
+				},
+
+			})
+		</script>
+		<script src="./js/particles.js"></script>
+		<script src="./js/app.js"></script>
+
+	</body>
+
+</html>

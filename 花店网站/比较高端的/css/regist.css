@@ -1,0 +1,256 @@
+.box,
+			.nibox {
+				position: absolute;
+				top: 150px;
+				left: 550px;
+				width: 400px;
+				height: 420px;
+				border-radius: 10px;
+			}
+
+			.box {
+				background-color: #FFFFFF;
+				box-shadow: 0 15px 25px rgba(217, 217, 217, 0.8);
+			}
+
+			.nibox {
+				background: rgba(78, 91, 120, 0.8);
+				box-shadow: 0 15px 25px rgba(78, 91, 120, 0.8);
+			}
+
+			.sea {
+				position: relative;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: auto;
+				min-width: 100%;
+				max-width: auto;
+				opacity: 0.8;
+				border-radius: 5px;
+				overflow: hidden;
+			}
+
+			.sea {
+				background-color: #c8eec7;
+			}
+
+			.wave {
+				position: absolute;
+				top: -3400px;
+				left: -1200px;
+				width: 4000px;
+				height: 4000px;
+				border-radius: 46%;
+				filter: opacity(0.7);
+				animation: drift linear infinite;
+				transform-origin: 50% 49%;
+			}
+
+			.wave {
+				background: #fcfcfc;
+			}
+
+			.wave:nth-of-type(1) {
+				animation-duration: 10s;
+			}
+
+			.wave:nth-of-type(2) {
+				animation-duration: 16s;
+			}
+
+			.wave:nth-of-type(3) {
+				animation-duration: 22s;
+				filter: opacity(0.2);
+			}
+
+			@keyframes drift {
+				from {
+					transform: rotate(360deg)
+				}
+
+				to {
+					transform: rotate(0deg)
+				}
+			}
+
+			.head {
+				position: absolute;
+				left: 170px;
+				top: 20px;
+				height: 60px;
+				width: 60px;
+				border-radius: 50%;
+			}
+
+			form {
+				position: absolute;
+				left: 50px;
+				top: 80px;
+				margin: auto;
+				position: absolute;
+				width: 100%;
+				max-width: 300px;
+			}
+
+			.bt1,
+			.bt2 {
+				padding: 0.5rem;
+				border: 0;
+				border-radius: 60px;
+				width: 80px;
+				background-color: #90e2c0;
+				color: #fff;
+				margin: 2rem 0 0 auto;
+			}
+
+			.bt1,
+			.nibt1 {
+				position: absolute;
+				left: 60px;
+				top: 330px;
+			}
+
+			.bt2,
+			.nibt2 {
+				position: absolute;
+				left: 250px;
+				top: 330px;
+			}
+
+			.nibt1,
+			.nibt2 {
+				padding: 0.5rem;
+				border: 0;
+				border-radius: 60px;
+				width: 80px;
+				background-color: #617aaf;
+				color: #fff;
+				margin: 2rem 0 0 auto;
+			}
+
+			.bt1:hover,
+			.bt2:hover {
+				background: #90e2c0;
+				color: #fff;
+				border-radius: 60px;
+				box-shadow: 0 0 5px #90e2c0,
+					0 0 25px #90e2c0,
+					0 0 50px #90e2c0,
+					0 0 100px #90e2c0;
+			}
+
+			.nibt1:hover,
+			.nibt2:hover {
+				background: #7c9bc1;
+				color: #fff;
+				border-radius: 60px;
+				box-shadow: 0 0 5px #7c9bc1,
+					0 0 25px #7c9bc1,
+					0 0 50px #7c9bc1,
+					0 0 100px #7c9bc1;
+			}
+
+			.bt1:focus,
+			.bt2:focus {
+				outline: 0;
+			}
+
+			.f1 {
+				width: 120px;
+				height: 110px;
+				top: 510px;
+				left: 500px;
+				position: absolute;
+			}
+
+			.f2 {
+				width: 200px;
+				height: 80px;
+				top: 100px;
+				left: 780px;
+				position: absolute;
+			}
+
+			#tips {
+				font-size: 12px;
+				position: absolute;
+				top: 340px;
+				left: 70px;
+				color: #ee8183;
+				opacity: 0.9;
+
+			}
+
+			#strtips {
+				font-size: 13px;
+				position: absolute;
+				left: 280px;
+				top: 270px;
+				color: #93d554;
+			}
+
+			.label,
+			.nilabel {
+				display: block;
+				margin-bottom: 5px;
+				text-align: center;
+				font-size: 12px;
+			}
+
+			.label {
+				color: #478349;
+			}
+
+			.nilabel {
+				color: #ffffff;
+			}
+
+			.input,
+			.niinput {
+				display: block;
+				width: 90%;
+				margin: 0 0 1rem 0.5rem;
+				padding: 0.5rem;
+				font-size: 12px;
+				border: 0;
+				border-radius: 0.125rem 0.25rem;
+				opacity: 0.8;
+			}
+
+			.input {
+				background-color: #f7f7f7;
+			}
+
+			.niinput {
+				color: white;
+				background-color: rgba(78, 91, 120, 0.8);
+			}
+
+			.input:focus {
+				outline: 0;
+				box-shadow: 1px 1px 1px 0px #8dcca2;
+			}
+
+			.input::-webkit-input-placeholder {
+				color: #c3cccc;
+
+			}
+
+			.input:focus::-webkit-input-placeholder {
+				color: #FFFFFF;
+			}
+
+			.niinput:focus {
+				outline: 0;
+				box-shadow: 1px 1px 1px 1px #c3c3c3;
+			}
+
+			.niinput::-webkit-input-placeholder {
+				color: #c5c5c5;
+			}
+
+			.niinput:focus::-webkit-input-placeholder {
+				color: #717171;
+			}
