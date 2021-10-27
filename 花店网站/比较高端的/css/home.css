@@ -1,7 +1,23 @@
-.bk {
-	background-color: #90b380 !important;
+html{
+            width: auto;
+            height: auto;
+            margin: 0; 
+            padding: 0;
+			overflow: scroll;
+        }
+.bk,
+.main {
+position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-height: 750px;
+	max-height: auto;
+	min-width: 1525px;
+	max-width: auto;
+	background-color: background-color: #90b380 ;
 }
-
 .title li a {
 	color: #525a52 !important;
 }
@@ -11,7 +27,6 @@
 	color: #4c6a48 !important;
 
 }
-
 .home-title {
 	position: absolute;
 	left: 100px;
@@ -51,11 +66,12 @@ opacity:1;
 }
 }
 .home-main-right{
+	opacity:1;
 }
 @-webkit-keyframes fadeInRight {	/* 右边淡入 */
 0% {
 opacity:0;
--webkit-transform:translateX(50px)
+-webkit-transform:translateX(20px)
 }
 100% {
 opacity:1;
@@ -65,7 +81,7 @@ opacity:1;
 @-moz-keyframes fadeInRight {
 0% {
 opacity:0;
--moz-transform:translateX(50px)
+-moz-transform:translateX(20px)
 }
 100% {
 opacity:1;
@@ -150,7 +166,7 @@ opacity:1;
 	background-color: #fff;
 	top: 750px;
 	left: 0;
-	width: 1524px;
+	width: 1523px;
 	height: 500px;
 }
 

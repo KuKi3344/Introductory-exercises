@@ -2,68 +2,63 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-<!-- 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+
 		<title>LuLu花房(*￣▽￣*)ブ欢迎您</title>
 		<link rel="stylesheet" href="./css/login.css" />
 		<link rel="icon" href="./logo/flower.ico" >
 		<link rel="stylesheet" href="./css/bk.css" />
-		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js" ></script>
-		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 		
 	</head>
 	<body>
-		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
-			<div id="particles-js">
-				<div :class="{sea:noon}">
-					<span :class="{wave:noon}"></span>
-					<span :class="{wave:noon}"></span>
-					<span :class="{wave:noon}"></span>				
+		<div class="bk" id="container" v-cloak>
+				<div class="sea">
+					<span class="wave"></span>
+					<span class="wave"></span>
+					<span class="wave"></span>				
 				</div>
 				<div class = "main">
 			<div class = "pageone">
 			<div class = "left">
-			<div :class="{box1:noon,ntbox1:night}">
+			<div class="box1">
 			<h1 class="h1">Welcome!</h1>
 			<a href="#" class="link1">Select?</a>
 			</div>
 			
-			<div :class="{box2:noon,ntbox2:night}">
+			<div class="box2">
 			<h1 class="h2">Do you have an account?</h1>
 			<a href="#" class="link2">Regist?</a>
 			</div>
 			
-			<div :class="{box3:noon,ntbox3:night}">
+			<div class="box3">
 			<h1 class="h3">Choose your like</h1>
 			<a href="#" class="link3">About?</a>
 			</div>
 			</div>
-			<button class = "night" v-if="noon" @click="tonight">夜间模式</button>
-			<button class = "night" v-else @click="tonight">白日模式</button>
-			<div :class="{box:noon,nibox:night}">
+			<div class="box">
 				<div class="Login">
 					<form>
-						<label for="name" :class= "{label:noon,nilabel:night}">Username</label>
+						<label for="name" class= "label">Username</label>
 
-						<input type="text" v-model="name" :class="{input:noon,niinput:night}" placeholder="请输入用户名" @keyup="checkInfo">
+						<input type="text" v-model="name" class="input" placeholder="请输入用户名" @keyup="checkInfo">
 
-						<label for="password" :class= "{label:noon,nilabel:night}">Password</label>
+						<label for="password" class= "label">Password</label>
 
-						<input type="password" v-model="password" :class="{input:noon,niinput:night}" placeholder="请输入密码" @keyup="checkInfo">
+						<input type="password" v-model="password" class="input" placeholder="请输入密码" @keyup="checkInfo">
 						
-						<label for="verify" :class= "{label:noon,nilabel:night}">验证码</label>
+						<label for="verify" class= "label">验证码</label>
 						
-						<input type="text" v-model="verify" :class="{input:noon,niinput:night}" placeholder="请输入验证码" @keyup="checkInfo">
+						<input type="text" v-model="verify" class="input" placeholder="请输入验证码" @keyup="checkInfo">
 						
 						<div class="code" id="checkCode" @click="createCode" ></div>
 						<a  @click="createCode">看不清换一张</a>
 					
 					</form>
-					<button :class="{bt1:noon,nibt1:night}" type="button"
+					<button class="bt1" type="button"
 						onclick="javascript:window.location.href='regist.html'">注册</button>
 					<div id="tips">{{tips}}</div>
-					<button :class="{bt2:noon,nibt2:night}" type="button" @click="doSubmit">登录</button>
+					<button class="bt2" type="button" @click="doSubmit">登录</button>
 				</div>
 
 			</div>
@@ -73,7 +68,6 @@
 				<img class="f3" src="https://pics.prcm.jp/3a638fefa1001/75420559/png/75420559_220x113.png" />
 			</div>
 			<div class="footer">Created by LULU @2021/仅供学习使用</div>
-			</div>
 			</div>
 			</div>
 		</div>
@@ -202,8 +196,6 @@
 				},
 			});
 		</script>
-		<script src="./js/particles.js"></script>
-		<script src="./js/app.js"></script>
 
 	</body>
 

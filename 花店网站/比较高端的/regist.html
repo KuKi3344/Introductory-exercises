@@ -13,38 +13,34 @@
 
 	</head>
 	<body>
-		<div :class="{bk:noon,bknight:night}" id="container" v-cloak>
-			<div id="particles-js">
-				<div :class="{sea:noon}">
-					<span :class="{wave:noon}"></span>
-					<span :class="{wave:noon}"></span>
-					<span :class="{wave:noon}"></span>				
+		<div class="bk" id="container" v-cloak>
+				<div class="sea">
+					<span class="wave"></span>
+					<span class="wave"></span>
+					<span class="wave"></span>				
 				</div>
 				<div class = "main">
 				<div class="pageone">
-					<button class="night" v-if="noon" @click="tonight">夜间模式</button>
-					<button class="night" v-else @click="tonight">白日模式</button>
-					<div :class="{box:noon,nibox:night}">
-						<img class="head" v-bind:src="user.img">
+					<div class="box">
 						<div class="Regist">
 							<form>
-								<label for="name" :class="{label:noon,nilabel:night}">Name</label>
-								<input type="text" :class="{input:noon,niinput:night}" placeholder="请输入用户名"
+								<label for="name" class="label">Name</label>
+								<input type="text" class="input" placeholder="请输入用户名"
 									v-model="user.name" @keyup="checkRegistInfo">
-								<label for="email" :class="{label:noon,nilabel:night}">Email</label>
-								<input type="text" :class="{input:noon,niinput:night}" placeholder="请输入邮箱"
+								<label for="email" class="label">Email</label>
+								<input type="text"  class="input" placeholder="请输入邮箱"
 									v-model="user.email" @keyup="checkRegistInfo">
-								<label for="password" :class="{label:noon,nilabel:night}">Password</label>
-								<input type="password" :class="{input:noon,niinput:night}" placeholder="请输入密码"
+								<label for="password" class="label">Password</label>
+								<input type="password"  class="input" placeholder="请输入密码"
 									v-model="user.password" @keyup="checkRegistInfo">
-								<label for="con-password" :class="{label:noon,nilabel:night}">Confirm Password</label>
-								<input type="password" :class="{input:noon,niinput:night}" placeholder="请再次输入密码"
+								<label for="con-password" class="label">Confirm Password</label>
+								<input type="password"  class="input" placeholder="请再次输入密码"
 									v-model="user.conpassword" @keyup="checkRegistInfo">
 
 							</form>
 							<div id="strtips">{{strtips}}</div>
-							<button :class="{bt1:noon,nibt1:night}" type="reset">重设</button>
-							<button :class="{bt2:noon,nibt2:night}" @click="doRegist">提交</button>
+							<button class="bt1" type="reset">重设</button>
+							<button class="bt2" @click="doRegist">提交</button>
 
 						</div>
 						<div id="tips">{{tips}}</div>
@@ -55,7 +51,6 @@
 					</div>
 					<div class="footer">Created by LULU @2021/仅供学习使用</div>
 				</div>
-			</div>
 			</div>
 		</div>
 		<script>
@@ -207,8 +202,6 @@
 
 			})
 		</script>
-		<script src="./js/particles.js"></script>
-		<script src="./js/app.js"></script>
 
 	</body>
 

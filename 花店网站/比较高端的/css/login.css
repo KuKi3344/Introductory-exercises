@@ -1,5 +1,25 @@
-.box,
-.nibox {
+html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0; 
+            padding: 0;
+        }
+.bk,
+.main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-height: 100vh;
+	max-height: auto;
+	min-width: 100vw;
+	max-width: auto;
+}
+.main{
+	overflow: scroll;
+}
+.box{
 	position: absolute;
 	top: 140px;
 	left: 930px;
@@ -13,19 +33,14 @@
 	box-shadow: 0 15px 25px rgba(217, 217, 217, 0.8);
 }
 
-.nibox {
-	background: rgba(78, 91, 120, 0.8);
-	box-shadow: 0 15px 25px rgba(78, 91, 120, 0.8);
-}
-
 .sea {
-	position: relative;
+	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	height: 100vh;
-	min-width: 100%;
+	height: 100%;
+	min-width: 100vw;
 	max-width: auto;
 	opacity: 0.8;
 	border-radius: 5px;
@@ -89,18 +104,6 @@
 		0.3rem 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
 }
 
-.ntbox1,
-.ntbox2,
-.ntbox3 {
-	height: 110px;
-	width: 320px;
-	opacity: 0.8;
-	background-color: #595d7e;
-	border-radius: 0.7rem;
-	box-shadow: 0.5rem 0.9rem 1.2rem rgba(0, 0, 0, 0.25),
-		0.3rem 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
-}
-
 .h1,
 .h2,
 .h3 {
@@ -122,22 +125,19 @@
 	top: 70px;
 }
 
-.box1,
-.ntbox1 {
+.box1 {
 	position: absolute;
 	top: 140px;
 	left: 160px;
 }
 
-.box2,
-.ntbox2 {
+.box2 {
 	position: absolute;
 	top: 290px;
 	left: 280px;
 }
 
-.box3,
-.ntbox3 {
+.box3{
 	position: absolute;
 	top: 450px;
 	left: 120px;
@@ -229,8 +229,7 @@ form a:hover {
 
 }
 
-.bt1,
-.nibt1 {
+.bt1{
 	position: absolute;
 	left: 70px;
 	top: 340px;
@@ -241,8 +240,7 @@ form a:hover {
 	width: 100px;
 }
 
-.bt2,
-.nibt2 {
+.bt2 {
 	position: absolute;
 	left: 280px;
 	top: 340px;
@@ -260,11 +258,7 @@ form a:hover {
 
 }
 
-.nibt1,
-.nibt2 {
-	background-color: #617aaf;
-	color: #ffffff;
-}
+
 
 .bt1:hover,
 .bt2:hover {
@@ -277,24 +271,14 @@ form a:hover {
 		0 0 100px #86d1b2;
 }
 
-.nibt1:hover,
-.nibt2:hover {
-	background: #7c9bc1;
-	color: #fff;
-	border-radius: 60px;
-	box-shadow: 0 0 5px #7c9bc1,
-		0 0 25px #7c9bc1,
-		0 0 50px #7c9bc1,
-		0 0 100px #7c9bc1;
-}
+
 
 .bt1:focus,
 .bt2:focus {
 	outline: 0;
 }
 
-.label,
-.nilabel {
+.label {
 	display: block;
 	margin-bottom: 10px;
 	text-align: center;
@@ -304,12 +288,7 @@ form a:hover {
 	color: #478349;
 }
 
-.nilabel {
-	color: #ffffff;
-}
-
-.input,
-.niinput {
+.input{
 	display: block;
 	width: 100%;
 	margin: 0 0 1rem 0;
@@ -324,10 +303,6 @@ form a:hover {
 	background-color: #f7f7f7;
 }
 
-.niinput {
-	color: white;
-	background-color: rgba(78, 91, 120, 0.8);
-}
 
 .input:focus {
 	outline: 0;
@@ -341,17 +316,4 @@ form a:hover {
 
 .input:focus::-webkit-input-placeholder {
 	color: #FFFFFF;
-}
-
-.niinput:focus {
-	outline: 0;
-	box-shadow: 1px 1px 1px 1px #c3c3c3;
-}
-
-.niinput::-webkit-input-placeholder {
-	color: #c5c5c5;
-}
-
-.niinput:focus::-webkit-input-placeholder {
-	color: #717171;
 }
