@@ -48,24 +48,27 @@ position: absolute;
 @keyframes fadeInLeft {		/* 左边淡入 */
 0% {
 opacity:0;
--webkit-transform:translateX(-40px)
+-webkit-transform:translateX(-40px);
 }
 100% {
 opacity:0.9;
--webkit-transform:translateX(0)
+-webkit-transform:translateX(0);
 }
 }
+
+
 .home-main-right{
 	opacity:1;
 }
+
 @keyframes fadeInRight {	/* 右边淡入 */
 0% {
 opacity:0;
--webkit-transform:translateX(20px)
+-webkit-transform:translateX(20px);
 }
 100% {
 opacity:1;
--webkit-transform:translateX(0)
+-webkit-transform:translateX(0);
 }
 }
 
