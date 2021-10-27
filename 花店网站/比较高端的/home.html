@@ -10,42 +10,52 @@
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js"></script>
 		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+		<script src="js/jquery.js"></script>
 	</head>
 	<body>
 
 		<div class="bk" id="container" v-cloak>
-			<img src = "./img/151313.jpg" style = "position:absolute;left:0;top:0px;right:0;bottom:0;width:100vw;min-height:750px;min-width:1525px;height:100vh;overflow: hidden;filter:blur(10px);opacity:0.7;margin:0 auto;">
+			<img src="./img/151313.jpg"
+				style="position:fixed;left:0;top:0px;right:0;bottom:0;width:100vw;min-height:750px;min-width:1524px;height:100vh;overflow: hidden;filter:blur(10px);opacity:0.7;margin:0 auto;">
 			<div class="main">
 				<div class="page">
-					<div style="position:absolute;left:-5px;top:0;right:0;bottom:0;width:1528px;height:750px;overflow:hidden">
-						<img style="position:absolute;left:0;top:0;overflow: hidden;width:1600px;height:750px;z-index:0;"
+					<div
+						style="position:absolute;left:-5px;top:0;right:0;bottom:0;width:1530px;height:750px;overflow:hidden">
+						<img style="position:absolute;left:0;top:0;overflow: hidden;width:1550px;height:750px;z-index:0;"
 							src="https://flowers-1135368-pic36.websiteonline.cn/upload/ss_01.jpg">
 
 					</div>
 					<div class="home-title">
-						<span style="position:absolute;left:50px;top:30px;font-size: 48px; color: rgb(255, 255, 255); font-family: 微软雅黑; line-height: 200%;"><strong>匠心独运，绿意传情</strong></span>
-						<p><span style="position:absolute;left:40px;top:120px;font-size: 16px; color: rgb(255, 255, 255); font-family: 微软雅黑; line-height: 200%;">EXERCISE ONE'S INVENTIVE MIND,C ONE'S TENDER FEELING</span></p>
+						<span
+							style="position:absolute;left:50px;top:30px;font-size: 48px; color: rgb(255, 255, 255); font-family: 微软雅黑; line-height: 200%;"><strong>匠心独运，绿意传情</strong></span>
+						<p><span
+								style="position:absolute;left:40px;top:120px;font-size: 16px; color: rgb(255, 255, 255); font-family: 微软雅黑; line-height: 200%;">EXERCISE
+								ONE'S INVENTIVE MIND,C ONE'S TENDER FEELING</span></p>
 						<a href="purchase.html">查看详情</a>
-						</div>
-						<div class = "home-main">
+					</div>
+					<div class="home-main">
 						<div class="aside"></div>
 						<div class="home-title2"><b>热销系列</b></div>
 						<div class="home-title2-btm">HOT SALE SERIES</div>
-						<a href="purchase.html"><img src="https://flowers-1135368-pic36.websiteonline.cn/upload/vx_21.jpg"  style="width: 500px; height: 350px;position:absolute;left:280px;top:80px;"></a>
-						<div class = "home-title2-text"><span id = "home-title2-text-1"><strong>浪漫爱情</strong></span>
-						<p><span id = "home-title2-text-2">xx花艺在线，是在《xxx》社的大力支持下，由北京龙焱世纪文化交流有限公司投资成立的国内</span></p>
-						<a id = "a2" href="purchase.html">查看详情</a>
-						</div>	
-						</div>
-						<div class = "home-main2">
-							<span id = "home-main2-1"><strong>为较爱的TA，送上较好的礼物</strong></span>
-							<p><span id = "home-main2-2">精挑细选，只为较爱的TA，较浪漫的礼物如果您对我们有什么建议、投诉、需求，可以通过留言告诉我们，</span></p>
-							<p><span id = "home-main2-3">我们会在**时间了解并及时与您联系。</span></p>
-							<a href="purchase.html">查看详情</a>						
+						<div class="home-main-right">
+							<a href="purchase.html"><img
+									src="https://flowers-1135368-pic36.websiteonline.cn/upload/vx_21.jpg"
+									style="width: 500px; height: 350px;position:absolute;left:280px;top:80px;"></a>
+							<div class="home-title2-text"><span id="home-title2-text-1"><strong>浪漫爱情</strong></span>
+								<p><span id="home-title2-text-2">xx花艺在线，是在《xxx》社的大力支持下，由北京龙焱世纪文化交流有限公司投资成立的国内</span></p>
+								<a id="a2" href="purchase.html">查看详情</a>
 							</div>
-						<div class = "home-main3">
-							
 						</div>
+					</div>
+					<div class="home-main2">
+						<span id="home-main2-1"><strong>为较爱的TA，送上较好的礼物</strong></span>
+						<p><span id="home-main2-2">精挑细选，只为较爱的TA，较浪漫的礼物如果您对我们有什么建议、投诉、需求，可以通过留言告诉我们，</span></p>
+						<p><span id="home-main2-3">我们会在**时间了解并及时与您联系。</span></p>
+						<a href="purchase.html">查看详情</a>
+					</div>
+					<div class="home-main3">
+
+					</div>
 					<div class="title">
 
 						<div>
@@ -72,7 +82,22 @@
 				</div>
 			</div>
 		</div>
+		 <script>
+		           
 
+		            //用js检测鼠标滚轮距离顶部位置来给div添加动画
+		            window.onscroll = function() {
+		                //检测鼠标滚轮距离顶部位置 
+		                var top = document.documentElement.scrollTop || document.body.scrollTop;
+		                console.log(top);
+		                //要设置到DIV显示出来时给div添加动画 也可以设置一个数值只要保证div出来给它加动画即可
+		                if(top>300){　　
+						console.log("daole");　
+						$('.home-main-right').css('animation', 'fadeInRight 1s .2s ease both') ;//添加动画  
+		                    　　　　　　　　
+		                }
+		            }
+		        </script>
 		<script>
 			var vm = new Vue({
 				el: "#container",

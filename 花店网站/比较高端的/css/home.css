@@ -27,8 +27,51 @@
 	-moz-opacity: 0.9;
 	-khtml-opacity: 0.9;
 	opacity: 0.9;
+	-webkit-animation:fadeInLeft 1s .2s ease both;
+	-moz-animation:fadeInLeft 1s .2s ease both;
 }
-
+@-webkit-keyframes fadeInLeft {		/* 左边淡入 */
+0% {
+opacity:0;
+-webkit-transform:translateX(-40px)
+}
+100% {
+opacity:1;
+-webkit-transform:translateX(0)
+}
+}
+@-moz-keyframes fadeInLeft {
+0% {
+opacity:0;
+-moz-transform:translateX(-40px)
+}
+100% {
+opacity:1;
+-moz-transform:translateX(0)
+}
+}
+.home-main-right{
+}
+@-webkit-keyframes fadeInRight {	/* 右边淡入 */
+0% {
+opacity:0;
+-webkit-transform:translateX(50px)
+}
+100% {
+opacity:1;
+-webkit-transform:translateX(0)
+}
+}
+@-moz-keyframes fadeInRight {
+0% {
+opacity:0;
+-moz-transform:translateX(50px)
+}
+100% {
+opacity:1;
+-moz-transform:translateX(0)
+}
+}
 .home-title a,
 .home-main2 a
 {
