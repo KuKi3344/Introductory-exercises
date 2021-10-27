@@ -85,6 +85,9 @@ html {
 .home-main3-img-2{
 	opacity:0;
 }
+.home-main3-left{
+	opacity:0;
+}
 @keyframes fadeInbt {
 
 	/* 下边淡入 */
