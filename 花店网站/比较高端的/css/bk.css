@@ -29,11 +29,11 @@
 	width: 1220px;
 	margin-left: 0;
 	position: absolute;
-	top: 0;
+	top: 30px;
 	color: white;
 	margin-bottom: 1px;
 	overflow: hidden;
-	background-color: rgba(231, 231, 231, 0.2);
+	background:none;
 	border-bottom-left-radius: 5px ;
 }
 
@@ -62,7 +62,7 @@
 	/* 设置链接内容显示的格式*/
 	display: block;
 	/* 把链接显示为块元素可使整个链接区域可点击 */
-	color: #5b645c;
+	color: #ffffff;
 	text-align: center;
 	padding: 8px 15px;
 	text-decoration: none;

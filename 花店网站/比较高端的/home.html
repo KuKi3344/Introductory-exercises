@@ -53,7 +53,26 @@
 						<a href="purchase.html">查看详情</a>
 					</div>
 					<div class="home-main3">
-
+						<div class="home-main3-title"> </div>
+						<div class="home-main3-left">
+							<img src="https://flowers-1139704-pic36.websiteonline.cn/upload/bt.png"
+								style="position:absolute;left:140px;top:50px;">
+							<span
+								style="font-size: 24px; font-family: 微软雅黑; color: rgb(85, 85, 85); line-height: 322%;position:absolute;left:140px;top:50px;">花开一瞬
+								情系一生</span>
+							<span id="home-main3-title-top">Flowers bloom for a whole life</span>
+							<span id = "home-main3-left-text">
+								生命的旅途中，总会有一些相遇停留在心底，总有一些人，给我们温暖的陪伴.相守是一种承诺，人世轮回中，怎样才能拥有一份温柔的情意，相遇是一种宿命，
+								心灵的交汇让我们有诉不尽的浪漫情怀。</span>
+						</div>
+						<div class="home-main3-img-1">
+							<img src="https://flowers-1139704-pic36.websiteonline.cn/upload/pen.png"
+								style="width:480px;height:350px;position:absolute;left:100px;top:320px;">
+						</div>
+						<div class="home-main3-img-2">
+							<img src="https://flowers-1136885-pic40.websiteonline.cn/upload/3.png"
+								style="width:250px;height:450px;position:absolute;left:1200px;top:190px;">
+						</div>
 					</div>
 					<div class="title">
 
@@ -70,7 +89,7 @@
 
 
 					</div>
-					<div class="footer" style="top:2140px">Created by LULU @2021/仅供学习使用</div>
+					<div class="footer" style="top:2300px">Created by LULU @2021/仅供学习使用</div>
 					<el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
 						<span>退出登录后将清空您的登录信息，请您确认</span>
 						<span slot="footer" class="dialog-footer">
@@ -81,23 +100,33 @@
 				</div>
 			</div>
 		</div>
-		 <script>
-		           
-
-		            //用js检测鼠标滚轮距离顶部位置来给div添加动画
-		            window.onscroll = function() {
-		                //检测鼠标滚轮距离顶部位置 
-		                var top = document.documentElement.scrollTop || document.body.scrollTop;
-		                console.log(top);
-		                //要设置到DIV显示出来时给div添加动画 也可以设置一个数值只要保证div出来给它加动画即可
-		                if(top>100){　　
-						console.log("daole");　
-						$('.home-main-right').css('animation-name', 'fadeInRight') ;//添加动画  
-						$('.home-main-right').css('animation-duration', '1s') ;//添加动画  	
-		                $('.home-main-right').css('opacity', '1') ;//添加动画  
-		                }
-		            }
-		        </script>
+		<script>
+			//用js检测鼠标滚轮距离顶部位置来给div添加动画
+			window.onscroll = function() {
+				//检测鼠标滚轮距离顶部位置 
+				var top = document.documentElement.scrollTop || document.body.scrollTop;
+				console.log(top);
+				//要设置到DIV显示出来时给div添加动画 也可以设置一个数值只要保证div出来给它加动画即可
+				if (top > 100) {
+					$('.home-main-right').css('animation-name', 'fadeInRight'); //添加动画  
+					$('.home-main-right').css('animation-duration', '1s'); //添加动画  	
+				}
+				if (top > 1100) {
+					$('.home-main3-left').css('animation-name', 'fadeInLeft'); //添加动画  
+					$('.home-main3-left').css('animation-duration', '1s'); //添加动画  	
+					$('.home-main3-left').css('opacity', '1'); //添加动画  
+				}
+				if (top > 1400) {
+					$('.home-main3-img-1').css('animation-name', 'fadeInbt'); //添加动画  
+					$('.home-main3-img-1').css('animation-duration', '1s'); //添加动画 
+					$('.home-main3-img-2').css('animation-name', 'fadeInRight'); //添加动画
+					$('.home-main3-img-2').css('animation-duration', '1s'); //添加动画 
+					$('.home-main3-img-1').css('opacity', '1'); //添加动画  
+					$('.home-main3-img-2').css('opacity', '1'); //添加动画  
+				}
+				
+			}
+		</script>
 		<script>
 			var vm = new Vue({
 				el: "#container",
