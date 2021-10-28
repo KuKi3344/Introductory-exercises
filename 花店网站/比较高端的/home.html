@@ -1,133 +1,299 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="./css/home.css" />
-		<link rel="stylesheet" href="./css/bk.css" />
-		<link rel="icon" href="./logo/flower.ico">
-		<!-- 		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
-		<!-- 		<script type="text/javascript" src="./js/vue.js"></script>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+			<meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+			<meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+			<link rel="stylesheet" href="./css/home.css" />
+			<link rel="stylesheet" href="./css/bk.css" />
+			<link rel="icon" href="./logo/flower.ico">
+			<style type="text/css">
+				html,
+				body {
+					margin: 0;
+					padding: 0;
+				}
+			
+				.iw_poi_title {
+					color: #CC5522;
+					font-size: 14px;
+					font-weight: bold;
+					overflow: hidden;
+					padding-right: 13px;
+					white-space: nowrap
+				}
+			
+				.iw_poi_content {
+					font: 12px arial, sans-serif;
+					overflow: visible;
+					padding-top: 4px;
+					white-space: -moz-pre-wrap;
+					word-wrap: break-word
+				}
+			</style>
+			<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+			<!-- 		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
+			<!-- 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js"></script>
 		<script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
-		<!-- 		<script src="js/jquery.js"></script> -->
-	</head>
-	<body>
+			<!-- 		<script src="js/jquery.js"></script> -->
+		</head>
+		<body>
 
-		<div class="bk">
-			<img src="./img/homebk2.jpg"
-				style="position:fixed;left:0;top:0px;right:0;bottom:0;width:100%;min-height:755px;min-width:1524px;height:100%;overflow: hidden;filter:blur(10px);opacity:0.7;margin:0 auto;">
-			<div class="main">
-				<div class="page">
-					<div
-						style="position:absolute;left:-5px;top:0;right:0;bottom:0;width:1528px;height:750px;overflow:hidden">
-						<img style="position:absolute;left:0;top:0;overflow: hidden;width:1528px;height:750px;z-index:0;"
-							src="https://flowers-1135368-pic36.websiteonline.cn/upload/ss_01.jpg">
+			<div class="bk">
+				<img src="./img/homebk2.jpg"
+					style="position:fixed;left:0;top:0px;right:0;bottom:0;width:100%;min-height:755px;min-width:1524px;height:100%;overflow: hidden;filter:blur(10px);opacity:0.7;margin:0 auto;">
+				<div class="main">
+					<div class="page">
+						<div
+							style="position:absolute;left:-5px;top:0;right:0;bottom:0;width:1528px;height:750px;overflow:hidden">
+							<img style="position:absolute;left:0;top:0;overflow: hidden;width:1528px;height:750px;z-index:0;"
+								src="https://flowers-1135368-pic36.websiteonline.cn/upload/ss_01.jpg">
 
-					</div>
-					<div class="home-title">
-						<span
-							style="position:absolute;left:50px;top:30px;font-size: 48px; color: rgb(255, 255, 255); font-family: 微软雅黑; line-height: 200%;"><strong>匠心独运，绿意传情</strong></span>
-						<p><span
-								style="position:absolute;left:40px;top:120px;font-size: 16px; color: rgb(255, 255, 255); font-family: 微软雅黑; line-height: 200%;">EXERCISE
-								ONE'S INVENTIVE MIND,C ONE'S TENDER FEELING</span></p>
-						<a href="purchase.html">查看详情</a>
-					</div>
-					<div class="home-main">
-						<div class="aside"></div>
-						<div class="home-title2"><b>热销系列</b></div>
-						<div class="home-title2-btm">HOT SALE SERIES</div>
-						<div class="home-main-right">
-							<a href="purchase.html"><img
-									src="https://flowers-1135368-pic36.websiteonline.cn/upload/vx_21.jpg"
-									style="width: 500px; height: 350px;position:absolute;left:0;top:0;"></a>
-							<div class="home-title2-text"><span id="home-title2-text-1"><strong>浪漫爱情</strong></span>
-								<p><span id="home-title2-text-2">xx花艺在线，是在《xxx》社的大力支持下，由北京龙焱世纪文化交流有限公司投资成立的国内</span></p>
-								<a id="a2" href="purchase.html">查看详情</a>
+						</div>
+						<div class="home-title">
+							<span
+								style="position:absolute;left:50px;top:30px;font-size: 48px; color: rgb(255, 255, 255); font-family: 微软雅黑; line-height: 200%;"><strong>匠心独运，绿意传情</strong></span>
+							<p><span
+									style="position:absolute;left:40px;top:120px;font-size: 16px; color: rgb(255, 255, 255); font-family: 微软雅黑; line-height: 200%;">EXERCISE
+									ONE'S INVENTIVE MIND,C ONE'S TENDER FEELING</span></p>
+							<a href="purchase.html">查看详情</a>
+						</div>
+						<div class="home-main">
+							<div class="aside"></div>
+							<div class="home-title2"><b>热销系列</b></div>
+							<div class="home-title2-btm">HOT SALE SERIES</div>
+							<div class="home-main-right">
+								<a href="purchase.html"><img
+										src="https://flowers-1135368-pic36.websiteonline.cn/upload/vx_21.jpg"
+										style="width: 500px; height: 350px;position:absolute;left:0;top:0;"></a>
+								<div class="home-title2-text"><span id="home-title2-text-1"><strong>浪漫爱情</strong></span>
+									<p><span id="home-title2-text-2">xx花艺在线，是在《xxx》社的大力支持下，由北京龙焱世纪文化交流有限公司投资成立的国内</span>
+									</p>
+									<a id="a2" href="purchase.html">查看详情</a>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="home-main2">
-						<span id="home-main2-1"><strong>为较爱的TA，送上较好的礼物</strong></span>
-						<p><span id="home-main2-2">精挑细选，只为较爱的TA，较浪漫的礼物如果您对我们有什么建议、投诉、需求，可以通过留言告诉我们，</span></p>
-						<p><span id="home-main2-3">我们会在**时间了解并及时与您联系。</span></p>
-						<a href="purchase.html">查看详情</a>
-					</div>
-					<div class="home-main3">
-						<div class="home-main3-title"> </div>
-						<div class="home-main3-left">
-							<img src="https://flowers-1139704-pic36.websiteonline.cn/upload/bt.png"
-								style="position:absolute;left:50px;top:0px;">
-							<span
-								style="font-size: 24px; font-family: 微软雅黑; color: rgb(85, 85, 85); line-height: 322%;position:absolute;left:50px;top:10px;">花开一瞬
-								情系一生</span>
-							<span id="home-main3-title-top">Flowers bloom for a whole life</span>
-							<span id="home-main3-left-text">
-								生命的旅途中，总会有一些相遇停留在心底，总有一些人，给我们温暖的陪伴.相守是一种承诺，人世轮回中，怎样才能拥有一份温柔的情意，相遇是一种宿命，
-								心灵的交汇让我们有诉不尽的浪漫情怀。</span>
+						<div class="home-main2">
+							<span id="home-main2-1"><strong>为较爱的TA，送上较好的礼物</strong></span>
+							<p><span id="home-main2-2">精挑细选，只为较爱的TA，较浪漫的礼物如果您对我们有什么建议、投诉、需求，可以通过留言告诉我们，</span></p>
+							<p><span id="home-main2-3">我们会在**时间了解并及时与您联系。</span></p>
+							<a href="purchase.html">查看详情</a>
 						</div>
-						<div class="home-main3-img-1">
-							<img src="https://flowers-1139704-pic36.websiteonline.cn/upload/pen.png" style="width: 480px;height: 350px;">
+						<div class="home-main3">
+							<div class="home-main3-title"> </div>
+							<div class="home-main3-left">
+								<img src="https://flowers-1139704-pic36.websiteonline.cn/upload/bt.png"
+									style="position:absolute;left:50px;top:0px;">
+								<span
+									style="font-size: 24px; font-family: 微软雅黑; color: rgb(85, 85, 85); line-height: 322%;position:absolute;left:50px;top:10px;">花开一瞬
+									情系一生</span>
+								<span id="home-main3-title-top">Flowers bloom for a whole life</span>
+								<span id="home-main3-left-text">
+									生命的旅途中，总会有一些相遇停留在心底，总有一些人，给我们温暖的陪伴.相守是一种承诺，人世轮回中，怎样才能拥有一份温柔的情意，相遇是一种宿命，
+									心灵的交汇让我们有诉不尽的浪漫情怀。</span>
+							</div>
+							<div class="home-main3-img-1">
+								<img src="https://flowers-1139704-pic36.websiteonline.cn/upload/pen.png"
+									style="width: 480px;height: 350px;">
+							</div>
+							<div class="home-main3-img-2">
+								<img src="https://flowers-1136885-pic40.websiteonline.cn/upload/3.png"
+									style="width:200px;height:420px;">
+							</div>
+							<div class="home-main3-right">
+								<div class="aside2"></div>
+								<span id="home-main3-right-1"><b>联系我们</b></span>
+								<span id="home-main3-right-2">CONTACT US</span>
+								<div style="width:500px;height:400px;border:#ccc solid 1px;position: absolute;top:80px;left:50px;" id="dituContent"></div>
+							</div>
 						</div>
-						<div class="home-main3-img-2">
-							<img src="https://flowers-1136885-pic40.websiteonline.cn/upload/3.png" style="width:200px;height:420px;">
-						</div>
-						<span os="home-main3-right-1"></span>
-						<span id="home-main3-right-2">CONTACT US</span>
-					</div>
-					<div class="title">
+						<div class="title">
 
-						<div>
-							<!-- 导航栏 -->
-							<ul>
-								<li><a href="home.html">首页</a></li>
-								<li><a href="purchase.html">购买</a></li>
-								<li><a href="introduce.html">关于我们</a></li>
-								<li><a href="order.html">您的订单</a></li>
-								<li><a @click="refor">退出登录</a></li>
-							</ul>
+							<div>
+								<!-- 导航栏 -->
+								<ul>
+									<li><a href="home.html">首页</a></li>
+									<li><a href="purchase.html">购买</a></li>
+									<li><a href="introduce.html">关于我们</a></li>
+									<li><a href="order.html">您的订单</a></li>
+									<li><a @click="refor">退出登录</a></li>
+								</ul>
+							</div>
+
+
 						</div>
-
-
-					</div>
-					<div class="footer" style="top:2300px">Created by LULU @2021/仅供学习使用</div>
-					<!-- <el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
+						<div class="footer" style="top:2320px">Created by LULU @2021/仅供学习使用</div>
+						<!-- <el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
 						<span>退出登录后将清空您的登录信息，请您确认</span>
 						<span slot="footer" class="dialog-footer">
 							<el-button @click="backhome">取 消</el-button>
 							<el-button type="primary" @click="backlogin">确 定</el-button>
 						</span>
 					</el-dialog> -->
+					</div>
 				</div>
 			</div>
-		</div>
-		<script>
-			//用js检测鼠标滚轮距离顶部位置来给div添加动画
-			window.onscroll = function() {
-				//检测鼠标滚轮距离顶部位置 
-				var top = document.documentElement.scrollTop || document.body.scrollTop;
-				var box1 = document.getElementsByClassName("home-main-right")[
-				0]; // 由于获取该元素的时候用的是getElementsByClassName()，得到的是数组，不是数组里面的元素，而我们要的不是数组，要的是元素
-				var box2 = document.getElementsByClassName("home-main3-left")[0];
-				var box3 = document.getElementsByClassName("home-main3-img-1")[0];
-				var box4 = document.getElementsByClassName("home-main3-img-2")[0];
-				console.log(top);
-				//要设置到DIV显示出来时给div添加动画 也可以设置一个数值只要保证div出来给它加动画即可
-				if (top > 100) {
-					box1.setAttribute("style", "animation-name:fadeInRight;animation-duration:1s;opacity:1;");
-				}
-				if (top > 1050) {
-					box2.setAttribute("style", "animation-name:fadeInLeft;animation-duration:1s;opacity:1;");
-				}
-				if (top > 1200) {
-					box4.setAttribute("style", "animation-name:fadeInRight;animation-duration:1s;opacity:1;");
-				}
-				if (top > 1350) {
-					box3.setAttribute("style", "animation-name:fadeInbt;animation-duration:1s;opacity:1;");
-				}
+			<script>
+				//用js检测鼠标滚轮距离顶部位置来给div添加动画
+				window.onscroll = function() {
+					//检测鼠标滚轮距离顶部位置 
+					var top = document.documentElement.scrollTop || document.body.scrollTop;
+					var box1 = document.getElementsByClassName("home-main-right")[0]; // 由于获取该元素的时候用的是getElementsByClassName()，得到的是数组，不是数组里面的元素，而我们要的不是数组，要的是元素
+					var box2 = document.getElementsByClassName("home-main3-left")[0];
+					var box3 = document.getElementsByClassName("home-main3-img-1")[0];
+					var box4 = document.getElementsByClassName("home-main3-img-2")[0];
+					var box5 = document.getElementsByClassName("home-main3-right")[0];
+					console.log(top);
+					//要设置到DIV显示出来时给div添加动画 也可以设置一个数值只要保证div出来给它加动画即可
+					if (top > 100) {
+						box1.setAttribute("style", "animation-name:fadeInRight;animation-duration:1s;opacity:1;");
+					}
+					if (top > 1050) {
+						box2.setAttribute("style", "animation-name:fadeInLeft;animation-duration:1s;opacity:1;");
+					}
+					if (top > 1150) {
+						box4.setAttribute("style", "animation-name:fadeInRight;animation-duration:1s;opacity:1;");
+						
+					}
+					if(top > 1200){
+						box5.setAttribute("style", "animation-name:fadeInRight;animation-duration:1s;opacity:1;");
+					}
+					if (top > 1300) {
+						box3.setAttribute("style", "animation-name:fadeInbt;animation-duration:1s;opacity:1;");
+					}
 
-			}
-		</script>
-		<!-- <script>
+				}
+			</script>
+			<script type="text/javascript">
+				//创建和初始化地图函数：
+				function initMap() {
+					createMap(); //创建地图
+					setMapEvent(); //设置地图事件
+					addMapControl(); //向地图添加控件
+					addMarker(); //向地图中添加marker
+				}
+			
+				//创建地图函数：
+				function createMap() {
+					var map = new BMap.Map("dituContent"); //在百度地图容器中创建一个地图
+					var point = new BMap.Point(121.988325, 39.091147); //定义一个中心点坐标
+					map.centerAndZoom(point, 17); //设定地图的中心点和坐标并将地图显示在地图容器中
+					window.map = map; //将map变量存储在全局
+				}
+			
+				//地图事件设置函数：
+				function setMapEvent() {
+					map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)
+					map.enableScrollWheelZoom(); //启用地图滚轮放大缩小
+					map.enableDoubleClickZoom(); //启用鼠标双击放大，默认启用(可不写)
+					map.enableKeyboard(); //启用键盘上下左右键移动地图
+				}
+			
+				//地图控件添加函数：
+				function addMapControl() {
+					//向地图中添加缩放控件
+					var ctrl_nav = new BMap.NavigationControl({
+						anchor: BMAP_ANCHOR_TOP_LEFT,
+						type: BMAP_NAVIGATION_CONTROL_LARGE
+					});
+					map.addControl(ctrl_nav);
+					//向地图中添加缩略图控件
+					var ctrl_ove = new BMap.OverviewMapControl({
+						anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+						isOpen: 1
+					});
+					map.addControl(ctrl_ove);
+					//向地图中添加比例尺控件
+					var ctrl_sca = new BMap.ScaleControl({
+						anchor: BMAP_ANCHOR_BOTTOM_LEFT
+					});
+					map.addControl(ctrl_sca);
+				}
+			
+				//标注点数组
+				var markerArr = [{
+					title: "LULU",
+					content: "公司总部",
+					point: "121.987975|39.091581",
+					isOpen: 0,
+					icon: {
+						w: 23,
+						h: 25,
+						l: 115,
+						t: 21,
+						x: 9,
+						lb: 12
+					}
+				}];
+				//创建marker
+				function addMarker() {
+					for (var i = 0; i < markerArr.length; i++) {
+						var json = markerArr[i];
+						var p0 = json.point.split("|")[0];
+						var p1 = json.point.split("|")[1];
+						var point = new BMap.Point(p0, p1);
+						var iconImg = createIcon(json.icon);
+						var marker = new BMap.Marker(point, {
+							icon: iconImg
+						});
+						var iw = createInfoWindow(i);
+						var label = new BMap.Label(json.title, {
+							"offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20)
+						});
+						marker.setLabel(label);
+						map.addOverlay(marker);
+						label.setStyle({
+							borderColor: "#808080",
+							color: "#333",
+							cursor: "pointer"
+						});
+			
+						(function() {
+							var index = i;
+							var _iw = createInfoWindow(i);
+							var _marker = marker;
+							_marker.addEventListener("click", function() {
+								this.openInfoWindow(_iw);
+							});
+							_iw.addEventListener("open", function() {
+								_marker.getLabel().hide();
+							})
+							_iw.addEventListener("close", function() {
+								_marker.getLabel().show();
+							})
+							label.addEventListener("click", function() {
+								_marker.openInfoWindow(_iw);
+							})
+							if (!!json.isOpen) {
+								label.hide();
+								_marker.openInfoWindow(_iw);
+							}
+						})()
+					}
+				}
+				//创建InfoWindow
+				function createInfoWindow(i) {
+					var json = markerArr[i];
+					var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title +
+						"</b><div class='iw_poi_content'>" + json.content + "</div>");
+					return iw;
+				}
+				//创建一个Icon
+				function createIcon(json) {
+					var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w, json.h), {
+						imageOffset: new BMap.Size(-json.l, -json.t),
+						infoWindowOffset: new BMap.Size(json.lb + 5, 1),
+						offset: new BMap.Size(json.x, json.h)
+					})
+					return icon;
+				}
+			
+				initMap(); //创建和初始化地图
+			</script>
+			<!-- <script>
 			var vm = new Vue({
 				el: "#container",
 				data: {
@@ -168,5 +334,6 @@
 		</script>
 		<script>
 		</script> -->
-	</body>
-</html>
+
+		</body>
+	</html>
