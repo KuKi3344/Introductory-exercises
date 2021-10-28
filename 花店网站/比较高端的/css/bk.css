@@ -26,7 +26,7 @@
 	height: 40px;
 	left: 300px;
 	font-size: 15px;
-	width: 1220px;
+	width: 1200px;
 	margin-left: 0;
 	position: absolute;
 	top: 30px;
@@ -39,7 +39,7 @@
 
 .title ul{
 	/* 清除ul标签的默认样式 */
-	width: 1200px;
+	width: 900px;
 	position: absolute;
 	left: 300px;
 	list-style-type: none;

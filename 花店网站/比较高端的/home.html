@@ -5,22 +5,22 @@
 		<link rel="stylesheet" href="./css/home.css" />
 		<link rel="stylesheet" href="./css/bk.css" />
 		<link rel="icon" href="./logo/flower.ico">
-		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-		<script type="text/javascript" src="./js/vue.js"></script>
+		<!-- 		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
+		<!-- 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js"></script>
-		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-		<script src="js/jquery.js"></script>
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+		<!-- 		<script src="js/jquery.js"></script> -->
 	</head>
 	<body>
 
-		<div class="bk" id="container" v-cloak>
+		<div class="bk">
 			<img src="./img/homebk2.jpg"
-				style="position:fixed;left:0;top:0px;right:0;bottom:0;width:100vw;min-height:750px;min-width:1524px;height:100%;overflow: hidden;filter:blur(10px);opacity:0.7;margin:0 auto;">
+				style="position:fixed;left:0;top:0px;right:0;bottom:0;width:100%;min-height:755px;min-width:1524px;height:100%;overflow: hidden;filter:blur(10px);opacity:0.7;margin:0 auto;">
 			<div class="main">
 				<div class="page">
 					<div
-						style="position:absolute;left:-5px;top:0;right:0;bottom:0;width:1530px;height:750px;overflow:hidden">
-						<img style="position:absolute;left:0;top:0;overflow: hidden;width:1550px;height:750px;z-index:0;"
+						style="position:absolute;left:-5px;top:0;right:0;bottom:0;width:1528px;height:750px;overflow:hidden">
+						<img style="position:absolute;left:0;top:0;overflow: hidden;width:1528px;height:750px;z-index:0;"
 							src="https://flowers-1135368-pic36.websiteonline.cn/upload/ss_01.jpg">
 
 					</div>
@@ -39,7 +39,7 @@
 						<div class="home-main-right">
 							<a href="purchase.html"><img
 									src="https://flowers-1135368-pic36.websiteonline.cn/upload/vx_21.jpg"
-									style="width: 500px; height: 350px;position:absolute;left:280px;top:80px;"></a>
+									style="width: 500px; height: 350px;position:absolute;left:0;top:0;"></a>
 							<div class="home-title2-text"><span id="home-title2-text-1"><strong>浪漫爱情</strong></span>
 								<p><span id="home-title2-text-2">xx花艺在线，是在《xxx》社的大力支持下，由北京龙焱世纪文化交流有限公司投资成立的国内</span></p>
 								<a id="a2" href="purchase.html">查看详情</a>
@@ -56,23 +56,23 @@
 						<div class="home-main3-title"> </div>
 						<div class="home-main3-left">
 							<img src="https://flowers-1139704-pic36.websiteonline.cn/upload/bt.png"
-								style="position:absolute;left:140px;top:50px;">
+								style="position:absolute;left:50px;top:0px;">
 							<span
-								style="font-size: 24px; font-family: 微软雅黑; color: rgb(85, 85, 85); line-height: 322%;position:absolute;left:140px;top:50px;">花开一瞬
+								style="font-size: 24px; font-family: 微软雅黑; color: rgb(85, 85, 85); line-height: 322%;position:absolute;left:50px;top:10px;">花开一瞬
 								情系一生</span>
 							<span id="home-main3-title-top">Flowers bloom for a whole life</span>
-							<span id = "home-main3-left-text">
+							<span id="home-main3-left-text">
 								生命的旅途中，总会有一些相遇停留在心底，总有一些人，给我们温暖的陪伴.相守是一种承诺，人世轮回中，怎样才能拥有一份温柔的情意，相遇是一种宿命，
 								心灵的交汇让我们有诉不尽的浪漫情怀。</span>
 						</div>
 						<div class="home-main3-img-1">
-							<img src="https://flowers-1139704-pic36.websiteonline.cn/upload/pen.png"
-								style="width:480px;height:350px;position:absolute;left:100px;top:320px;">
+							<img src="https://flowers-1139704-pic36.websiteonline.cn/upload/pen.png" style="width: 480px;height: 350px;">
 						</div>
 						<div class="home-main3-img-2">
-							<img src="https://flowers-1136885-pic40.websiteonline.cn/upload/3.png"
-								style="width:250px;height:450px;position:absolute;left:1200px;top:190px;">
+							<img src="https://flowers-1136885-pic40.websiteonline.cn/upload/3.png" style="width:200px;height:420px;">
 						</div>
+						<span os="home-main3-right-1"></span>
+						<span id="home-main3-right-2">CONTACT US</span>
 					</div>
 					<div class="title">
 
@@ -90,13 +90,13 @@
 
 					</div>
 					<div class="footer" style="top:2300px">Created by LULU @2021/仅供学习使用</div>
-					<el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
+					<!-- <el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
 						<span>退出登录后将清空您的登录信息，请您确认</span>
 						<span slot="footer" class="dialog-footer">
 							<el-button @click="backhome">取 消</el-button>
 							<el-button type="primary" @click="backlogin">确 定</el-button>
 						</span>
-					</el-dialog>
+					</el-dialog> -->
 				</div>
 			</div>
 		</div>
@@ -105,29 +105,29 @@
 			window.onscroll = function() {
 				//检测鼠标滚轮距离顶部位置 
 				var top = document.documentElement.scrollTop || document.body.scrollTop;
+				var box1 = document.getElementsByClassName("home-main-right")[
+				0]; // 由于获取该元素的时候用的是getElementsByClassName()，得到的是数组，不是数组里面的元素，而我们要的不是数组，要的是元素
+				var box2 = document.getElementsByClassName("home-main3-left")[0];
+				var box3 = document.getElementsByClassName("home-main3-img-1")[0];
+				var box4 = document.getElementsByClassName("home-main3-img-2")[0];
 				console.log(top);
 				//要设置到DIV显示出来时给div添加动画 也可以设置一个数值只要保证div出来给它加动画即可
 				if (top > 100) {
-					$('.home-main-right').css('animation-name', 'fadeInRight'); //添加动画  
-					$('.home-main-right').css('animation-duration', '1s'); //添加动画  	
+					box1.setAttribute("style", "animation-name:fadeInRight;animation-duration:1s;opacity:1;");
 				}
-				if (top > 1100) {
-					$('.home-main3-left').css('animation-name', 'fadeInLeft'); //添加动画  
-					$('.home-main3-left').css('animation-duration', '1s'); //添加动画  	
-					$('.home-main3-left').css('opacity', '1'); //添加动画  
+				if (top > 1050) {
+					box2.setAttribute("style", "animation-name:fadeInLeft;animation-duration:1s;opacity:1;");
 				}
-				if (top > 1400) {
-					$('.home-main3-img-1').css('animation-name', 'fadeInbt'); //添加动画  
-					$('.home-main3-img-1').css('animation-duration', '1s'); //添加动画 
-					$('.home-main3-img-2').css('animation-name', 'fadeInRight'); //添加动画
-					$('.home-main3-img-2').css('animation-duration', '1s'); //添加动画 
-					$('.home-main3-img-1').css('opacity', '1'); //添加动画  
-					$('.home-main3-img-2').css('opacity', '1'); //添加动画  
+				if (top > 1200) {
+					box4.setAttribute("style", "animation-name:fadeInRight;animation-duration:1s;opacity:1;");
 				}
-				
+				if (top > 1350) {
+					box3.setAttribute("style", "animation-name:fadeInbt;animation-duration:1s;opacity:1;");
+				}
+
 			}
 		</script>
-		<script>
+		<!-- <script>
 			var vm = new Vue({
 				el: "#container",
 				data: {
@@ -167,6 +167,6 @@
 			})
 		</script>
 		<script>
-		</script>
+		</script> -->
 	</body>
 </html>
