@@ -6,8 +6,7 @@ html {
 	overflow: scroll;
 }
 
-.bk,
-.main {
+.bk{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -49,34 +48,6 @@ html {
 	animation-duration: 1s;
 }
 
-@keyframes fadeInLeft {
-
-	/* 左边淡入 */
-	0% {
-		opacity: 0;
-		-webkit-transform: translateX(-50px);
-	}
-
-	100% {
-		opacity: 0.9;
-		-webkit-transform: translateX(0);
-	}
-}
-
-@keyframes fadeInRight {
-
-	/* 右边淡入 */
-	0% {
-		opacity: 0;
-		-webkit-transform: translateX(30px);
-	}
-
-	100% {
-		opacity: 1;
-		-webkit-transform: translateX(0);
-	}
-}
-
 .home-main3-img-1,
 .home-main3-img-2 {
 	opacity: 0;
@@ -105,20 +76,6 @@ html {
 	top: 50px;
 	width: 600px;
 	height: 500px;
-}
-
-@keyframes fadeInbt {
-
-	/* 下边淡入 */
-	0% {
-		opacity: 0;
-		-webkit-transform: translateY(40px);
-	}
-
-	100% {
-		opacity: 1;
-		-webkit-transform: translateX(0);
-	}
 }
 
 .home-title a,

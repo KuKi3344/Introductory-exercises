@@ -2,50 +2,68 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-	
+
 		<link rel="stylesheet" href="./css/purchase.css" />
 		<link rel="stylesheet" href="./css/bk.css" />
 		<link rel="icon" href="./logo/flower.ico">
-		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		<!-- 		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js"></script>
-		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
 	</head>
 	<body>
 
-		<div class="bk" id="container" v-cloak>
-			<div id="particles-js">
-				<div class = "main">
-					<div class = "page">
-			<div class="title">
-
-				<div>
-					<!-- 导航栏 -->
-					<ul>
-						<li><a href="home.html">首页</a></li>
-						<li><a href="purchase.html">购买</a></li>
-						<li><a href="introduce.html">关于我们</a></li>
-						<li><a href="order.html">您的订单</a></li>
-						<li><a @click="refor">退出登录</a></li>
-					</ul>
+		<div class="bk">
+<!-- 			<img src="./img/79cd6e80c6c14f8e0fd7932e7f55370e.jpg"
+				style="position:fixed;left:0;top:0px;right:0;bottom:0;width:100%;min-height:755px;min-width:1524px;height:100%;overflow: hidden;filter:blur(10px);opacity:0.8;margin:0 auto;"> -->
+			<div class="page">
+				<div style="position:absolute;left:-5px;top:0;right:0;bottom:0;width:1528px;height:750px;overflow:hidden">
+					<img style="position:absolute;left:0;top:0;overflow: hidden;width:1528px;height:750px;z-index:0;animation-name:flipInX;animation-duration: 1s;"
+						src="https://flowers-1136885-pic40.websiteonline.cn/upload/13.jpg">
+				</div>
+				<div class="purchase-title">
+					<span id="purchase-title-1"><strong>予你芬芳 自然留香</strong></span>
+					<span id="purchase-title-2">GIVE YOU THE BEAUTIFUL FLOWERS</span>
+				</div>
+				<div class="purchase-main1">
+					<div class = "main1-title">
+					<span id="main1-title-1">FLOWERS</span>
+					<span id = "main1-title-2"><strong>新品推荐<br></strong></span>
+					</div>
+					
 				</div>
 
+				<div class="title">
 
-			</div>
-			<div class="footer" style="top:1350px">Created by LULU @2021/仅供学习使用</div>
-			<el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
-				<span>退出登录后将清空您的登录信息，请您确认</span>
-				<span slot="footer" class="dialog-footer">
-					<el-button @click="backhome">取 消</el-button>
-					<el-button type="primary" @click="backlogin">确 定</el-button>
-				</span>
-			</el-dialog>
-			</div>
-		</div>
-		</div>
-		</div>
+					<div>
+						<!-- 导航栏 -->
+						<ul>
+							<li><a href="home.html">首页</a></li>
+							<li><a href="purchase.html">产品展示</a></li>
+							<li><a href="introduce.html">关于我们</a></li>
+							<li><a href="order.html">您的订单</a></li>
+							<li><a @click="refor">退出登录</a></li>
+						</ul>
+					</div>
 
-		<script>
+
+				</div>
+				<div class="footer" style="top:1800px">Created by LULU @2021/仅供学习使用</div>
+			</div>
+		</div>
+<script>
+	window.onscroll = function() {
+					//检测鼠标滚轮距离顶部位置 
+					var top = document.documentElement.scrollTop || document.body.scrollTop;
+					var box1 = document.getElementsByClassName("main1-title")[0]; // 由于获取该元素的时候用的是getElementsByClassName()，得到的是数组，不是数组里面的元素，而我们要的不是数组，要的是元素
+					console.log(top);
+					//要设置到DIV显示出来时给div添加动画 也可以设置一个数值只要保证div出来给它加动画即可
+					if (top > 100) {
+						box1.setAttribute("style", "animation-name:fadeInbt;animation-duration:1s;opacity:1;");
+					}
+
+				}</script>
+		<!-- <script>
 			var vm = new Vue({
 				el: "#container",
 				data: {
@@ -85,7 +103,7 @@
 			})
 		</script>
 		<script src="./js/particles.js"></script>
-		<script src="./js/app.js"></script>
+		<script src="./js/app.js"></script> -->
 		<script>
 		</script>
 	</body>

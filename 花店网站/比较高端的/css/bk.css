@@ -125,3 +125,43 @@
 [v-cloak] {
 	display: none !important;
 }
+@keyframes fadeInLeft {
+
+	/* 左边淡入 */
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 0.9;
+		-webkit-transform: translateX(0);
+	}
+}
+
+@keyframes fadeInRight {
+
+	/* 右边淡入 */
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(30px);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+@keyframes fadeInbt {
+
+	/* 下边淡入 */
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(40px);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}

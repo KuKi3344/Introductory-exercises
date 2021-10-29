@@ -7,15 +7,14 @@
 		<link rel="stylesheet" href="./css/introduce.css" />
 		<link rel="stylesheet" href="./css/bk.css" />
 		<link rel="icon" href="./logo/flower.ico">
-		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 		<script type="text/javascript" src="./js/vue.js"></script>
 		<script type="text/javascript" src="./js/cookie_utils.js"></script>
-		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
 	</head>
 	<body>
-		<div class="bk" id="container" v-cloak>
+		<div class="bk">
 				<img src = "./img/introbk.jpg" style = "position:fixed;left:0;top:0px;right:0;bottom:0;width:100vw;min-height:750px;min-width:1525px;height:100%;overflow: hidden;margin:0 auto;">
-				<div class="main">
 					<div class="intro-main">
 						<div class="main1">
 							<div class="aside"></div>
@@ -74,7 +73,7 @@
 								<!-- 导航栏 -->
 								<ul>
 									<li><a href="home.html">首页</a></li>
-									<li><a href="purchase.html">购买</a></li>
+									<li><a href="purchase.html">产品展示</a></li>
 									<li><a href="introduce.html">关于我们</a></li>
 									<li><a href="order.html">您的订单</a></li>
 									<li><a @click="refor">退出登录</a></li>
@@ -90,18 +89,17 @@
 							<!-- <img src="./img/introtxt.png" style="position:absolute;left:190px;top:130px;"> -->
 						</div>
 						<div class="footer" style="top:1900px">Created by LULU @2021/仅供学习使用</div>
-						<el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
+						<!-- <el-dialog title="提示" :visible.sync="isback" width="30%" :before-close="backhome">
 							<span>退出登录后将清空您的登录信息，请您确认</span>
 							<span slot="footer" class="dialog-footer">
 								<el-button @click="backhome">取 消</el-button>
 								<el-button type="primary" @click="backlogin">确 定</el-button>
 							</span>
-						</el-dialog>
+						</el-dialog> -->
 					</div>
-			</div>
 		</div>
 
-		<script>
+		<!-- <script>
 			var vm = new Vue({
 				el: "#container",
 				data: {
@@ -139,6 +137,6 @@
 					},
 				},
 			})
-		</script>
+		</script> -->
 	</body>
 </html>
