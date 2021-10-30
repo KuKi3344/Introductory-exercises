@@ -1,0 +1,167 @@
+
+.page,
+.pageone {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width:1528px;
+	margin:0 auto;
+}
+
+.page {
+	height: 1000px auto;
+}
+
+.pageone {
+	height: 700px auto;		/* 可以随内涵元素的位置和宽高而变化高度,可以使foot一直保持在底部 */
+}
+
+.bk {
+	background-color: #fcfffc;
+}
+
+.title{
+	height: 40px;
+	left: 300px;
+	font-size: 15px;
+	width: 1200px;
+	margin-left: 0;
+	position: absolute;
+	top: 30px;
+	color: white;
+	margin-bottom: 1px;
+	overflow: hidden;
+	background:none;
+	border-bottom-left-radius: 5px ;
+}
+
+.title ul{
+	/* 清除ul标签的默认样式 */
+	width: 900px;
+	position: absolute;
+	left: 300px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+.title li{
+	float: left;
+	/* 使li内容横向浮动，即横向排列  */
+	margin-right: 90px;
+	/* 两个li之间的距离*/
+	position: relative;
+	top: 0.;
+	border-radius: 8px;
+}
+
+.title li a{
+	/* 设置链接内容显示的格式*/
+	display: block;
+	/* 把链接显示为块元素可使整个链接区域可点击 */
+	color: #ffffff;
+	text-align: center;
+	padding: 8px 15px;
+	text-decoration: none;
+	/* 去除下划线 */
+}
+
+.title li a:hover {
+	/* 鼠标选中时背景变为深色 */
+	background-color: none;
+	color: #658f61;
+	animation-name:ona;
+	animation-duration: 0.5s;
+	border-bottom: 1px solid #61885c;
+	
+}
+@keyframes ona{
+	from{border:none;}
+	to{color: #658f61;border-bottom: 1px solid #61885c;}
+}
+
+.footer {
+	width: 300px;
+	height:30px;
+	color: #b3b3b3;
+	font-size: 15px;
+	margin-left: 5px;
+	position: absolute;
+	left: 600px;
+	bottom:0;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+::-webkit-scrollbar-track-piece {
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	height: 8px;
+	background-color: rgba(115, 115, 115, 0.5);
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+	width: 8px;
+	background-color: rgba(110, 112, 115, 0.5);
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+[v-cloak] {
+	display: none !important;
+}
+@keyframes fadeInLeft {
+
+	/* 左边淡入 */
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 0.9;
+		-webkit-transform: translateX(0);
+	}
+}
+
+@keyframes fadeInRight {
+
+	/* 右边淡入 */
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(30px);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+@keyframes fadeInbt {
+
+	/* 下边淡入 */
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(40px);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}

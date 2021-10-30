@@ -1,0 +1,185 @@
+
+html {
+	width:100% auto;
+	height:100% auto;
+	margin: 0;
+	padding: 0;
+	overflow: scroll;
+}
+
+.title li a {
+	color: #434343 !important;
+}
+
+.title li a:hover {
+	/* 鼠标选中时背景变为深色 */
+	color: #5f8459 !important;
+
+}
+
+.bk {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-height: 750px;
+	max-height: auto;
+	min-width: 1525px;
+	max-width: auto;
+	background: none;
+}
+
+.purchase-title {
+	position: absolute;
+	left: 1000px;
+	top: 330px;
+	width: 420px;
+	height: 100px;
+	animation-name: fadeInRight;
+	animation-duration: 1.5s;
+	;
+
+}
+
+#purchase-title-1 {
+	position: absolute;
+	top: 0;
+	left: 50px;
+	color: rgb(0, 0, 0);
+	font-family: 微软雅黑;
+	font-size: 36px;
+}
+
+#purchase-title-2 {
+	position: absolute;
+	top: 60px;
+	left: 0px;
+	color: rgb(0, 0, 0);
+	font-family: 微软雅黑;
+	font-size: 24px;
+}
+
+.purchase-main1 {
+	position: absolute;
+	top: 750px;
+	left: -5px;
+	width: 1533px;
+	height: 1400px;
+	min-width: 1529px;
+	background-color: #fff;
+}
+
+.main1-title {
+	position: absolute;
+	top: 120px;
+	left: 600px;
+	width: 300px;
+	height: 100px;
+}
+
+#main1-title-1 {
+	position: absolute;
+	left: 20px;
+	top: 0;
+	font-size: 60px;
+	font-family: Times\ New\ Roman;
+	color: rgb(244, 244, 246);
+}
+
+#main1-title-2 {
+	position: absolute;
+	left: 95px;
+	top: 30px;
+	font-size: 32px;
+	font-family: 微软雅黑;
+	color: rgb(127, 127, 127);
+}
+.main1-mes{
+	position:absolute;
+	top: 350px;
+	left: 80px;
+	width:1440px;
+	height:850px;
+	opacity: 0;
+	
+}
+.purchase-main1 ul {
+	margin: 0px;
+	list-style-type: none;
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+.main1-li {
+	width: 270px;
+	height: 400px;
+	overflow: hidden;
+	margin-bottom: 70px;
+	margin-right: 80px;
+	float: left;
+	background-color: #ffffff;
+}
+
+.main1-li-img{
+	width: 270px;
+	height: 280px;
+	
+}
+.main1-li-mes{
+	margin-left:25px;
+	width:220px;
+	height:20px;
+	background-color: #ffffff;
+}
+.main1-li a{
+	text-decoration: none;
+}
+.main1-li a:hover .mes-1{
+	color:#729e67;
+}
+
+.main1-mes .mes-1{
+	font-style: Microsoft yahei;
+	color:#595959;
+	margin-top:10px;
+	text-align: center;
+}
+.main1-mes .mes-2{
+	font-style: Microsoft yahei;
+	font-size:13px;
+	color:#909090;
+	margin-top:10px;
+	text-align: center;
+}
+.main1-mes .mes-3{
+	font-style: Microsoft yahei;
+	font-size:13px;
+	color:#676767;
+	margin-top:5px;
+	text-align: center;
+}
+@keyframes flipInX {
+	0% {
+		-webkit-transform: perspective(400px) rotateX(10deg);
+		opacity: 0.7;
+	}
+
+	100% {
+		-webkit-transform: perspective(400px) rotateX(0deg);
+		opacity: 1;
+	}
+}
+@media screen and (max-width: 1000px) {
+
+.main1-mes{
+		opacity: 1 !important;
+	}
+}
+
+@media screen and (min-width:2400px) {
+.main1-mes{
+		opacity: 1 !important;
+	}
+}
