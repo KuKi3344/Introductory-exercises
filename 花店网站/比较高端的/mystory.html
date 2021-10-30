@@ -6,17 +6,11 @@
 		<title>LULU Flower</title>
 		<link rel="stylesheet" href="./css/order.css" />
 		<link rel="stylesheet" href="./css/bk.css" />
-		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 		<link rel="icon" href="./logo/flower.ico" >		
-		<script type="text/javascript" src="./js/vue.js"></script>
-		<script type="text/javascript" src="./js/cookie_utils.js" ></script>
-		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 	
 	</head>
 	<body>
-		<div class = "bk" id = "container" v-cloak>
-			<div id="particles-js">
-				<div class = "main">
+		<div class = "bk">
 					<div class = "page">
 				<div class="title">
 					
@@ -24,12 +18,13 @@
 						<ul>
 							<li><a href="home.html">首页</a></li>
 							<li><a href="purchase.html">购买</a></li>
-							<li><a href="buyshow.html">买家秀</a></li>
-							<li><a href="order.html">您的订单</a></li>
+							<li><a href="buyshow.html">关于我们</a></li>
+							<li><a href="mystory.html">我的故事</a></li>
 							<li><a href="login.html" @click="refor">退出登录</a></li>
 						</ul>
 					</div>
 				</div>
+				
 				<!-- <el-dialog title="提示" :visible.sync="noLogin" width="30%" :before-close="backhome">
 					<span>登陆后才能访问此页面，请先登录</span>
 					<span slot="footer" class="dialog-footer">
@@ -37,7 +32,7 @@
 						<el-button type="primary" @click="backlogin">确 定</el-button>
 					</span>
 				</el-dialog> -->
-				<el-dialog
+				<!-- <el-dialog
 				  title="提示"
 				  :visible.sync="isback"
 				  width="30%"
@@ -47,17 +42,15 @@
 				    <el-button @click="backhome">取 消</el-button>
 				    <el-button type="primary" @click="backlogin">确 定</el-button>
 				  </span>
-				</el-dialog>
+				</el-dialog> -->
 					<div class="footer">Created by LULU @2021/仅供学习使用</div>
 				</div>
-	</div>
-	</div>
 	</div>
 	<script>
 	
 	</script>
 	
-	<script>
+	<!-- <script>
 	var vm = new Vue({
 		el:"#container",
 		data:{
@@ -70,14 +63,12 @@
 		created:function(){
 			//从cookie中获取token、username
 			var token = getCookieValue("token");
-			if(token!=null && token!=""){
-				this.noLogin = false;
-				this.username = getCookieValue('username');
-			}else{
-				this.noLogin = true; 
-				alert('请先登录！');
-				window.location.href="login.html";
-			}
+			// if(token!=null && token!=""){
+			// 	this.noLogin = false;
+			// 	this.username = getCookieValue('username');
+			// }else{
+			// 	this.noLogin = true; 
+			// }
 			},
 		methods:{
 		refor:function(){			// 点击退出登录后，不管是网页后退还是直接输入首页网址，都要重新登录，cookie直接被删除了
@@ -102,8 +93,6 @@
 		},
 	})
 	
-		</script>
-		<script src="./js/particles.js"></script>
-		<script src="./js/app.js"></script>
+		</script> -->
 	</body>
 </html>
