@@ -13,14 +13,16 @@
 
 .box {
 	position: absolute;
-	top: 120px;
-	left: 480px;
+	top: 180px;
+	left:200px;
+	width:500px;
+	height:200px;
 }
 
 #one {
 	position: absolute;
-	left: 400px;
-	top: 50px;
+	left: 50px;
+	top: 40px;
 	width: 200px;
 	height: 50px;
 	font-family: Microsoft YaHei;
@@ -33,8 +35,8 @@
 	position: absolute;
 	font-family: NSimSun;
 	font-size: 47px;
-	left: 580px;
-	top: 40px;
+	left: 230px;
+	top: 20px;
 	width: 160px;
 	height: 50px;
 	color: rgb(94, 86, 63);
@@ -43,7 +45,7 @@
 #three {
 	position: absolute;
 	font-family: NSimSun;
-	left: 625px;
+	left: 275px;
 	top: 50px;
 	width: 160px;
 	height: 50px;
@@ -53,8 +55,8 @@
 
 #four {
 	position: absolute;
-	left: 660px;
-	top: 50px;
+	left: 300px;
+	top: 40px;
 	width: 160px;
 	height: 50px;
 	font-family: Microsoft YaHei;
@@ -66,7 +68,7 @@
 #five {
 	color: rgb(125, 140, 122);
 	position: absolute;
-	left: 420px;
+	left: 60px;
 	top: 130px;
 	width: 300px;
 	height: 35px;
@@ -81,7 +83,7 @@
 	background-color: #fff;
 	z-index: 0;
 	width: 1528px;
-	height: 1320px;
+	height: 2200px;
 	margin: 0 auto;
 }
 
@@ -90,12 +92,20 @@
 	top: 0;
 	left: 0;
 	width: 1520px;
-	height: 450px;
+	height: 500px;
 }
 
 .main2 {
 	position: absolute;
-	top: 450px;
+	top: 500px;
+	left: 0;
+	width: 1520px;
+	height: 900px;
+}
+
+.main3 {
+	position: absolute;
+	top: 1400px;
 	left: 0;
 	width: 1520px;
 	height: 720px;
@@ -146,6 +156,43 @@
 	height: 300px;
 }
 
+.main2-title {
+	position: absolute;
+	top: 10px;
+	left: 600px;
+	width: 300px;
+	height: 60px;
+
+}
+
+.main2-mes {
+	width:800px;
+	font-family: 'PingFang SC';
+	font-size: 14px;
+	color: #000000;
+	letter-spacing: 3px;
+	line-height: 36px;
+	position:absolute;
+	left:380px;
+	top:180px;
+	text-align: center;
+}
+#main2-img{
+	width:1100px;
+	height:500px;
+	position:absolute;
+	left:220px;
+	top:320px;
+}
+.line {
+	position: absolute;
+	left: 680px;
+	top: 120px;
+	width: 150px;
+	height: 1px;
+	background-color: #363636;
+}
+
 .img_over,
 .img_over2,
 .img_over3,
@@ -175,7 +222,7 @@
 	left: 1150px;
 }
 
-.main2_text {
+.main3_text {
 	position: absolute;
 	left: 150px;
 	top: 320px;
@@ -190,7 +237,7 @@
 
 }
 
-.main2_text span {
+.main3_text span {
 	font-size: 13px;
 	font-family: Microsoft YaHei;
 	line-height: 200%;
