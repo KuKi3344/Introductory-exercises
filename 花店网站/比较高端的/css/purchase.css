@@ -56,7 +56,7 @@
 	top: 750px;
 	left: -5px;
 	width: 1525px;
-	height: 1000px auto;
+	height: 1000px;
 	min-width: 1529px;
 	background-color: #fff;
 }
@@ -130,6 +130,7 @@
 .main1-li a:hover .mes-1{
 	color:#729e67;
 }
+
 .main1-mes .mes-1{
 	font-style: Microsoft yahei;
 	color:#595959;
@@ -159,5 +160,17 @@
 	100% {
 		-webkit-transform: perspective(400px) rotateX(0deg);
 		opacity: 1;
+	}
+}
+@media screen and (max-width: 1000px) {
+
+.main1-mes{
+		opacity: 1 !important;
+	}
+}
+
+@media screen and (min-width:2400px) {
+.main1-mes{
+		opacity: 1 !important;
 	}
 }

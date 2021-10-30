@@ -366,7 +366,7 @@ html {
 	.home-main3-img-2,
 	.home-main3-left,
 	.home-main3-right{
-		opacity: 1;
+		opacity: 1 !important;
 	}
 }
 
@@ -376,6 +376,6 @@ html {
 	.home-main3-img-2,
 	.home-main3-left,
 	.home-main3-right{
-		opacity: 1;
+		opacity: 1 !important;
 	}
 }
