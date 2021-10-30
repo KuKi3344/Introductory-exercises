@@ -14,9 +14,9 @@
 .box {
 	position: absolute;
 	top: 180px;
-	left:200px;
-	width:500px;
-	height:200px;
+	left: 200px;
+	width: 500px;
+	height: 200px;
 }
 
 #one {
@@ -66,7 +66,7 @@
 }
 
 #five {
-	color: rgb(125, 140, 122);
+	color: rgb(100, 111, 100);
 	position: absolute;
 	left: 60px;
 	top: 130px;
@@ -166,24 +166,26 @@
 }
 
 .main2-mes {
-	width:800px;
+	width: 800px;
 	font-family: 'PingFang SC';
 	font-size: 14px;
 	color: #000000;
 	letter-spacing: 3px;
 	line-height: 36px;
-	position:absolute;
-	left:380px;
-	top:180px;
+	position: absolute;
+	left: 380px;
+	top: 180px;
 	text-align: center;
 }
-#main2-img{
-	width:1100px;
-	height:500px;
-	position:absolute;
-	left:220px;
-	top:320px;
+
+#main2-img {
+	width: 1100px;
+	height: 500px;
+	position: absolute;
+	left: 220px;
+	top: 320px;
 }
+
 .line {
 	position: absolute;
 	left: 680px;
@@ -242,4 +244,13 @@
 	font-family: Microsoft YaHei;
 	line-height: 200%;
 	letter-spacing: 3px;
+}
+
+#particles-js {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	min-height: 750px;
+	min-width: 1525px;
+	overflow: hidden;
 }
