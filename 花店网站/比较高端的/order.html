@@ -30,13 +30,13 @@
 						</ul>
 					</div>
 				</div>
-				<el-dialog title="提示" :visible.sync="noLogin" width="30%" :before-close="backhome">
+				<!-- <el-dialog title="提示" :visible.sync="noLogin" width="30%" :before-close="backhome">
 					<span>登陆后才能访问此页面，请先登录</span>
 					<span slot="footer" class="dialog-footer">
 						<el-button @click="backhome">取 消</el-button>
 						<el-button type="primary" @click="backlogin">确 定</el-button>
 					</span>
-				</el-dialog>
+				</el-dialog> -->
 				<el-dialog
 				  title="提示"
 				  :visible.sync="isback"
@@ -74,7 +74,9 @@
 				this.noLogin = false;
 				this.username = getCookieValue('username');
 			}else{
-				this.noLogin = true; 						
+				this.noLogin = true; 
+				alert('请先登录！');
+				window.location.href="login.html";
 			}
 			},
 		methods:{
