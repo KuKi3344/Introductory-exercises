@@ -127,10 +127,18 @@ html,body {
 	border-radius: 15px;
 	-webkit-border-radius: 15px;
 }
-
-[v-cloak] {
-	display: none !important;
+.line {
+	position: absolute;
+	left: 680px;
+	width: 150px;
+	height: 1px;
+	background-color: #363636;
 }
+
+
+/* [v-cloak] {
+	display: none !important;
+} */
 @keyframes fadeInLeft {
 
 	/* 左边淡入 */

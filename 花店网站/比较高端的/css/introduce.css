@@ -82,7 +82,8 @@
 	margin: 0;
 	background-color: #fff;
 	z-index: 0;
-	width: 1528px;
+	width:100%;
+	min-width: 1528px;
 	height: 2200px;
 	margin: 0 auto;
 }
@@ -187,12 +188,7 @@
 }
 
 .line {
-	position: absolute;
-	left: 680px;
 	top: 120px;
-	width: 150px;
-	height: 1px;
-	background-color: #363636;
 }
 
 .img_over,
