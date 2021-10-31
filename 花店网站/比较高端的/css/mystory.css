@@ -19,6 +19,8 @@ video {
 	position: absolute;
 	left: 1000px;
 	top: 250px;
+	animation-name: fadeInRight;
+	animation-duration: 2s;
 }
 
 #title-1 {
@@ -70,6 +72,7 @@ video {
 	width: 100%;
 	height: 600px;
 	min-width: 1524px;
+	opacity: 0;
 }
 
 .main1-title {
@@ -79,6 +82,7 @@ video {
 	left: 620px;
 	top: 100px;
 	letter-spacing: 15px;
+
 
 }
 
@@ -94,7 +98,7 @@ video {
 	top: 400px;
 }
 
-.main1-mes {
+.main1-mes1,.main1-mes2 {
 	width: 800px;
 	font-family: 'PingFang SC';
 	font-size: 14px;
@@ -103,7 +107,18 @@ video {
 	line-height: 36px;
 	position: absolute;
 	left: 360px;
-	top: 250px;
 	text-align: center;
 }
+.main1-mes1{
+		top: 250px;
+}
+.main1-mes2{
+		top: 1000px;
+}
+#main1-img2{
+	width: 800px;
+	height: 450px;
+	position: absolute;
+	left: 370px;
+	top: 1200px;
 }
