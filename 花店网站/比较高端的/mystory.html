@@ -5,9 +5,10 @@
 <!-- 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
 		<title>LULU Flower</title>
 		<link rel="stylesheet" href="./css/mystory.css" />
+		<link rel="stylesheet" type="text/css" href="./css/loader.css">
 		<link rel="stylesheet" href="./css/bk.css" />
 		<link rel="icon" href="./logo/flower.ico" >		
-	
+		<script src="js/jquery.js"></script>
 	</head>
 	<body>
 		<div class = "bk">
@@ -27,7 +28,7 @@
 					<span class = "main1-mes1">故事开始于此...<br/>2019年于大连拥有第一家属于自己的小店,以自己的名字为店名—LULU<br/>从那时开始慢慢成长...</span>
 					<img id = "main1-img1" src = "https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180915%2F7a614f6f7c904ebaa7dff3a2ee75195f.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1638276587&t=8f6a17f1d771aa0a97267875dfc1ef4d">
 					<span class = "main1-mes2">而现在，我们拥有了更多的伙伴，得到了更多人的认可。<br/>如今LULU已经建成全国7大仓储基地，拥有35000平方米鲜花工厂<br/>0.3秒完成一束花的包装，确保鲜花能无恙抵达用户手中</span>
-					<img id = "main1-img2" src = "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.intocity.cn%2F%40%2Finto%2Fitem-images%2F20160630%2F14672559161432.jpg&refer=http%3A%2F%2Fimage.intocity.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1638279512&t=e267c052db71335a96a217fd278618f0">
+					<img id = "main1-img2" src = "https://static2.flowerplus.cn/Static/newpc/images/gyl.jpg">
 				</div>
 				<div class="title">
 					<div>	<!-- 导航栏 -->
@@ -75,7 +76,21 @@
 					}
 				}
 			</script>
-	
+			<script type="text/javascript">         
+			    // 等待所有加载
+			    $(window).load(function(){
+			        $('body').addClass('loaded');
+					sleep(1s);
+			        $('#loader-wrapper .load_title').remove();
+			    }); 
+			</script>    
+			
+			<div id="loader-wrapper">
+			    <div id="loader"></div>
+			    <div class="loader-section section-left"></div>
+			    <div class="loader-section section-right"></div>
+			    <div class="load_title">LOADING......<br><span>lULU STORY</span></div>
+			</div>
 	<!-- <script>
 	var vm = new Vue({
 		el:"#container",
