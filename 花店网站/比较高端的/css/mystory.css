@@ -122,3 +122,15 @@ video {
 	left: 370px;
 	top: 1200px;
 }
+@media screen and (max-width: 1400px) {
+
+.mystory-main1{
+		opacity: 1 !important;
+	}
+}
+
+@media screen and (min-width:3500px) {
+.mystory-main1{
+		opacity: 1 !important;
+	}
+}
