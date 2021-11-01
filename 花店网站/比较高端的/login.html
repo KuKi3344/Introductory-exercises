@@ -8,24 +8,21 @@
 		<link rel="icon" href="./logo/flower.ico" >
 		<link rel="stylesheet" href="./css/bk.css" />
 		<script type="text/javascript" src="./js/vue.js"></script>
-		<script type="text/javascript" src="./js/cookie_utils.js" ></script>
+		<script type="text/javascript" src="./js/cookie_utils.js" ></script>		
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 		
 	</head>
 	<body>
-		<div class="bk" id="container" v-cloak>
-				<div class="sea">
-					<span class="wave"></span>
-					<span class="wave"></span>
-					<span class="wave"></span>				
-				</div>
-				<div class = "main">
+		<div class="bk" id = "container">
 			<div class = "pageone">
+				<img src = "https://flowers-1139704-pic36.websiteonline.cn/upload/ban.jpg" style = "position:fixed;left:0;top:0px;right:0;bottom:0;min-width:100%;min-height:755px;width:160vh;height:100%;hidden;margin:0 auto;">
 			<div class = "left">
 			<div class="box1">
 			<h1 class="h1">Welcome!</h1>
 			<a href="#" class="link1">Select?</a>
 			</div>
-			
+						
 			<div class="box2">
 			<h1 class="h2">Do you have an account?</h1>
 			<a href="#" class="link2">Regist?</a>
@@ -62,13 +59,7 @@
 				</div>
 
 			</div>
-			<div class="picture">
-				<img class="f1" src="https://pics.prcm.jp/3a638fefa1001/75420560/png/75420560_220x200.png" />
-				<img class="f2" src="https://www.haoy99.com/FileUpload/2018-11/7-60Zhang_Bei_Jing_Tou-102413_132.png" />
-				<img class="f3" src="https://pics.prcm.jp/3a638fefa1001/75420559/png/75420559_220x113.png" />
-			</div>
 			<div class="footer">Created by LULU @2021/仅供学习使用</div>
-			</div>
 			</div>
 		</div>
 		<script type="text/javascript">
@@ -78,7 +69,6 @@
 					name:"",
 					password: "",
 					verify:"",
-					img:"./img/head.png",
 					tips: "",
 					isRight:false,		
 					noon:true,
@@ -134,7 +124,6 @@
 							setCookieValue("token","yes");
 							setCookieValue("username",vm.name);
 							console.log(getCookieValue("token"));
-							this.$message('');
 							 this.$message({
 							          showClose: true,
 							          message: '登陆成功',

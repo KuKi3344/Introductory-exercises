@@ -4,8 +4,7 @@ html, body {
             margin: 0; 
             padding: 0;
         }
-.bk,
-.main {
+.bk{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -25,91 +24,29 @@ html, body {
 	left: 930px;
 	width: 450px;
 	height: 450px;
-	border-radius: 10px;
+	opacity:0.95;
 }
 
 .box {
 	background-color: #FFFFFF;
-	box-shadow: 0 15px 25px rgba(217, 217, 217, 0.8);
+	box-shadow: 0 15px 25px rgba(152, 152, 152, 0.8);
 }
-
-.sea {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 100%;
-	min-width: 100vw;
-	max-width: auto;
-	opacity: 0.8;
-	border-radius: 5px;
-	overflow: hidden;
-}
-
-.sea {
-	background-color: #c8eec7;
-}
-
-.wave {
-	position: absolute;
-	top: -3400px;
-	left: -1200px;
-	right: -1200px;
-	width: 4000px;
-	height: 4000px;
-	border-radius: 46%;
-	filter: opacity(0.6);
-	animation: drift linear infinite;
-	transform-origin: 50% 49%;
-	margin:0 auto;
-}
-
-.wave {
-	background: #fcfcfc;
-}
-
-.wave:nth-of-type(1) {
-	animation-duration: 10s;
-}
-
-.wave:nth-of-type(2) {
-	animation-duration: 16s;
-}
-
-.wave:nth-of-type(3) {
-	animation-duration: 22s;
-	filter: opacity(0.2);
-}
-
-@keyframes drift {
-	from {
-		transform: rotate(360deg)
-	}
-
-	to {
-		transform: rotate(0deg)
-	}
-}
-
 .box1,
 .box2,
 .box3 {
 	height: 110px;
 	width: 320px;
-	opacity: 0.8;
-	background-color: #bbccc0;
-	border-radius: 0.7rem;
-	box-shadow: 0.5rem 0.9rem 1.2rem rgba(0, 0, 0, 0.25),
-		0.3rem 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+	background-color:#fff;
+	box-shadow: 0.5rem 0.9rem 1.2rem rgba(83, 83, 83, 0.2),
+		0.3rem 0.7rem 0.7rem rgba(109, 109, 109, 0.2);
+		opacity:0.9;
 }
 
 .h1,
 .h2,
 .h3 {
 	font-size: 26px;
-	color: white;
-	text-shadow: 4px 4px 4px #758481;
+	color: #789574;
 	position: absolute;
 	left: 20px;
 	top: 0px;
@@ -118,7 +55,7 @@ html, body {
 .link1,
 .link2,
 .link3 {
-	color: #ffffff;
+	color:  #789574;
 	font-size: 16px;
 	position: absolute;
 	left: 240px;
@@ -165,32 +102,6 @@ form {
 	width: 100%;
 	max-width: 300px;
 }
-
-.f1 {
-	width: 120px;
-	height: 110px;
-	top: 510px;
-	left: 1330px;
-	position: absolute;
-}
-
-.f2 {
-	width: 150px;
-	height: 110px;
-	top: 90px;
-	left: 920px;
-	position: absolute;
-}
-
-.f3 {
-	width: 200px;
-	height: 100px;
-	top: 120px;
-	left: 920px;
-	position: absolute;
-
-}
-
 
 #tips {
 	font-size: 12px;
@@ -253,7 +164,7 @@ form a:hover {
 
 .bt1,
 .bt2 {
-	background-color: #a6d1be;
+	background-color: #779688;
 	color: #ffffff;
 
 }
@@ -262,13 +173,13 @@ form a:hover {
 
 .bt1:hover,
 .bt2:hover {
-	background: #86d1b2;
+	background: #507d6a;
 	color: #fff;
 	border-radius: 60px;
-	box-shadow: 0 0 5px #86d1b2,
-		0 0 25px #86d1b2,
-		0 0 50px #86d1b2,
-		0 0 100px #86d1b2;
+	box-shadow: 0 0 5px  #507d6a,
+		0 0 25px  #507d6a,
+		0 0 50px  #507d6a,
+		0 0 100px  #507d6a;
 }
 
 
