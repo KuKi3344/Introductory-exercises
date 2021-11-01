@@ -89,7 +89,9 @@ video {
 .line {
 	top: 200px;
 }
-
+.line2{
+	top:1740px;
+}
 #main1-img1 {
 	width: 900px;
 	height: 500px;
@@ -98,7 +100,7 @@ video {
 	top: 400px;
 }
 
-.main1-mes1,.main1-mes2 {
+.main1-mes1,.main1-mes2,.main1-mes3 {
 	width: 800px;
 	font-family: 'PingFang SC';
 	font-size: 14px;
@@ -114,6 +116,10 @@ video {
 }
 .main1-mes2{
 		top: 1000px;
+}
+.main1-mes3{
+	top:1800px;
+	font-size: 16px;
 }
 #main1-img2{
 	width: 800px;

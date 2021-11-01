@@ -127,7 +127,8 @@ html,body {
 	border-radius: 15px;
 	-webkit-border-radius: 15px;
 }
-.line {
+.line,
+.line2 {
 	position: absolute;
 	left: 680px;
 	width: 150px;
